@@ -8,7 +8,7 @@
 
 DatumLex is the Integrated Project-Based Learning project for the fifth semester of the Database program at Fatec São José dos Campos, term 2026-2, developed in partnership with Xertica.
 
-The system aims to reduce fragmentation in legal information. Legal professionals and researchers currently need to consult different portals, such as DataJud/CNJ and court websites, which use different standards and formats. Results are also generally presented as lists of documents without consolidated quantitative indicators.
+The system aims to reduce fragmentation in legal information. Legal professionals and researchers currently need to consult different portals, such as DataJud/CNJ and court websites, which use different standards and formats. Results are also generally presented as lists of documents without consolidated quantitative indicators
 
 ## Proposed solution
 
