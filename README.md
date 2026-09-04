@@ -16,13 +16,13 @@ Build a data pipeline capable of extracting, transforming, and storing public le
 
 ## MVP focus
 
-- Data intelligence and a broad analytical view;
-- Volume and time-trend indicators;
-- Comparisons across courts and legal topics;
-- Dimensional Data Warehouse;
-- One dashboard for all users;
-- Individual case search as a secondary feature;
-- Precedent-adherence rate only after its rule is defined and validated.
+- Data intelligence and a broad analytical view
+- Volume and time-trend indicators
+- Comparisons across courts and legal topics
+- Dimensional Data Warehouse
+- One dashboard for all users
+- Individual case search as a secondary feature
+- Precedent-adherence rate only after its rule is defined and validated
 
 ## Target audience
 
