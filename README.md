@@ -1,120 +1,86 @@
-# Documentation
+# 📚 DatumLex — Documentation
 
-## DatumLex
+Repositório central de documentação do projeto **DatumLex** — plataforma analítica (Data Warehouse + Dashboard Web) para consolidação e análise de decisões judiciais, jurisprudência e doutrinas.
 
-> Academic legal-data intelligence platform for consolidating and analyzing public decisions, cases, and precedents.
+> 💻 Código-fonte: [datumlex-app](#) *(link para o repositório de código)*
+> 📋 Board / Backlog: [GitHub Project](#) *(link para o Project ao vivo)*
 
-## About the project
+---
 
-DatumLex is the Integrated Project-Based Learning project for the fifth semester of the Database program at Fatec São José dos Campos, term 2026-2, developed in partnership with Xertica.
+## 🏢 Sobre o Projeto
 
-The system aims to reduce fragmentation in legal information. Legal professionals and researchers currently need to consult different portals, such as DataJud/CNJ and court websites, which use different standards and formats. Results are also generally presented as lists of documents without consolidated quantitative indicators
+| | |
+|---|---|
+| **Instituição** | Fatec SJC — Banco de Dados, 5º semestre (noturno) |
+| **Equipe** | LegacyTech |
+| **Parceiro Acadêmico** | Xertica (Juan Hassam, Gerson Rolim) |
+| **Professores/Avaliadores** | Eduardo Sakaue, Juliana Pasquini |
+| **Stack** | Python, Django, ETL (DataJud/CNJ, TJs, diários oficiais), NLP, Modelo Dimensional (OLAP) |
 
-## Proposed solution
+## 👥 Equipe
 
-Build a data pipeline capable of extracting, transforming, and storing public legal data in a dimensional Data Warehouse. The data will be provided through an API and displayed in a single web dashboard with filters and indicators by court, legal topic, and period.
+| Nome | Papel | GitHub | LinkedIn |
+|---|---|---|---|
+| Pedro Mattos | Product Owner (P.O.) | | |
+| [Nome] | Scrum Master | | |
+| [Nome] | Data Engineer | | |
+| [Nome] | Backend / NLP Developer | | |
+| [Nome] | QA / DevOps Analyst | | |
 
-## MVP focus
+---
 
-- Data intelligence and a broad analytical view
-- Volume and time-trend indicators
-- Comparisons across courts and legal topics
-- Dimensional Data Warehouse
-- One dashboard for all users
-- Individual case search as a secondary feature
-- Precedent-adherence rate only after its rule is defined and validated
+## 🗂️ Estrutura deste Repositório
 
-## Target audience
+documentation/
+├── agile/          → gestão ágil, backlog, sprints
+├── architecture/   → modelagem de dados e ETL
+├── devops/         → branch, commits, CI/CD
+├── design/         → identidade visual e protótipos
+├── manuais/        → instalação e uso do sistema
+└── sprints-academicas/ → entregas oficiais para a banca
 
-- Attorneys and legal teams;
-- Judges and judiciary professionals;
-- Researchers;
-- Legal students.
+## 🔗 Navegação Rápida
 
-The MVP does not include different dashboards or permission levels by profession.
+### Ágil / Scrum
+- [Glossário Ágil (Épicos, User Stories, Tasks)](agile/glossario.md)
+- [Visão de Produto](agile/visao-produto.md)
+- [Backlog / Board (GitHub Project)](#) *(link para o Project)*
+- [Checklist de DoR](agile/backlog-de-tarefas/dor-checklist.md)
+- [Checklist de DoD](agile/backlog-de-tarefas/dod-checklist.md)
+- [Snapshots de Sprint](agile/sprints/)
 
-## Architecture summary
+### Arquitetura & Dados
+- [Modelo Conceitual](architecture/modelo-conceitual.md)
+- [Modelo Lógico](architecture/modelo-logico.md)
+- [Modelo Físico](architecture/modelo-fisico.md)
+- [Dicionário de Dados](architecture/dicionario-de-dados.md)
+- [Mapeamento do Pipeline de ETL](architecture/etl-pipeline.md)
 
-```mermaid
-flowchart LR
-    A["Legal APIs"] --> B["ETL pipeline"]
-    B --> C["Data Warehouse"]
-    C --> D["Analytics API"]
-    D --> E["Web dashboard"]
-```
-
-## Documentation structure
-
-```text
-datumlex/
-├── README.md
-├── CONTRIBUTING.md
-├── agile/
-│   ├── scrum-roles.md
-│   ├── requirements-flow.md
-│   ├── product-backlog.md
-│   └── sprint-planning.md
-├── devops/
-│   ├── git-flow.md
-│   └── quality-and-testing.md
-├── architecture/
-│   ├── etl-pipeline.md
-│   ├── data-warehouse-modeling.md
-│   ├── data-dictionary.md
-│   ├── api-documentation.md
-│   └── privacy-and-lgpd.md
-├── design/
-│   ├── style-guide.md
-│   └── brainstorming.md
-└── .github/
-    ├── ISSUE_TEMPLATE/
-    └── PULL_REQUEST_TEMPLATE.md
-```
-
-## Quick access
-
-### Agile management
-
-- [Scrum roles and responsibilities](agile/scrum-roles.md)
-- [Requirements flow](agile/requirements-flow.md)
-- [Initial Product Backlog](agile/product-backlog.md)
-- [Suggested sprint planning](agile/sprint-planning.md)
-
-### Development and quality
-
-- [Team Git Flow](devops/git-flow.md)
-- [Quality, testing, and CI/CD](devops/quality-and-testing.md)
-
-### Architecture
-
-- [ETL pipeline](architecture/etl-pipeline.md)
-- [Data Warehouse modeling](architecture/data-warehouse-modeling.md)
-- [Data dictionary](architecture/data-dictionary.md)
-- [Initial API documentation](architecture/api-documentation.md)
-- [Privacy and LGPD](architecture/privacy-and-lgpd.md)
+### DevOps
+- [Padrão de Commits](devops/padrao-commits.md)
+- [Estratégia de Branch](devops/estrategia-branch.md)
+- [Checklist de Pull Request](devops/pull-request-checklist.md)
+- [CI/CD](devops/ci-cd.md)
 
 ### Design
-
+- [Paleta de Cores](design/paleta-cores.md)
 - [Style Guide](design/style-guide.md)
-- [Brainstorming and records](design/brainstorming.md)
+- [Protótipos / Wireframes](design/prototipos.md)
+- [Brainstorming & Atas](design/brainstorming.md)
 
-## Technologies
+### Manuais
+- [Manual de Instalação](manuais/manual-instalacao.md)
+- [Manual de Usuário](manuais/manual-usuario.md)
 
-Python and Django were suggested in the challenge document but still need confirmation by the team. Database, frontend, ETL, testing, and hosting choices must be technically justified throughout the project.
+### Entregas Acadêmicas
+- [Apresentações de Sprint (.pptx/.pdf)](sprints-academicas/)
 
-## Current status
+---
 
-**Stage:** Sprint 1 - discovery, organization, and MVP definition.
+## 📌 Sobre o Desafio
 
-Before implementation, the team still needs to confirm with the partner:
+*(Descrição do desafio proposto pelo parceiro Xertica — a "dor" que o DatumLex resolve, contexto do problema, objetivo do produto.)*
 
-1. initial court or small group of courts;
-2. legal topic for the first scope;
-3. historical period;
-4. three priority indicators;
-5. definition of precedent adherence;
-6. final technology stack.
+## 📈 Cronograma de Evolução do Projeto
 
-## Notice
-
-This is an academic project and does not provide legal advice. Every indicator must disclose its source, period, update date, coverage, and limitations.
+*(Inserir aqui uma linha do tempo visual das sprints/entregas.)*
