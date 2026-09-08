@@ -1,86 +1,88 @@
 # 📚 DatumLex — Documentation
 
-Repositório central de documentação do projeto **DatumLex** — plataforma analítica (Data Warehouse + Dashboard Web) para consolidação e análise de decisões judiciais, jurisprudência e doutrinas.
+Central documentation repository for **DatumLex** — an analytical platform (Data Warehouse + Web Dashboard) for consolidating and analyzing judicial decisions, jurisprudence, and academic doctrines.
 
-> 💻 Código-fonte: [datumlex-app](#) *(link para o repositório de código)*
-> 📋 Board / Backlog: [GitHub Project](#) *(link para o Project ao vivo)*
+> 💻 Source code: [datumlex-app](#) *(link to the code repository)*
+> 📋 Board / Backlog: [GitHub Project](#) *(link to the live Project)*
 
 ---
 
-## 🏢 Sobre o Projeto
+## 🏢 About the Project
 
 | | |
 |---|---|
-| **Instituição** | Fatec SJC — Banco de Dados, 5º semestre (noturno) |
-| **Equipe** | LegacyTech |
-| **Parceiro Acadêmico** | Xertica (Juan Hassam, Gerson Rolim) |
-| **Professores/Avaliadores** | Eduardo Sakaue, Juliana Pasquini |
-| **Stack** | Python, Django, ETL (DataJud/CNJ, TJs, diários oficiais), NLP, Modelo Dimensional (OLAP) |
+| **Institution** | Fatec SJC — Database, 5th semester (evening) |
+| **Team** | LegacyTech |
+| **Academic Partner** | Xertica (Juan Hassam, Gerson Rolim) |
+| **Professors / Evaluators** | Eduardo Sakaue, Juliana Pasquini |
+| **Stack** | Python, Django, ETL (DataJud/CNJ, State Courts, official gazettes), NLP, Dimensional Model (OLAP) |
 
-## 👥 Equipe
+## 👥 Team
 
-| Nome | Papel | GitHub | LinkedIn |
+| Name | Role | GitHub | LinkedIn |
 |---|---|---|---|
 | Pedro Mattos | Product Owner (P.O.) | | |
-| [Nome] | Scrum Master | | |
-| [Nome] | Data Engineer | | |
-| [Nome] | Backend / NLP Developer | | |
-| [Nome] | QA / DevOps Analyst | | |
+| [Name] | Scrum Master | | |
+| [Name] | Data Engineer | | |
+| [Name] | Backend / NLP Developer | | |
+| [Name] | QA / DevOps Analyst | | |
 
 ---
 
-## 🗂️ Estrutura deste Repositório
+## 🗂️ Repository Structure
 
+```
 documentation/
-├── agile/          → gestão ágil, backlog, sprints
-├── architecture/   → modelagem de dados e ETL
-├── devops/         → branch, commits, CI/CD
-├── design/         → identidade visual e protótipos
-├── manuais/        → instalação e uso do sistema
-└── sprints-academicas/ → entregas oficiais para a banca
+├── agile/          → agile management, backlog, sprints
+├── architecture/   → data modeling and ETL
+├── devops/         → branching, commits, CI/CD
+├── design/         → visual identity and prototypes
+├── manuals/        → system installation and usage
+└── presentation/   → official deliverables for evaluators
+```
 
-## 🔗 Navegação Rápida
+## 🔗 Quick Navigation
 
-### Ágil / Scrum
-- [Glossário Ágil (Épicos, User Stories, Tasks)](agile/glossario.md)
-- [Visão de Produto](agile/visao-produto.md)
-- [Backlog / Board (GitHub Project)](#) *(link para o Project)*
-- [Checklist de DoR](agile/backlog-de-tarefas/dor-checklist.md)
-- [Checklist de DoD](agile/backlog-de-tarefas/dod-checklist.md)
-- [Snapshots de Sprint](agile/sprints/)
+### Agile / Scrum
+- [Agile Glossary (Epics, User Stories, Tasks)](agile/glossary.md)
+- [Product Vision](agile/product-vision.md)
+- [Backlog / Board (GitHub Project)](#) *(link to the Project)*
+- [Definition of Ready](agile/definition-of-ready.md)
+- [Definition of Done](agile/definition-of-done.md)
+- [Sprint Snapshots](agile/)
 
-### Arquitetura & Dados
-- [Modelo Conceitual](architecture/modelo-conceitual.md)
-- [Modelo Lógico](architecture/modelo-logico.md)
-- [Modelo Físico](architecture/modelo-fisico.md)
-- [Dicionário de Dados](architecture/dicionario-de-dados.md)
-- [Mapeamento do Pipeline de ETL](architecture/etl-pipeline.md)
+### Architecture & Data
+- [Conceptual Model](architecture/conceptual-model.md)
+- [Logical Model](architecture/logical-model.md)
+- [Physical Model](architecture/physical-model.md)
+- [Data Dictionary](architecture/data-dictionary.md)
+- [ETL Pipeline Mapping](architecture/etl-pipeline.md)
 
 ### DevOps
-- [Padrão de Commits](devops/padrao-commits.md)
-- [Estratégia de Branch](devops/estrategia-branch.md)
-- [Checklist de Pull Request](devops/pull-request-checklist.md)
+- [Commit Standards](devops/commit-standards.md)
+- [Branch Standards](devops/branch-standards.md)
+- [Pull Request Checklist](devops/pull-request-checklist.md)
 - [CI/CD](devops/ci-cd.md)
 
 ### Design
-- [Paleta de Cores](design/paleta-cores.md)
+- [Color Palette](design/color-palette.md)
 - [Style Guide](design/style-guide.md)
-- [Protótipos / Wireframes](design/prototipos.md)
-- [Brainstorming & Atas](design/brainstorming.md)
+- [Prototypes / Wireframes](design/prototypes.md)
+- [Brainstorming & Meeting Notes](design/brainstorming.md)
 
-### Manuais
-- [Manual de Instalação](manuais/manual-instalacao.md)
-- [Manual de Usuário](manuais/manual-usuario.md)
+### Manuals
+- [Installation Manual](manuals/installation-manual.md)
+- [User Manual](manuals/user-manual.md)
 
-### Entregas Acadêmicas
-- [Apresentações de Sprint (.pptx/.pdf)](sprints-academicas/)
+### Academic Deliverables
+- [Sprint Presentations (.pptx/.pdf)](presentation/)
 
 ---
 
-## 📌 Sobre o Desafio
+## 📌 About the Challenge
 
-*(Descrição do desafio proposto pelo parceiro Xertica — a "dor" que o DatumLex resolve, contexto do problema, objetivo do produto.)*
+*(Description of the challenge proposed by partner Xertica — the "pain point" DatumLex solves, problem context, and product goal.)*
 
-## 📈 Cronograma de Evolução do Projeto
+## 📈 Project Evolution Timeline
 
-*(Inserir aqui uma linha do tempo visual das sprints/entregas.)*
+*(Insert a visual timeline of sprints/deliverables here.)*
