@@ -3,7 +3,7 @@
 Central documentation repository for **DatumLex** — an analytical platform (Data Warehouse + Web Dashboard) for consolidating and analyzing judicial decisions, jurisprudence, and academic doctrines.
 
 > 💻 Source code: [datumlex-app](#) *(link to the code repository)*
-> 📋 Board / Backlog: [GitHub Project](#) *(link to the live Project)*
+> 📋 Board / Backlog: [GitHub Project](https://github.com/orgs/DatumLex/projects/1/views/9?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%5D) *(link to the live Project)*
 
 ---
 
@@ -21,11 +21,12 @@ Central documentation repository for **DatumLex** — an analytical platform (Da
 
 | Name | Role | GitHub | LinkedIn |
 |---|---|---|---|
-| Pedro Mattos | Product Owner (P.O.) | | |
-| [Name] | Scrum Master | | |
-| [Name] | Data Engineer | | |
-| [Name] | Backend / NLP Developer | | |
-| [Name] | QA / DevOps Analyst | | |
+| Pedro Mattos | Product Owner (P.O.) | [pedromattos11](https://github.com/pedromattos11) | |
+| [Ed Wilson] | Scrum Master | [EdWilsonsj](https://github.com/EdWilsonsj) | |
+| [Abimael Souza] | Developer | [Bima0195](https://github.com/Bima0195) | |
+| [Thiago Chaves] | Developer | [ThiagoChaves13](https://github.com/ThiagoChaves13) | |
+| [Johnatan Coelho] | Developer | [JohnatanCoelho](https://github.com/JohnatanCoelho) | |
+| [Diego Vitvicki] | QA | [dievit](https://github.com/dievit) | |
 
 ---
 
@@ -46,7 +47,7 @@ documentation/
 ### Agile / Scrum
 - [Agile Glossary (Epics, User Stories, Tasks)](agile/glossary.md)
 - [Product Vision](agile/product-vision.md)
-- [Backlog / Board (GitHub Project)](#) *(link to the Project)*
+- [Backlog / Board (GitHub Project)](https://github.com/orgs/DatumLex/projects/1/views/9?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%5D) *(link to the Project)*
 - [Definition of Ready](agile/definition-of-ready.md)
 - [Definition of Done](agile/definition-of-done.md)
 - [Sprint Snapshots](agile/)
