@@ -22,11 +22,11 @@ Central documentation repository for **DatumLex** — an analytical platform (Da
 | Name | Role | GitHub | LinkedIn |
 |---|---|---|---|
 | Pedro Mattos | Product Owner (P.O.) | [pedromattos11](https://github.com/pedromattos11) | |
-| [Ed Wilson] | Scrum Master | [EdWilsonsj](https://github.com/EdWilsonsj) | |
-| [Abimael Souza] | Developer | [Bima0195](https://github.com/Bima0195) | |
-| [Thiago Chaves] | Developer | [ThiagoChaves13](https://github.com/ThiagoChaves13) | |
-| [Johnatan Coelho] | Developer | [JohnatanCoelho](https://github.com/JohnatanCoelho) | |
-| [Diego Vitvicki] | QA | [dievit](https://github.com/dievit) | |
+| Ed Wilson | Scrum Master | [EdWilsonsj](https://github.com/EdWilsonsj) | |
+| Abimael Souza | Developer | [Bima0195](https://github.com/Bima0195) | |
+| Thiago Chaves | Developer | [ThiagoChaves13](https://github.com/ThiagoChaves13) | |
+| Johnatan Coelho | Developer | [JohnatanCoelho](https://github.com/JohnatanCoelho) | |
+| Diego Vitvicki | QA | [dievit](https://github.com/dievit) | |
 
 ---
 
