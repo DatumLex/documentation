@@ -3,7 +3,7 @@
 Central documentation repository for **DatumLex** — an analytical platform (Data Warehouse + Web Dashboard) for consolidating and analyzing judicial decisions, jurisprudence, and academic doctrines.
 
 > 💻 Source code: [datumlex-app](#) *(link to the code repository)*
-> 📋 Board / Backlog: [GitHub Project](https://github.com/orgs/DatumLex/projects/1/views/9?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%5D) *(link to the live Project)*
+> 📋 Board / Backlog: [GitHub Project](https://github.com/orgs/DatumLex/projects/1/views/9?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%5D)
 
 ---
 
@@ -47,7 +47,7 @@ documentation/
 ### Agile / Scrum
 - [Agile Glossary (Epics, User Stories, Tasks)](agile/glossary.md)
 - [Product Vision](agile/product-vision.md)
-- [Backlog / Board (GitHub Project)](https://github.com/orgs/DatumLex/projects/1/views/9?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%5D) *(link to the Project)*
+- [Backlog / Board (GitHub Project)](https://github.com/orgs/DatumLex/projects/1/views/9?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%5D)
 - [Definition of Ready](agile/definition-of-ready.md)
 - [Definition of Done](agile/definition-of-done.md)
 - [Sprint Snapshots](agile/)
@@ -82,8 +82,6 @@ documentation/
 
 ## 📌 About the Challenge
 
-*(Description of the challenge proposed by partner Xertica — the "pain point" DatumLex solves, problem context, and product goal.)*
 
 ## 📈 Project Evolution Timeline
 
-*(Insert a visual timeline of sprints/deliverables here.)*
