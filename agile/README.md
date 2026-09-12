@@ -1,18 +1,32 @@
-# 📋 Agile
+# Agile — DatumLex
 
-This folder holds the artifacts related to how the LegacyTech team plans, prioritizes, and tracks work on **DatumLex** using Scrum.
+This folder documents how the LegacyTech team plans, reviews, and tracks DatumLex development. Agreements apply across sprints and evolve through reviewed changes.
 
-## Contents
+## Working agreements
 
-- **`definition-of-ready.md`** — the team's fixed checklist defining when a User Story is ready to enter a Sprint.
-- **`definition-of-done.md`** — the team's fixed checklist defining when an increment is truly finished.
-- **`sprint-<n>-user-stories.md`** *(one per sprint)* — the User Stories worked on in that sprint, each with its DoR checklist filled in and its acceptance criteria written out (Gherkin format: `Dado / Quando / Então`).
+| Document | Purpose | Applied when |
+|---|---|---|
+| [Definition of Ready](definition-of-ready.md) | Explain the clarity and available inputs required to start. | Refinement, Sprint Planning, and transition to Ready. |
+| [Definition of Done](definition-of-done.md) | Explain quality, review, validation, and documentation required for completion. | Task review, story completion, integrated delivery. |
 
-## What does NOT live here
+Acceptance criteria remain in each issue and describe its outcome. DoR/DoD complement the existing **Work and acceptance**, **Dependencies**, and **Evidence** sections. Both documents include reusable evidence templates and guidance for different kinds of work.
 
-- The live Product Backlog and Sprint Backlog — these are managed as a **GitHub Project** linked to the code repository, not as static files.
-- Sprint retrospective notes or meeting minutes, unless the team decides to formalize them as an artifact (in which case they'd go in a `retrospectives/` subfolder).
+## Live planning and evidence
 
-## Why it matters
+The [GitHub Project](https://github.com/orgs/DatumLex/projects/1) is the live source for backlog items, assignees, status, and dates. Use [datumlex-core issues](https://github.com/DatumLex/datumlex-core/issues) for stories, tasks, acceptance criteria, blockers, and deliverable/validation links.
 
-DoR and DoD are team-wide agreements that don't change per sprint — they're the "quality gates" for entering and leaving development. The per-sprint User Story files are where those gates get applied to actual work, and are also the evidence submitted to the FATEC evaluators for the Sprint deliverables.
+The workflow is `Backlog → Ready → In progress → In review → Done`. Backlog tasks wait on dependencies; Ready tasks can start. See [transition rules](definition-of-ready.md#board-transitions) and [completion workflow](definition-of-done.md#review-and-board-workflow). Planned dates do not prove work has started or finished.
+
+## Sprint records
+
+When an academic delivery needs a snapshot, add a dated `sprint-<n>-user-stories.md` here with sprint goal, included issue links, applied readiness/acceptance evidence, and delivery references. These are historical snapshots, not a second live backlog. No snapshot is implied to exist until its file is committed.
+
+Use English for documents and issues, including `Given / When / Then` scenarios when useful. Epics group product objectives and may span sprints; stories and tasks are planned within sprint capacity.
+
+## Related documents
+
+- [Branch Standards](../devops/branch-standards.md)
+- [Commit Standards](../devops/commit-standards.md)
+- [Repository index](../README.md)
+
+Review changes to these agreements with the team and record rationale and effective date in the PR. Never silently relax an unmet completion criterion to close an issue.
