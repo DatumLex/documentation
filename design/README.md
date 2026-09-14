@@ -1,14 +1,43 @@
-# 🎨 Design
+# DatumLex Design
 
-This folder holds the visual and interaction design artifacts for the **DatumLex** Web Dashboard.
+This folder is the source of truth for DatumLex brand assets and product design
+standards. Use these files when creating interfaces, presentations,
+documentation, social materials, or partner-facing deliverables.
 
-## Contents
+## Files
 
-- **Wireframes / low-fidelity prototypes** — early screen sketches used to satisfy the Definition of Ready for UI-facing User Stories.
-- **High-fidelity mockups** — polished screen designs (e.g. Figma exports or images) showing filters, charts, and navigation for the precedent/jurisprudence analytics dashboard.
-- **Design decisions** — notes on layout, information hierarchy, and UX choices (e.g. how filters by court/theme/period are surfaced, how large result sets are presented).
-- **Style guide** *(if adopted)* — colors, typography, and component conventions used across the dashboard, for consistency.
+| File | Purpose | Recommended use |
+|---|---|---|
+| [Design Standards Guide](datumlex-design-guide.pdf) | Official rules for brand, color, typography, layout, UI components, data visualization, responsive behavior, and accessibility. | Read before designing or reviewing a product interface. |
+| [Minimal Logo](datumlex-logo-minimalist.jpg) | Square symbol without the wordmark. | App icons, avatars, favicons, compact headers, and square placements. |
+| [Horizontal Logo](datumlex-logo-horizontal.jpg) | Flat horizontal symbol and `DatumLex` wordmark. | Website headers, presentation covers, documents, and wide partner materials. |
 
-## Why it matters
+## Logo preview
 
-Since DatumLex's core value is helping legal professionals explore and interpret large volumes of judicial data, the dashboard's usability is as important as the data pipeline behind it. This folder is the reference point whenever a UI-facing User Story needs a prototype attached to satisfy the Definition of Ready.
+### Minimal logo
+
+![DatumLex minimal logo](datumlex-logo-minimalist.jpg)
+
+### Horizontal logo
+
+![DatumLex horizontal logo](datumlex-logo-horizontal.jpg)
+
+## Working agreement
+
+- Preserve the original proportions and colors of both logos.
+- Do not add 3D effects, shadows, gradients, textures, outlines, or decorative
+  backgrounds.
+- Do not stretch, crop, rotate, or reconstruct a logo from a screenshot.
+- Choose the logo format according to the available space and minimum sizes in
+  the Design Standards Guide.
+- Discuss material changes through a Pull Request and update the guide and this
+  README when the approved design system changes.
+- Keep repository documentation in English and product interface copy in clear
+  Portuguese, following the team's documentation standards.
+
+## Product design evidence
+
+Wireframes and high-fidelity mockups may be added to this folder when they are
+needed as Definition of Ready evidence for a User Story. Use descriptive English
+filenames and link each artifact to the corresponding GitHub card or Pull
+Request. Do not store temporary exports or duplicate logo files here.

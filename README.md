@@ -81,6 +81,9 @@ documentation/
 
 ### Design
 - [Design folder overview](design/README.md)
+- [Design Standards Guide](design/datumlex-design-guide.pdf)
+- [Minimal Logo](design/datumlex-logo-minimalist.jpg)
+- [Horizontal Logo](design/datumlex-logo-horizontal.jpg)
 
 ### Manuals
 - [Manuals folder overview](manuals/README.md)
