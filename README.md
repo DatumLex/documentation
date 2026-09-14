@@ -9,6 +9,24 @@ Central documentation repository for **DatumLex** — an analytical platform (Da
 
 ## 🏢 About the Project
 
+DatumLex is a legal intelligence platform designed to support more informed and
+consistent decision-making. It brings together judicial decisions,
+jurisprudence, and other official legal data that are often spread across
+different sources, then organizes them into information that can be explored
+through a web dashboard.
+
+The product helps legal professionals and decision-makers identify patterns,
+compare outcomes, and understand relevant judicial context more efficiently.
+Rather than replacing professional legal judgment, DatumLex is intended to
+provide reliable, structured evidence that supports analysis and decision-making.
+
+### Product goals
+
+- Consolidate official judicial data into a structured analytical repository.
+- Make legal information easier to search, filter, compare, and interpret.
+- Surface indicators and trends that support evidence-based legal analysis.
+- Reduce the time spent gathering information from disconnected sources.
+
 | | |
 |---|---|
 | **Institution** | Fatec SJC — Database, 5th semester (evening) |
