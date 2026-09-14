@@ -2,7 +2,7 @@
 
 Central documentation repository for **DatumLex** — an analytical platform (Data Warehouse + Web Dashboard) for consolidating and analyzing judicial decisions, jurisprudence, and academic doctrines.
 
-> 💻 Source code: [datumlex-app](#) *(link to the code repository)*
+> 💻 Source code: [datumlex-core](https://github.com/DatumLex/datumlex-core)
 > 📋 Board / Backlog: [GitHub Project](https://github.com/orgs/DatumLex/projects/1/views/9?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%5D)
 
 ---
@@ -40,43 +40,37 @@ documentation/
 ├── design/         → visual identity and prototypes
 ├── manuals/        → system installation and usage
 └── presentation/   → official deliverables for evaluators
+    └── sprints/     → links to Sprint Review presentations
 ```
 
-## 🔗 Quick Navigation
+## 🔗 Documentation Index
 
 ### Agile / Scrum
+- [Agile folder overview](agile/README.md)
 - [Agile Glossary (Epics, User Stories, Tasks)](agile/glossary.md)
-- [Product Vision](agile/product-vision.md)
 - [Backlog / Board (GitHub Project)](https://github.com/orgs/DatumLex/projects/1/views/9?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%5D)
 - [Definition of Ready](agile/definition-of-ready.md)
 - [Definition of Done](agile/definition-of-done.md)
-- [Sprint Snapshots](agile/)
 
 ### Architecture & Data
-- [Conceptual Model](architecture/conceptual-model.md)
-- [Logical Model](architecture/logical-model.md)
-- [Physical Model](architecture/physical-model.md)
-- [Data Dictionary](architecture/data-dictionary.md)
-- [ETL Pipeline Mapping](architecture/etl-pipeline.md)
+- [Technology Stack and Rationale](architecture/technology-stack.md)
+- [Architecture folder overview](architecture/README.md)
 
 ### DevOps
 - [Commit Standards](devops/commit-standards.md)
 - [Branch Standards](devops/branch-standards.md)
-- [Pull Request Checklist](devops/pull-request-checklist.md)
-- [CI/CD](devops/ci-cd.md)
+- [DevOps folder overview](devops/README.md)
 
 ### Design
-- [Color Palette](design/color-palette.md)
-- [Style Guide](design/style-guide.md)
-- [Prototypes / Wireframes](design/prototypes.md)
-- [Brainstorming & Meeting Notes](design/brainstorming.md)
+- [Design folder overview](design/README.md)
 
 ### Manuals
-- [Installation Manual](manuals/installation-manual.md)
-- [User Manual](manuals/user-manual.md)
+- [Manuals folder overview](manuals/README.md)
 
 ### Academic Deliverables
-- [Sprint Presentations (.pptx/.pdf)](presentation/)
+- [Presentation folder overview](presentation/README.md)
+- [Sprint presentations index](presentation/sprints/README.md)
+- [Sprint 1 presentation (Google Slides)](https://docs.google.com/presentation/d/15ZrHGEJONJXZg2ENUoq1YoI8AjIF6A7Wol1-tTPDVHM/edit?usp=sharing)
 
 ---
 
@@ -84,4 +78,3 @@ documentation/
 
 
 ## 📈 Project Evolution Timeline
-

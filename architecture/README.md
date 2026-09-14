@@ -10,6 +10,11 @@ This folder documents the technical architecture of **DatumLex** — how the sys
 - **System/component diagrams** — how the Django application, ETL pipelines, database, and dashboard relate to each other.
 - **Technology decisions** — key architectural choices and the reasoning behind them (e.g. why a given OLAP approach, why Django, why a given NLP API).
 
+## Documents
+
+- [Technology Stack and Rationale](technology-stack.md) — selected technologies,
+  their responsibilities, and the rationale for each architectural decision.
+
 ## Why it matters
 
 This is the folder evaluators will check first to understand *why* the system is built the way it is, not just what it does. Every non-trivial architectural decision should be traceable to a reason documented here — especially the dimensional model, since it's an explicit graded requirement of the challenge.

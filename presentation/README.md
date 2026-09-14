@@ -5,6 +5,9 @@ This folder holds the materials used to present **DatumLex** to the professors, 
 ## Contents
 
 - **Slide decks** — for sprint reviews, the individual presentation, and the team presentation (both count toward the final grade, per the challenge rules: *Individual Presentation + Team Presentation = Final Grade*).
+- [**Sprint presentations index**](sprints/README.md) — links to the three
+  Sprint Review decks. Sprint 1 is already available; Sprint 2 and Sprint 3
+  will be added as their presentations are prepared.
 
 
 ## Why it matters

@@ -6,6 +6,7 @@ This folder documents how the LegacyTech team plans, reviews, and tracks DatumLe
 
 | Document | Purpose | Applied when |
 |---|---|---|
+| [Agile Glossary](glossary.md) | Define the backlog hierarchy, board statuses, and shared agile language. | Onboarding, refinement, and daily work. |
 | [Definition of Ready](definition-of-ready.md) | Explain the clarity and available inputs required to start. | Refinement, Sprint Planning, and transition to Ready. |
 | [Definition of Done](definition-of-done.md) | Explain quality, review, validation, and documentation required for completion. | Task review, story completion, integrated delivery. |
 
