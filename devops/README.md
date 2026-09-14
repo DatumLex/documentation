@@ -6,6 +6,7 @@ This folder documents the practices and tooling the LegacyTech team uses to keep
 
 - **`commit-standards.md`** — the Conventional Commits-based convention every commit must follow (types, message format, issue linking).
 - **`branch-standards.md`** — the branch naming convention, base-branch strategy (`main`/`develop`/`hotfix`/`release`), and Pull Request rules.
+- **[`qa-guide.md`](qa-guide.md)** — the mandatory QA and PR review workflow, including review decisions, validation evidence, and comments on GitHub Project cards.
 - **CI/CD pipeline documentation** *(to be added)* — what runs automatically on push/PR: static code analysis, automated tests (unit, integration, system-level), and any deployment steps.
 - **Tooling justifications** — for each DevOps tool adopted (CI provider, static analysis tool, testing frameworks), a short explanation of why it was chosen, as required by the challenge ("apply DevOps concepts and define tools with technical justification for each").
 

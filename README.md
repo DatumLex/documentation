@@ -58,7 +58,6 @@ documentation/
 ├── design/         → visual identity and prototypes
 ├── manuals/        → system installation and usage
 └── presentation/   → official deliverables for evaluators
-    └── sprints/     → links to Sprint Review presentations
 ```
 
 ## 🔗 Documentation Index
@@ -77,6 +76,7 @@ documentation/
 ### DevOps
 - [Commit Standards](devops/commit-standards.md)
 - [Branch Standards](devops/branch-standards.md)
+- [QA Guide](devops/qa-guide.md)
 - [DevOps folder overview](devops/README.md)
 
 ### Design
@@ -87,7 +87,6 @@ documentation/
 
 ### Academic Deliverables
 - [Presentation folder overview](presentation/README.md)
-- [Sprint presentations index](presentation/sprints/README.md)
 - [Sprint 1 presentation (Google Slides)](https://docs.google.com/presentation/d/15ZrHGEJONJXZg2ENUoq1YoI8AjIF6A7Wol1-tTPDVHM/edit?usp=sharing)
 
 ---
