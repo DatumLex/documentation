@@ -81,6 +81,8 @@ documentation/
 ### Process
 - [Process folder overview](process/README.md)
 - [End-to-End Development Process](process/development-process.md)
+- [Team Permanence Rule](process/team-participation-policy.md)
+- [Strike Register](process/strike-register.md)
 
 ### Product
 - [Product folder overview](product/README.md)

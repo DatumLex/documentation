@@ -174,6 +174,7 @@ measures of value or individual performance.
 
 ## Related documents
 
+- [Team Permanence Rule](../process/team-participation-policy.md)
 - [Agile Glossary](glossary.md)
 - [Definition of Ready](definition-of-ready.md)
 - [Definition of Done](definition-of-done.md)
@@ -183,4 +184,3 @@ measures of value or individual performance.
 - [Branch Standards](../devops/branch-standards.md)
 - [Commit Standards](../devops/commit-standards.md)
 - [Product Backlog](https://github.com/orgs/DatumLex/projects/1)
-
