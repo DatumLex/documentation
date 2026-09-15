@@ -9,6 +9,8 @@ This folder documents how the LegacyTech team plans, reviews, and tracks DatumLe
 | [Agile Glossary](glossary.md) | Define the backlog hierarchy, board statuses, and shared agile language. | Onboarding, refinement, and daily work. |
 | [Definition of Ready](definition-of-ready.md) | Explain the clarity and available inputs required to start. | Refinement, Sprint Planning, and transition to Ready. |
 | [Definition of Done](definition-of-done.md) | Explain quality, review, validation, and documentation required for completion. | Task review, story completion, integrated delivery. |
+| [Product Owner Guide](product-owner-guide.md) | Define product ownership, backlog ordering, refinement, and story acceptance practices. | Product planning, stakeholder decisions, and acceptance. |
+| [Scrum Master Guide](scrum-master-guide.md) | Define facilitation, impediment management, board stewardship, and continuous improvement practices. | Scrum events, daily coordination, and process improvement. |
 
 Acceptance criteria remain in each issue and describe its outcome. DoR/DoD complement the existing **Work and acceptance**, **Dependencies**, and **Evidence** sections. Both documents include reusable evidence templates and guidance for different kinds of work.
 
@@ -28,6 +30,9 @@ Use English for documents and issues, including `Given / When / Then` scenarios 
 
 - [Branch Standards](../devops/branch-standards.md)
 - [Commit Standards](../devops/commit-standards.md)
+- [Developer Guide](../development/developer-guide.md)
+- [QA Guide](../devops/qa-guide.md)
+- [End-to-End Development Process](../process/development-process.md)
 - [Repository index](../README.md)
 
 Review changes to these agreements with the team and record rationale and effective date in the PR. Never silently relax an unmet completion criterion to close an issue.

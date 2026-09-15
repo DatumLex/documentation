@@ -54,9 +54,12 @@ provide reliable, structured evidence that supports analysis and decision-making
 documentation/
 ├── agile/          → agile management, backlog, sprints
 ├── architecture/   → data modeling and ETL
+├── development/    → developer workflow and contribution guidance
 ├── devops/         → branching, commits, CI/CD
 ├── design/         → visual identity and prototypes
 ├── manuals/        → system installation and usage
+├── process/        → end-to-end product development workflow
+├── product/        → product vision, audiences, roadmap, and references
 └── presentation/   → official deliverables for evaluators
 ```
 
@@ -68,6 +71,23 @@ documentation/
 - [Backlog / Board (GitHub Project)](https://github.com/orgs/DatumLex/projects/1/views/9?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%5D)
 - [Definition of Ready](agile/definition-of-ready.md)
 - [Definition of Done](agile/definition-of-done.md)
+- [Product Owner Guide](agile/product-owner-guide.md)
+- [Scrum Master Guide](agile/scrum-master-guide.md)
+
+### Development
+- [Development folder overview](development/README.md)
+- [Developer Guide](development/developer-guide.md)
+
+### Process
+- [Process folder overview](process/README.md)
+- [End-to-End Development Process](process/development-process.md)
+
+### Product
+- [Product folder overview](product/README.md)
+- [Product Vision](product/product-vision.md)
+- [Personas and Primary Audiences](product/personas.md)
+- [Product Roadmap](product/product-roadmap.md)
+- [Market References](product/market-references.md)
 
 ### Architecture & Data
 - [Technology Stack and Rationale](architecture/technology-stack.md)
