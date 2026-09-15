@@ -8,6 +8,8 @@ documentation by providing the product rationale behind backlog decisions.
 
 | Document | Purpose |
 |---|---|
+| [Client Alignment](client-alignment.md) | Record dated client direction, traceability, and unresolved scope mismatches. |
+| [Story catalog](../agile/user-stories.md) | List every story, current priority, planned sprint, and estimation status. |
 | [Product Vision](product-vision.md) | Define the product purpose, value proposition, focus, principles, boundaries, and success signals. |
 | [Personas and Primary Audiences](personas.md) | Describe the principal users, their needs, decisions, pain points, and expected value. |
 | [Product Roadmap](product-roadmap.md) | Connect the current validated scope with the next product outcomes without replacing the live backlog. |
@@ -17,7 +19,7 @@ documentation by providing the product rationale behind backlog decisions.
 
 - The [Product Vision](product-vision.md) provides long-term direction.
 - The [GitHub Product Backlog](https://github.com/orgs/DatumLex/projects/1)
-  remains the live source for priorities, sprint scope, status, and ownership.
+  remains the live source for priorities, sprint scope, `estimativa`, status, and ownership.
 - The [Product Owner Guide](../agile/product-owner-guide.md) defines how product
   decisions, refinement, and acceptance are managed.
 - The [End-to-End Development Process](../development/development-process.md)
@@ -25,4 +27,3 @@ documentation by providing the product rationale behind backlog decisions.
 
 Product documents must be reviewed when research, user feedback, legal or data
 constraints, or delivery evidence materially changes the product direction.
-

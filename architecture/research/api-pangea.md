@@ -1,3 +1,10 @@
+<!-- Existing research retained; current planning boundary below. -->
+
+> **Research scope:** This note is an earlier investigation, not a verified
+> production contract. DataJud is the only Sprint 1 source. Revalidate access,
+> coverage, permitted collection, and rights before later integration. See the
+> [source research index](README.md) and [client alignment](../../product/client-alignment.md).
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>

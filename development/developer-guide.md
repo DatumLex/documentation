@@ -180,6 +180,14 @@ Before requesting final approval, confirm that:
 Move the item to `Done` only after required review, merge, integration,
 deployment, validation, and acceptance are recorded.
 
+## Estimation responsibilities
+
+Participate in [Planning Poker](../agile/estimation-and-prioritization.md) for the
+complete parent story and include implementation, validation, review, documentation,
+and integration. `estimativa` contains agreed story points, not hours. Leave child
+tasks and epics blank; use task timeboxes where needed. Raise new uncertainty or
+scope changes explicitly rather than adjusting points to justify elapsed time.
+
 ## Quick links
 
 - [Product Backlog](https://github.com/orgs/DatumLex/projects/1)
@@ -191,4 +199,3 @@ deployment, validation, and acceptance are recorded.
 - [QA Guide](qa-guide.md)
 - [Definition of Ready](../agile/definition-of-ready.md)
 - [Definition of Done](../agile/definition-of-done.md)
-

@@ -20,3 +20,10 @@ who build, validate, review, and maintain DatumLex.
 - [Definition of Done](../agile/definition-of-done.md)
 - [Product Vision](../product/product-vision.md)
 - [Design Standards](../design/datumlex-design-guide.pdf)
+
+## Planning inputs
+
+Use the [story catalog](../agile/user-stories.md) and
+[estimation agreement](../agile/estimation-and-prioritization.md) during refinement.
+`estimativa` belongs to user stories; task implementation, QA, documentation, and
+review are part of the story estimate, not a second points total.

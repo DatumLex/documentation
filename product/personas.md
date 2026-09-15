@@ -11,11 +11,13 @@ roles, decisions, needs, and risks rather than fictional personal biographies.
 
 ## Audience priority
 
-The initial product is prioritized for legal professionals and researchers who
-need to analyze judicial outcomes. Educational use by law students and educators
-is also a core opportunity. Judges and court staff are an important audience,
-but their institutional, ethical, accessibility, and interpretive requirements
-must be validated directly before specialized workflows are claimed.
+The client alignment of September 15 prioritizes **lawyers, magistrates, and
+judicial advisors**. Researchers and legal operations are secondary beneficiaries
+of traceable analytics and exports. Students, educators, and examination candidates
+do not drive features in these sprints. All priority audiences share one dashboard
+with interactive filters; specialized permissions or screens are not required.
+These are client-validated audience priorities, while detailed persona behavior
+remains a hypothesis to validate with representative users.
 
 ## Persona 1 — Lawyer or legal team
 
@@ -50,36 +52,7 @@ period.
 - The product must encourage reading relevant decisions and obtaining
   professional judgment.
 
-## Persona 2 — Law student or educator
-
-### Context
-
-Studies or teaches legal doctrine, procedure, jurisprudence, empirical legal
-research, or data-informed legal practice.
-
-### Needs and questions
-
-- How do real judicial outcomes relate to concepts studied in class?
-- How can court data be filtered and interpreted responsibly?
-- What do denominator, classification, exclusion, and missing data mean?
-- Which patterns can support a research question without proving causation?
-
-### Expected value
-
-- Explore real public judicial data in an understandable visual format.
-- Develop legal research and data-literacy skills.
-- Compare periods and categories while seeing methodological limitations.
-- Use a structured example for classroom discussion and academic projects.
-
-### Risks and safeguards
-
-- The dashboard must not present correlation as legal or causal explanation.
-- Educational explanations should distinguish doctrine, jurisprudence, data, and
-  product classification rules.
-- Complex terms need plain-language definitions and links to methodology.
-- Examples must not be represented as legal advice or guaranteed outcomes.
-
-## Persona 3 — Judge, clerk, or court analyst
+## Persona 2 — Magistrate or judicial advisor
 
 ### Context
 
@@ -112,7 +85,7 @@ independence and case-specific reasoning.
   precision.
 - Institutional use requires direct validation with representative users.
 
-## Persona 4 — Legal or academic researcher
+## Persona 3 — Researcher or legal operations professional (secondary)
 
 ### Context
 
@@ -195,6 +168,14 @@ small convenience sample.
 - Limitations of the research: <details>
 ```
 
+## Planning professional journeys
+
+US-42 validates the shared path from research question to evidence, comparison,
+and reviewed report. Capture feedback from lawyers and judicial professionals;
+do not introduce student/exam workflows or separate portals. Estimate the whole
+story in `estimativa`, including usability and accessibility work, under the
+[Planning Poker agreement](../agile/estimation-and-prioritization.md).
+
 ## Related documents
 
 - [Product Vision](product-vision.md)
@@ -203,4 +184,3 @@ small convenience sample.
 - [Product Owner Guide](../agile/product-owner-guide.md)
 - [Design Standards](../design/datumlex-design-guide.pdf)
 - [Product Backlog](https://github.com/orgs/DatumLex/projects/1)
-

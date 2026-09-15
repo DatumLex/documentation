@@ -1,3 +1,12 @@
+# DataJud Research Notes
+
+> **Historical research, not the production query.** The examples below include
+> TRF1 and tax-enforcement records outside the Sprint 1 TJDFT/Civil Liability/2023
+> scope. They do not demonstrate merit coverage. Revalidate current access and
+> limits using official documentation; see the [research index](README.md).
+> Record actual query parameters, source timestamps, scope, and outcome evidence
+> in US-01/US-03 before implementation. Missing evidence stays unknown/unavailable.
+
 [**Datajud-Wiki**](https://datajud-wiki.cnj.jus.br/)
 
 URL: https://datajud-wiki.cnj.jus.br/api-publica/exemplos/exemplo2
@@ -14,10 +23,9 @@ may be changed by the CNJ at any time.
 To include the API Key in your requests, use the format
 "Authorization: APIKey [Public Key]" in the request header.
 
--   **Current APIKey**:
-
-    -   Authorization:
-       This API puclic:  APIKey **cDZHYzlZa0JadVREZDJCendQbXY6SkJlTzNjLV9TRENyQk1RdnFKZGRQdw==**
+Do not treat a copied public key as current configuration. Obtain the current
+public key from the official access instructions and configure it outside source
+code; the examples use the placeholder `[Public Key]`.
 
 **POST /api_publica_tribunal/_search**
 
@@ -33,7 +41,7 @@ To include the API Key in your requests, use the format
 
 5.  The [Public Key] value corresponds to the public key available
     at [Public
-    Key](https://datajud-wiki.cnj.jus.br/api-publica/exemplos/api-publica/acesso);
+    Key](https://datajud-wiki.cnj.jus.br/api-publica/acesso);
 
 6.  Still in *"Headers"*, add the key "Content-Type" with the value
     "application/json";
@@ -41,7 +49,7 @@ To include the API Key in your requests, use the format
 7.  Select the *"Body"* tab and choose the *"raw"* option. Enter the
     JSON request body as shown in the example below:
 
-**[Ex. 1 - Search by process number]{.mark}**
+**Example 1 — Search by process number**
 
 ## Query DSL
 
@@ -53,7 +61,7 @@ To include the API Key in your requests, use the format
     }
   }
 }
-
+```
 
 8.  Click *Send* to submit and wait for the API's response.
 
@@ -134,6 +142,7 @@ processes according to the search criteria:
     ]
   }
 }
+```
 
 >
 > This second JSON is from TRF1, and it has a structure very similar
@@ -163,7 +172,7 @@ processes according to the search criteria:
 | **Internal ID**        | TRF1_436_JE_16403_00008323520184013202        |
 
 
-> **[Ex. 2 - Search by Process Class and Judging Body]{.mark}**
+> **Example 2 — Search by process class and judging body**
 >
 > In the example below, a query is performed for processes with
 > Process Class 1116 -- "Execução Fiscal" (Tax Enforcement) from the
@@ -182,7 +191,7 @@ processes according to the search criteria:
 
 5.  The [Public Key] value corresponds to the public key available
     at [Public
-    Key](https://datajud-wiki.cnj.jus.br/api-publica/exemplos/api-publica/acesso);
+    Key](https://datajud-wiki.cnj.jus.br/api-publica/acesso);
 
 6.  Still in *"Headers"*, add the key "Content-Type" with the value
     "application/json";
@@ -203,13 +212,14 @@ processes according to the search criteria:
     }
   }
 }
-
+```
 
 > **Response**
 >
 > The expected response is a JSON with the metadata of 1 or more
 > processes according to the search criteria:
 
+```json
 {
   "took": 213,
   "timed_out": false,
@@ -317,7 +327,7 @@ processes according to the search criteria:
     ]
   }
 }
-
+```
 
 This response brings **information on TJDFT court cases**.
 Broken down by category:
@@ -347,9 +357,9 @@ Broken down by category:
 | **Complements**     | Complement value          | 2                                          |
 
 
-**[Ex. 3 - Example 3: Search with pagination (search_after):]{.mark}**
+**Example 3 — Pagination (search_after)**
 
-**By default, searches in the Elasticsearch API return up to 10
+**In this historical example, searches in the Elasticsearch API return up to 10
 records per request. However, it's possible to increase the number of
 records returned using the "size" pagination parameter. This
 parameter allows you to specify how many results should be returned
@@ -364,23 +374,15 @@ pointer that references the last record returned on the previous
 page and can be passed as a parameter for the next request, allowing
 the API to return the following results.**
 
-**It's important to note that using "search_after" does not hurt the
-API's performance when searching large volumes of data, since it
-allows the Datajud API to run queries more efficiently, without
-needing to reload all the results on each page. Combining the "size"
-parameter with "search_after" makes it possible to go through large
-volumes of data efficiently and with low impact on the API's
-performance.**
+Pagination still requires source-specific rate limits, retries, and validation.
+Do not infer a performance guarantee or unlimited collection permission from this example.
 
 **To paginate results using search_after, it is necessary to sort
-the data using the "@timestamp" attribute, as shown in the example
-below:**
+the data using the "@timestamp" attribute, using the official pagination example linked at the beginning of this note:**
 
-![](./media/image1.png){width="6.970833333333333in"
-height="3.3333333333333335in"}
 
-![](./media/image2.png){width="6.741666666666666in"
-height="2.5833333333333335in"}After the first query, the API's
+
+After the first query, the API's
 response will include an array called "sort" that contains the
 values of the sort field for each document returned. This array can
 be used as the value of the "search_after" parameter in the next
@@ -389,11 +391,9 @@ documents to be returned on the next page.
 
 To fetch the next 100 processes, simply add the "search_after"
 parameter to the next query, using the value of the "sort" field
-from the last document returned on the previous page, as shown in
-the example below:
+from the last document returned on the previous page, using that array from the actual preceding response:
 
-![](./media/image3.png){width="6.432554680664917in"
-height="3.7903969816272967in"}
+
 
 Note that the value of the "search_after" field is an array with the
 sort field values for the last document returned on the previous

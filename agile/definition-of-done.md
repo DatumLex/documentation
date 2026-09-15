@@ -98,6 +98,20 @@ Policy: https://github.com/DatumLex/documentation/blob/main/agile/definition-of-
 - Completion date: <YYYY-MM-DD>
 ```
 
+## Estimation and release evidence
+
+Priority and `estimativa` do not waive any quality criterion. Count a story's
+points once only after the integrated story meets DoD; finished child tasks do
+not earn partial story points. Preserve the planning baseline and disclose scope
+changes under [Estimation and Prioritization](estimation-and-prioritization.md).
+
+Sprint 2 additionally requires source/provenance validation, matching evidence,
+versioned human-reviewed NLP evaluation and thresholds, and reconciled analytical
+results. Sprint 3 additionally requires reproducible PDF/XLSX validation, safe
+spreadsheet content, citation/grounding checks, human review, and validated new
+subjects and professional journeys. See the [roadmap](../product/product-roadmap.md).
+These requirements describe planned release evidence, not completed work.
+
 ## References
 
 - [Definition of Ready](definition-of-ready.md)

@@ -133,8 +133,8 @@ DatumLex tracks item flow with the following statuses:
 
 | Status | Meaning | Expected action |
 |---|---|---|
-| Backlog | Known work not yet selected or started. | Refine, prioritize, or wait for sprint planning. |
-| Ready | The item satisfies the Definition of Ready. | It can be selected for a sprint. |
+| Backlog | Execution waits on a dependency or required input. | Record blocker and next action; resolve missing inputs. |
+| Ready | Applicable DoR holds and no dependency prevents starting. | It can begin when selected within capacity. |
 | In progress | Active work is underway. | Keep the assignee, linked branch, and progress visible. |
 | In review | Implementation is ready for peer review. | Open or update the PR and address review feedback. |
 | Done | The item satisfies the Definition of Done. | Retain the evidence and close the item. |
@@ -197,6 +197,15 @@ indicate that coding is merely finished.
 - Hiding blockers, changing scope silently, or using the board status as a
   substitute for a clear written update.
 - Adding mock values that could be mistaken for verified legal analytics data.
+
+## Priority and estimation
+
+`Priority` orders work by product value, dependency, and risk; `estimativa`
+measures relative effort in story points. Use the Fibonacci scale **1, 2, 3, 5,
+8, 13, 21** on user stories only, including enablers. Leave tasks and epics blank
+to avoid double counting. Points are not hours or individual performance scores.
+See [Estimation and Prioritization](estimation-and-prioritization.md). Epics group
+objectives and may cross sprint boundaries; Sprint names a planned delivery.
 
 ## Related Documents
 

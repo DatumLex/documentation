@@ -23,6 +23,7 @@ and an accessible user experience for the scope of the project.
 | Frontend styling | Tailwind CSS | Responsive, consistent interface styling |
 | Relational database | PostgreSQL | Persistent analytical and application data |
 | Frontend hosting | Vercel | Preview and production deployment of the dashboard |
+| Backend and database hosting | Railway | Django API and PostgreSQL deployment |
 | Source control and planning | GitHub | Repositories, issues, project board, pull requests, and review history |
 | External legal data | DataJud / CNJ | Judicial records used by the project scope |
 
@@ -127,8 +128,8 @@ The detailed rules are maintained in the [Development documentation](../developm
   contracts.
 - PostgreSQL is the persistent source for processed project data; raw external
   data must be handled through documented ingestion and transformation steps.
-- Vercel deploys the frontend only. Backend deployment and database access are
-  configured independently and must follow the project security practices.
+- Vercel deploys the frontend; Railway hosts backend and PostgreSQL. Configure
+  access independently and follow project security practices.
 - GitHub records work and review evidence; it is not a replacement for the
   database or for runtime monitoring.
 
@@ -143,3 +144,16 @@ Any future stack change should be evaluated against the following criteria:
 - Cost, learning curve, and operational overhead for the team.
 - Compatibility with the documented branch, commit, review, and deployment
   workflow.
+
+## Sprint boundaries and planning
+
+Sprint 1 uses DataJud only, for TJDFT Civil Liability from 2023 onward. Sprint 2
+adds approved STJ/jurisprudence/open-doctrine sources, provenance, and NLP. Sprint 3
+adds reproducible exports, grounded narrative, Consumer Law, and Contracts. Specific
+NLP/generation models and export libraries require reviewed decisions; this document
+does not select them implicitly. Versions, alternatives, operational limits, and
+court-selection evidence remain deliverables of US-02, not proven by this summary.
+
+Track effort in story-level `estimativa`, including migrations, source feasibility,
+validation, and documentation. See the [roadmap](../product/product-roadmap.md) and
+[estimation agreement](../agile/estimation-and-prioritization.md).

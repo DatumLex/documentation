@@ -32,7 +32,7 @@ data, or proprietary behavior.
 
 DatumLex applies those lessons to its own purpose: transparent analytics from
 public judicial data for evidence-informed legal research, professional
-analysis, learning, and institutional understanding. Its current dashboard,
+analysis and institutional understanding. Its current dashboard,
 data model, methodology, visual identity, architecture, wording, and backlog are
 independent DatumLex work governed by this repository.
 
@@ -63,7 +63,7 @@ broad legal-technology domain is not evidence of a validated DatumLex need.
 Juri Analytics is close to the long-term DatumLex legal analytics proposition.
 DatumLex initially differentiates itself through a narrow, documented DataJud
 scope, explicit unavailable-data states, reproducible methodology, and combined
-professional, academic, and institutional learning goals.
+professional legal decision-support goals.
 
 ## Reference — Turivius
 
@@ -87,9 +87,9 @@ professional, academic, and institutional learning goals.
 ### DatumLex interpretation
 
 Turivius is a useful benchmark for professional workflows and analytical UX.
-Its AI assistance, predictive language, document generation, and commercial
-scale are not current DatumLex commitments. DatumLex must first validate its
-descriptive indicators and real-data reconciliation.
+Competitor predictive language and commercial scale are not DatumLex commitments.
+The client-aligned roadmap does include grounded narrative drafts and exports in
+Sprint 3, built on validated descriptive indicators and real-data reconciliation.
 
 ## Reference — Data Lawyer Insights
 
@@ -280,6 +280,13 @@ date, purpose, and access constraints recorded.
 - User-research evidence:
 - Backlog or decision links:
 ```
+
+## Scope precedence
+
+The observations above retain their original review dates; this documentation
+review does not revalidate competitor offerings. [Client alignment](client-alignment.md)
+and the [roadmap](product-roadmap.md) govern DatumLex scope. Educational/exam products
+are market context, not planned DatumLex features.
 
 ## Related documents
 
