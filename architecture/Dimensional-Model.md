@@ -4,4 +4,4 @@
 
 # 📍 Dimensional Physical Model
 
-<img src="assets/Model_Physical.png" widht="500">
+<img src="assets/Model_physical.png" widht="500">
