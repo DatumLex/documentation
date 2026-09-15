@@ -17,7 +17,7 @@ To include the API Key in your requests, use the format
 -   **Current APIKey**:
 
     -   Authorization:
-        APIKey **cDZHYzlZa0JadVREZDJCendQbXY6SkJlTzNjLV9TRENyQk1RdnFKZGRQdw==**
+       This API puclic:  APIKey **cDZHYzlZa0JadVREZDJCendQbXY6SkJlTzNjLV9TRENyQk1RdnFKZGRQdw==**
 
 **POST /api_publica_tribunal/_search**
 
