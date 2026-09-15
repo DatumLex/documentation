@@ -1,55 +1,56 @@
-# Documentação da API Pública de Consulta à Jurisprudência do TJDFT
+# TJDFT Public Jurisprudence Query API Documentation
 
-## Finalidade
+## Purpose
 
-A API de jurisprudência do TJDFT tem como finalidade oferecer um ponto de acesso estruturado e padronizado aos acórdãos e decisões disponíveis para consulta pública, promovendo transparência, acessibilidade e eficiência. Por meio dela, usuários podem realizar consultas programáticas utilizando termos de pesquisa e filtros específicos. A API é especialmente útil para outros tribunais, pesquisadores, advogados e desenvolvedores que desejam integrar suas aplicações ou rotinas de análise de dados.
+The TJDFT Jurisprudence API provides a structured and standardized access point to publicly available appellate decisions and rulings, promoting transparency, accessibility, and efficiency. Through the API, users can perform programmatic queries using search terms and specific filters. The API is particularly useful for other courts, researchers, lawyers, and developers who want to integrate TJDFT jurisprudence data into their applications or data analysis workflows.
 
 ## Endpoint
 
-```
+```text
 POST https://jurisdf.tjdft.jus.br/api/v1/pesquisa
 ```
 
-## Formato da Requisição
+## Request Format
 
-A requisição deve ser enviada com o método `POST` e corpo em JSON.
+The request must be sent using the `POST` method with a JSON body.
 
-### Parâmetros obrigatórios
+### Required Parameters
 
-| Parâmetro | Descrição | Tipo |
-|---|---|---|
-| `query` | Termo principal da pesquisa | string |
-| `pagina` | Número da página | inteiro (começando do 0) |
-| `tamanho` | Número de resultados por página | inteiro |
+| Parameter | Description                | Type                      |
+| --------- | -------------------------- | ------------------------- |
+| `query`   | Main search term           | string                    |
+| `pagina`  | Page number                | integer (starting from 0) |
+| `tamanho` | Number of results per page | integer                   |
 
-### Parâmetro opcional
+### Optional Parameter
 
-- **`termosAcessorios`**: lista de filtros adicionais, cada um com:
-  - `campo`: nome do campo (string)
-  - `valor`: valor do filtro (string ou data)
+* **`termosAcessorios`**: list of additional filters, each containing:
 
-## Campos disponíveis para filtros (`termosAcessorios`)
+  * `campo`: field name (string)
+  * `valor`: filter value (string or date)
 
-Os filtros devem ser passados dentro do array `termosAcessorios`. Os únicos campos permitidos são:
+## Available Filter Fields (`termosAcessorios`)
 
-| Campo | Descrição |
-|---|---|
-| `base` | Base de dados da decisão |
-| `subbase` | Subbase de dados |
-| `origem` | Origem da decisão |
-| `uuid` | Identificador UUID da decisão |
-| `identificador` | Identificador da decisão |
-| `identificadorOrdenacao` | Identificador para ordenação |
-| `processo` | Número do processo |
-| `nomeRelator` | Nome do relator |
-| `nomeRevisor` | Nome do revisor |
-| `nomeRelatorDesignado` | Nome do relator designado |
-| `descricaoOrgaoJulgador` | Nome do órgão julgador |
-| `dataJulgamento` | Data do julgamento (formato: `YYYY-MM-DD`) |
-| `dataPublicacao` | Data da publicação (formato: `YYYY-MM-DD`) |
-| `descricaoClasseCnj` | Classe processual CNJ |
+Filters must be provided inside the `termosAcessorios` array. The only allowed fields are:
 
-## Exemplo de Requisição JSON
+| Field                    | Description                             |
+| ------------------------ | --------------------------------------- |
+| `base`                   | Decision database                       |
+| `subbase`                | Decision database subcategory           |
+| `origem`                 | Origin of the decision                  |
+| `uuid`                   | UUID identifier of the decision         |
+| `identificador`          | Decision identifier                     |
+| `identificadorOrdenacao` | Identifier used for sorting             |
+| `processo`               | Case number                             |
+| `nomeRelator`            | Judge rapporteur's name                 |
+| `nomeRevisor`            | Reviewing judge's name                  |
+| `nomeRelatorDesignado`   | Designated rapporteur's name            |
+| `descricaoOrgaoJulgador` | Name of the adjudicating panel          |
+| `dataJulgamento`         | Judgment date (format: `YYYY-MM-DD`)    |
+| `dataPublicacao`         | Publication date (format: `YYYY-MM-DD`) |
+| `descricaoClasseCnj`     | CNJ procedural class                    |
+
+## JSON Request Example
 
 ```json
 {
@@ -65,7 +66,7 @@ Os filtros devem ser passados dentro do array `termosAcessorios`. Os únicos cam
 }
 ```
 
-## Exemplo de Resposta JSON
+## JSON Response Example
 
 ```json
 {
@@ -101,7 +102,7 @@ Os filtros devem ser passados dentro do array `termosAcessorios`. Os únicos cam
 }
 ```
 
-## Observações
+## Notes
 
-- O campo `hits` representa a quantidade total de decisões encontradas para os critérios de busca utilizados.
-- O campo `agregações` traz a lista de relatores, revisores e órgãos julgadores, possibilitando que o usuário da API conheça o domínio dos filtros.
+* The `hits` field represents the total number of decisions found for the search criteria used.
+* The `agregações` field provides a list of rapporteurs, reviewing judges, and adjudicating panels, allowing the API user to identify the available filter domains.
