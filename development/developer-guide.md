@@ -43,6 +43,12 @@ issue when it cannot be completed within the agreed item.
 Create a focused branch from the team's current base branch. The branch name
 must follow [Branch Standards](branch-standards.md):
 
+For this documentation repository and its subfolders, use
+`documentation/<issue-number>-<short-description>` (issue number optional), for
+example `documentation/backlog-estimation`. Apply the area's documented prefix
+before committing; do not use `codex/` or `docs/` here. Other areas use their
+specific convention or the type-based fallback below:
+
 ```text
 <type>/<issue-number>-<short-description>
 ```

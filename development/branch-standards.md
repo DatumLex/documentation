@@ -4,6 +4,22 @@ To keep the repository organized and make it easy to identify what each branch i
 
 ## ✍️ Branch Naming Format
 
+For work in the **documentation repository/folder**, use the area prefix:
+
+```text
+documentation/<issue-number>-<short-description>
+```
+
+The issue number is optional. For example, `documentation/backlog-estimation`
+or `documentation/74-api-reference`. This applies to all documentation subfolders,
+including `agile/`, `product/`, `architecture/`, and `development/`.
+Create or rename the branch before committing documentation work. Do not use
+`codex/` or `docs/` for this area. Commit and PR titles still use Conventional
+Commits, such as `docs(planning): align stories and estimation`.
+
+For other areas, follow their documented area-specific convention. Where none
+is defined, the existing type-based convention below remains the fallback:
+
 ```
 <type>/<issue-number>-<short-description>
 ```
@@ -33,7 +49,7 @@ To keep the repository organized and make it easy to identify what each branch i
 - **`main`**: always stable and deployable. No direct commits — only merges via reviewed Pull Requests.
 - **`develop`** *(if adopted by the team)*: integration branch for features before they reach `main`.
 
-All `feat`, `fix`, `refactor`, `perf`, `docs`, `test`, and `chore` branches are created from `develop` (or `main`, if the team is not using a `develop` branch) and merged back via Pull Request.
+All `documentation`, `feat`, `fix`, `refactor`, `perf`, `docs`, `test`, and `chore` branches are created from `develop` (or `main`, if the team is not using a `develop` branch) and merged back via Pull Request. The `docs` fallback does not apply to the documentation area, which uses `documentation/`.
 
 `hotfix` branches are created directly from `main` and merged back into both `main` and `develop` once resolved.
 
@@ -54,7 +70,8 @@ Whenever possible, include the issue number in the branch name so it's traceable
 feat/34-court-filter-dashboard
 fix/41-null-publication-dates
 refactor/nlp-theme-classifier
-docs/update-data-dictionary
+documentation/update-data-dictionary
+documentation/backlog-estimation
 hotfix/etl-pipeline-crash
 release/1.2.0
 ```
