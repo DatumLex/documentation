@@ -16,7 +16,7 @@ This standard applies across sprints and can evolve through reviewed team agreem
 - [ ] **Applicable validation passes:** tests or artifact checks below have been executed and results linked. A screenshot or unchecked checklist alone does not prove success.
 - [ ] **Documentation matches the result:** affected instructions, contracts, models, dictionary entries, decisions, limitations, and environment configuration are updated.
 - [ ] **No secrets exposed:** credentials are absent from commits, reports, samples, screenshots, and logs. Evidence includes only data needed to reproduce the result.
-- [ ] **Repository delivery rules followed:** changes are merged through a reviewed PR into the target branch following [Branch Standards](../devops/branch-standards.md) and [Commit Standards](../devops/commit-standards.md).
+- [ ] **Repository delivery rules followed:** changes are merged through a reviewed PR into the target branch following [Branch Standards](../development/branch-standards.md) and [Commit Standards](../development/commit-standards.md).
 - [ ] **Evidence recorded before closing:** validation, reviewer, N/A reasons, and any non-blocking follow-ups are linked in the issue.
 
 Mark an inapplicable check `N/A — <reason>` and have the reviewer confirm it. Documentation-only changes need content and link review, not unrelated application tests. An unavailable test environment, failed required test, or missing required deployment is a blocker, not N/A.

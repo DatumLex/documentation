@@ -133,6 +133,6 @@ research findings. Record:
 - [Personas and Primary Audiences](personas.md)
 - [Market References](market-references.md)
 - [Product Owner Guide](../agile/product-owner-guide.md)
-- [End-to-End Development Process](../process/development-process.md)
+- [End-to-End Development Process](../development/development-process.md)
 - [Product Backlog](https://github.com/orgs/DatumLex/projects/1)
 

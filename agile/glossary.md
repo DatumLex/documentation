@@ -154,13 +154,13 @@ indicate that coding is merely finished.
    information explicit before implementation begins.
 4. Assign the active item to its owner and move it to **In progress** only when
    work starts.
-5. Create a branch following the [Branch Standards](../devops/branch-standards.md),
+5. Create a branch following the [Branch Standards](../development/branch-standards.md),
    preferably including the related issue number.
 
 ### During Development
 
 1. Keep commits small, in English, and compliant with the
-   [Commit Standards](../devops/commit-standards.md).
+   [Commit Standards](../development/commit-standards.md).
 2. Reference the related issue with `Refs #<number>` when the work contributes
    to it but does not complete it. Use `Resolves #<number>` only when the
    completed change truly closes the item.
@@ -202,6 +202,6 @@ indicate that coding is merely finished.
 
 - [Definition of Ready](definition-of-ready.md)
 - [Definition of Done](definition-of-done.md)
-- [Branch Standards](../devops/branch-standards.md)
-- [Commit Standards](../devops/commit-standards.md)
+- [Branch Standards](../development/branch-standards.md)
+- [Commit Standards](../development/commit-standards.md)
 - [Technology Stack and Rationale](../architecture/technology-stack.md)

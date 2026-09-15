@@ -41,7 +41,7 @@ issue when it cannot be completed within the agreed item.
 ## Branch workflow
 
 Create a focused branch from the team's current base branch. The branch name
-must follow [Branch Standards](../devops/branch-standards.md):
+must follow [Branch Standards](branch-standards.md):
 
 ```text
 <type>/<issue-number>-<short-description>
@@ -112,7 +112,7 @@ contributor's work.
 ## Commits
 
 Commits must be written in English and follow
-[Commit Standards](../devops/commit-standards.md) and Conventional Commits:
+[Commit Standards](commit-standards.md) and Conventional Commits:
 
 ```text
 <type>(<optional scope>): <short summary>
@@ -135,7 +135,7 @@ author's identity or add attribution that the team did not request.
 4. Confirm that required checks pass and move the task to `In review` only when
    the deliverable is ready for independent review.
 5. Add a comment to the related card with the PR and validation links.
-6. Follow the [QA and Pull Request Review Guide](../devops/qa-guide.md), respond
+6. Follow the [QA and Pull Request Review Guide](qa-guide.md), respond
    to findings, and request another review after material corrections.
 7. Merge only after approval and required checks. Delete the merged branch when
    it is no longer needed.
@@ -186,9 +186,9 @@ deployment, validation, and acceptance are recorded.
 - [DatumLex core issues](https://github.com/DatumLex/datumlex-core/issues)
 - [Technology Stack](../architecture/technology-stack.md)
 - [Design Standards](../design/datumlex-design-guide.pdf)
-- [Branch Standards](../devops/branch-standards.md)
-- [Commit Standards](../devops/commit-standards.md)
-- [QA Guide](../devops/qa-guide.md)
+- [Branch Standards](branch-standards.md)
+- [Commit Standards](commit-standards.md)
+- [QA Guide](qa-guide.md)
 - [Definition of Ready](../agile/definition-of-ready.md)
 - [Definition of Done](../agile/definition-of-done.md)
 

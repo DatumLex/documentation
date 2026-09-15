@@ -117,7 +117,7 @@ This centralizes traceability from product work to implementation:
    issue.
 4. Review and validation evidence are retained in the pull request.
 
-The detailed rules are maintained in the [DevOps documentation](../devops/README.md).
+The detailed rules are maintained in the [Development documentation](../development/README.md).
 
 ## Architecture Boundaries
 

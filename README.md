@@ -54,11 +54,8 @@ provide reliable, structured evidence that supports analysis and decision-making
 documentation/
 ├── agile/          → agile management, backlog, sprints
 ├── architecture/   → data modeling and ETL
-├── development/    → developer workflow and contribution guidance
-├── devops/         → branching, commits, CI/CD
+├── development/    → development, review, QA, and delivery workflow
 ├── design/         → visual identity and prototypes
-├── manuals/        → system installation and usage
-├── process/        → end-to-end product development workflow
 ├── product/        → product vision, audiences, roadmap, and references
 └── presentation/   → official deliverables for evaluators
 ```
@@ -73,16 +70,16 @@ documentation/
 - [Definition of Done](agile/definition-of-done.md)
 - [Product Owner Guide](agile/product-owner-guide.md)
 - [Scrum Master Guide](agile/scrum-master-guide.md)
+- [Team Permanence Rule](agile/team-permanence-rule.md)
+- [Strike Register](agile/strike-register.md)
 
 ### Development
 - [Development folder overview](development/README.md)
 - [Developer Guide](development/developer-guide.md)
-
-### Process
-- [Process folder overview](process/README.md)
-- [End-to-End Development Process](process/development-process.md)
-- [Team Permanence Rule](process/team-participation-policy.md)
-- [Strike Register](process/strike-register.md)
+- [End-to-End Development Process](development/development-process.md)
+- [Commit Standards](development/commit-standards.md)
+- [Branch Standards](development/branch-standards.md)
+- [QA Guide](development/qa-guide.md)
 
 ### Product
 - [Product folder overview](product/README.md)
@@ -95,20 +92,11 @@ documentation/
 - [Technology Stack and Rationale](architecture/technology-stack.md)
 - [Architecture folder overview](architecture/README.md)
 
-### DevOps
-- [Commit Standards](devops/commit-standards.md)
-- [Branch Standards](devops/branch-standards.md)
-- [QA Guide](devops/qa-guide.md)
-- [DevOps folder overview](devops/README.md)
-
 ### Design
 - [Design folder overview](design/README.md)
 - [Design Standards Guide](design/datumlex-design-guide.pdf)
 - [Minimal Logo](design/datumlex-logo-minimalist.jpg)
 - [Horizontal Logo](design/datumlex-logo-horizontal.jpg)
-
-### Manuals
-- [Manuals folder overview](manuals/README.md)
 
 ### Academic Deliverables
 - [Presentation folder overview](presentation/README.md)

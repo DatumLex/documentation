@@ -52,7 +52,7 @@ ensure accountability, communication, and commitment to the project.
 ## Related documents
 
 - [Strike Register](strike-register.md)
-- [End-to-End Development Process](development-process.md)
-- [Scrum Master Guide](../agile/scrum-master-guide.md)
-- [Product Owner Guide](../agile/product-owner-guide.md)
+- [End-to-End Development Process](../development/development-process.md)
+- [Scrum Master Guide](scrum-master-guide.md)
+- [Product Owner Guide](product-owner-guide.md)
 - [Developer Guide](../development/developer-guide.md)

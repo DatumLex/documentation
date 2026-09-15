@@ -140,10 +140,10 @@ an item to `In progress`; execution must actually begin.
 **Primary owner:** Assigned developer or specialist
 
 Move `Ready → In progress`, create a branch following
-[Branch Standards](../devops/branch-standards.md), and add a concise issue
+[Branch Standards](branch-standards.md), and add a concise issue
 comment when the approach, dependencies, or limitations need to be visible.
 
-Developers follow the [Developer Guide](../development/developer-guide.md),
+Developers follow the [Developer Guide](developer-guide.md),
 [Technology Stack](../architecture/technology-stack.md), and applicable
 [Design Standards](../design/datumlex-design-guide.pdf).
 
@@ -156,7 +156,7 @@ item's scope.
 **Primary owner:** Author
 
 Create small, logical, English commits following
-[Commit Standards](../devops/commit-standards.md). Reference the issue with
+[Commit Standards](commit-standards.md). Reference the issue with
 `Refs #<number>` when work contributes to it. Use `Resolves #<number>` only when
 the entire item will genuinely be satisfied by the merge.
 
@@ -201,8 +201,8 @@ Push the branch and open a focused Pull Request. The PR must:
 
 Move `In progress → In review` and comment on the issue only when the change is
 actually ready for independent review. Follow the
-[Developer Guide](../development/developer-guide.md) and
-[QA Guide](../devops/qa-guide.md).
+[Developer Guide](developer-guide.md) and
+[QA Guide](qa-guide.md).
 
 ### 9. Perform code review and QA
 
@@ -221,7 +221,7 @@ Possible outcomes:
   revalidate, and request another review.
 - **Blocked:** record the cause, impact, owner, next action, and follow-up date.
 
-Use the [QA and Pull Request Review Guide](../devops/qa-guide.md) for the full
+Use the [QA and Pull Request Review Guide](qa-guide.md) for the full
 review procedure.
 
 ### 10. Merge and integrate
@@ -338,7 +338,7 @@ review, QA, and evidence workflow.
 ### Hotfixes
 
 Use a `hotfix/` branch from `main` only for an urgent production correction,
-following [Branch Standards](../devops/branch-standards.md). Keep the change
+following [Branch Standards](branch-standards.md). Keep the change
 minimal, require review and focused regression evidence, deploy with a recovery
 plan, and reconcile the fix with any integration branch after release. Urgency
 does not authorize undocumented or unreviewed changes.
@@ -370,9 +370,9 @@ until it can be validated.
 - [Definition of Done](../agile/definition-of-done.md)
 - [Product Owner Guide](../agile/product-owner-guide.md)
 - [Scrum Master Guide](../agile/scrum-master-guide.md)
-- [Developer Guide](../development/developer-guide.md)
-- [QA Guide](../devops/qa-guide.md)
-- [Branch Standards](../devops/branch-standards.md)
-- [Commit Standards](../devops/commit-standards.md)
+- [Developer Guide](developer-guide.md)
+- [QA Guide](qa-guide.md)
+- [Branch Standards](branch-standards.md)
+- [Commit Standards](commit-standards.md)
 - [Technology Stack](../architecture/technology-stack.md)
 - [Design Standards](../design/datumlex-design-guide.pdf)

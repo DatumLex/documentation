@@ -11,6 +11,8 @@ This folder documents how the LegacyTech team plans, reviews, and tracks DatumLe
 | [Definition of Done](definition-of-done.md) | Explain quality, review, validation, and documentation required for completion. | Task review, story completion, integrated delivery. |
 | [Product Owner Guide](product-owner-guide.md) | Define product ownership, backlog ordering, refinement, and story acceptance practices. | Product planning, stakeholder decisions, and acceptance. |
 | [Scrum Master Guide](scrum-master-guide.md) | Define facilitation, impediment management, board stewardship, and continuous improvement practices. | Scrum events, daily coordination, and process improvement. |
+| [Team Permanence Rule](team-permanence-rule.md) | Define the three-strike participation rule and communicated-unavailability exception. | Team accountability and participation follow-up. |
+| [Strike Register](strike-register.md) | Record applied strikes using the agreed fields. | When the PO and Scrum Master confirm a strike. |
 
 Acceptance criteria remain in each issue and describe its outcome. DoR/DoD complement the existing **Work and acceptance**, **Dependencies**, and **Evidence** sections. Both documents include reusable evidence templates and guidance for different kinds of work.
 
@@ -28,11 +30,11 @@ Use English for documents and issues, including `Given / When / Then` scenarios 
 
 ## Related documents
 
-- [Branch Standards](../devops/branch-standards.md)
-- [Commit Standards](../devops/commit-standards.md)
+- [Branch Standards](../development/branch-standards.md)
+- [Commit Standards](../development/commit-standards.md)
 - [Developer Guide](../development/developer-guide.md)
-- [QA Guide](../devops/qa-guide.md)
-- [End-to-End Development Process](../process/development-process.md)
+- [QA Guide](../development/qa-guide.md)
+- [End-to-End Development Process](../development/development-process.md)
 - [Repository index](../README.md)
 
 Review changes to these agreements with the team and record rationale and effective date in the PR. Never silently relax an unmet completion criterion to close an issue.

@@ -155,5 +155,5 @@ developers, QA, design, and data specialists. Material changes must:
 
 See the [Product Owner Guide](../agile/product-owner-guide.md),
 [Product Roadmap](product-roadmap.md), and
-[End-to-End Development Process](../process/development-process.md).
+[End-to-End Development Process](../development/development-process.md).
 

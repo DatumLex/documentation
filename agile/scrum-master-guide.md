@@ -158,7 +158,7 @@ measures of value or individual performance.
 - Encourage authors to attach reproducible evidence before requesting review.
 - Ensure meaningful QA activity is recorded on the related card.
 - Help resolve stalled reviews without pressuring a reviewer to approve.
-- Use the [QA and Pull Request Review Guide](../devops/qa-guide.md) as the review
+- Use the [QA and Pull Request Review Guide](../development/qa-guide.md) as the review
   standard and preserve reviewer independence whenever possible.
 
 ## Scrum Master checklist
@@ -174,13 +174,13 @@ measures of value or individual performance.
 
 ## Related documents
 
-- [Team Permanence Rule](../process/team-participation-policy.md)
+- [Team Permanence Rule](team-permanence-rule.md)
 - [Agile Glossary](glossary.md)
 - [Definition of Ready](definition-of-ready.md)
 - [Definition of Done](definition-of-done.md)
 - [Product Owner Guide](product-owner-guide.md)
 - [Developer Guide](../development/developer-guide.md)
-- [QA Guide](../devops/qa-guide.md)
-- [Branch Standards](../devops/branch-standards.md)
-- [Commit Standards](../devops/commit-standards.md)
+- [QA Guide](../development/qa-guide.md)
+- [Branch Standards](../development/branch-standards.md)
+- [Commit Standards](../development/commit-standards.md)
 - [Product Backlog](https://github.com/orgs/DatumLex/projects/1)

@@ -172,5 +172,5 @@ review, QA, security checks, automated tests, or the shared Definition of Done.
 - [Definition of Done](definition-of-done.md)
 - [Scrum Master Guide](scrum-master-guide.md)
 - [Developer Guide](../development/developer-guide.md)
-- [QA Guide](../devops/qa-guide.md)
+- [QA Guide](../development/qa-guide.md)
 - [Product Backlog](https://github.com/orgs/DatumLex/projects/1)

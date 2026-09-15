@@ -20,7 +20,7 @@ documentation by providing the product rationale behind backlog decisions.
   remains the live source for priorities, sprint scope, status, and ownership.
 - The [Product Owner Guide](../agile/product-owner-guide.md) defines how product
   decisions, refinement, and acceptance are managed.
-- The [End-to-End Development Process](../process/development-process.md)
+- The [End-to-End Development Process](../development/development-process.md)
   explains how an approved product need becomes a reviewed increment.
 
 Product documents must be reviewed when research, user feedback, legal or data

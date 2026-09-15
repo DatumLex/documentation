@@ -1,7 +1,7 @@
 # Strike Register — DatumLex
 
 This document records strikes applied under the
-[Team Permanence Rule](team-participation-policy.md).
+[Team Permanence Rule](team-permanence-rule.md).
 
 ## Current register
 
