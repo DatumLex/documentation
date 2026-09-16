@@ -3,8 +3,7 @@
 ## Vision statement
 
 DatumLex transforms public judicial data into transparent and accessible legal
-analytics, helping legal professionals, students, judges, court staff, and
-researchers make better-informed decisions.
+analytics, helping lawyers, magistrates, and judicial advisors make better-informed decisions.
 
 The product organizes fragmented judicial information into a structured
 analytical repository and presents understandable indicators, comparisons, and
@@ -24,7 +23,7 @@ sources to documented analytical rules and an accessible interface.
 
 ## Product focus
 
-DatumLex is a legal decision-support and learning platform focused on:
+DatumLex is a legal decision-support platform focused on:
 
 - consolidating official judicial data into a structured analytical model;
 - exposing understandable indicators and outcome distributions;
@@ -43,9 +42,13 @@ scope is a delivery boundary, not the limit of the long-term vision.
 | Audience | Core need | Value provided by DatumLex |
 |---|---|---|
 | Lawyers and legal teams | Understand patterns and prepare evidence-informed case strategies. | Faster comparison of outcomes, courts, periods, and legal subjects with transparent analytical context. |
-| Law students and educators | Learn how judicial decisions and appeal outcomes behave in practice. | A structured and visual environment for exploring real public data and connecting doctrine with observed decisions. |
 | Judges, clerks, and court analysts | Access statistical context without replacing independent legal analysis. | Transparent indicators and trends that support research, consistency analysis, and institutional understanding. |
 | Legal and academic researchers | Study judicial behavior using reproducible dimensions and documented limitations. | Traceable sources, structured data, explicit methodology, and comparable analytical views. |
+
+Lawyers, magistrates, and judicial advisors are primary. Researchers and legal
+operations are secondary beneficiaries of reproducible exports. Student and
+exam-preparation features are outside the agreed scope. A single dashboard serves
+these professional needs without role-specific screens or complex permission tiers.
 
 The [Personas and Primary Audiences](personas.md) document provides detailed
 needs, scenarios, and safeguards for each group.
@@ -74,8 +77,8 @@ statistical patterns as certainty or guaranteed legal outcomes.
 
 ### Decision support, not automated judgment
 
-The product assists research, comparison, learning, and professional analysis.
-It does not replace lawyers, judges, educators, researchers, due process, or
+The product assists research, comparison, and professional analysis.
+It does not replace lawyers, judges, researchers, due process, or
 case-specific legal reasoning.
 
 ### Accessibility and clarity
@@ -120,7 +123,9 @@ The first dashboard experience answers a focused set of questions:
 2. What proportion was granted and denied under the documented classification?
 3. How are outcomes distributed for the selected court, subject, period, and
    result filters?
-4. How does process volume differ between first and second instance over time?
+4. What first/second-instance outcome comparison is actually supported by the
+   evidence? Reconcile the latest client request with the existing chart criteria
+   before claiming this comparison is delivered.
 5. Which records, exclusions, limitations, and refresh date support the view?
 
 The interface may be implemented before all backend services are available, but
@@ -157,3 +162,13 @@ See the [Product Owner Guide](../agile/product-owner-guide.md),
 [Product Roadmap](product-roadmap.md), and
 [End-to-End Development Process](../development/development-process.md).
 
+## Validated delivery direction
+
+The [September client alignment](client-alignment.md) requires initial merit
+analytics in Sprint 1, cross-source TJDFT/STJ/precedent/open-doctrine integration
+and explainable NLP in Sprint 2, and reproducible exports, grounded narrative,
+Consumer Law/Contracts, and professional journeys in Sprint 3. The final user
+must understand which evidenced thesis relates to an outcome. See the
+[roadmap](product-roadmap.md) and [story catalog](../agile/user-stories.md).
+Public DataJud access does not imply complete merits or decision text: missing
+evidence stays unknown/unavailable.

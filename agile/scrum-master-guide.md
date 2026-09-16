@@ -172,6 +172,15 @@ measures of value or individual performance.
 - [ ] Improvement actions have owners and are revisited.
 - [ ] Metrics are used for learning, not individual surveillance.
 
+## Facilitating estimation
+
+Facilitate [Planning Poker](estimation-and-prioritization.md) during refinement:
+private votes, simultaneous reveal, discussion, and agreement by delivery contributors.
+Keep `estimativa` on stories only; check allowed values and prevent duplicate
+story/task totals. Retain assumptions and the planning baseline. Use points for
+team forecasts, not individual rankings or disciplinary decisions. Do not invent
+Sprint 1 historical velocity when estimates were introduced after work started.
+
 ## Related documents
 
 - [Team Permanence Rule](team-permanence-rule.md)

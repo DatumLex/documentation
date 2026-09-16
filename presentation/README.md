@@ -27,3 +27,13 @@ limitations, and next steps.
 ## Why it matters
 
 Sprint Reviews and the final presentations are graded events, and both the individual and team components matter. Keeping decks and demo scripts here — versioned alongside the rest of the documentation — makes it easy to reuse and build on previous presentations instead of starting from scratch each sprint.
+
+## Sprint scope and planning evidence
+
+Use the [README sprint objectives](../README.md#-sprint-objectives),
+[roadmap](../product/product-roadmap.md), and [story catalog](../agile/user-stories.md)
+to distinguish planned from delivered scope. Include Priority and story-level
+`estimativa` when reporting a real planning baseline; disclose blank estimates
+and scope changes. Do not count child tasks again, invent historical velocity,
+or describe Sprint 1 as the complete MVP. Present the final thesis/evidence
+objective and known source limitations alongside release evidence.

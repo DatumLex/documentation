@@ -43,6 +43,12 @@ issue when it cannot be completed within the agreed item.
 Create a focused branch from the team's current base branch. The branch name
 must follow [Branch Standards](branch-standards.md):
 
+For this documentation repository and its subfolders, use
+`documentation/<issue-number>-<short-description>` (issue number optional), for
+example `documentation/backlog-estimation`. Apply the area's documented prefix
+before committing; do not use `codex/` or `docs/` here. Other areas use their
+specific convention or the type-based fallback below:
+
 ```text
 <type>/<issue-number>-<short-description>
 ```
@@ -180,6 +186,14 @@ Before requesting final approval, confirm that:
 Move the item to `Done` only after required review, merge, integration,
 deployment, validation, and acceptance are recorded.
 
+## Estimation responsibilities
+
+Participate in [Planning Poker](../agile/estimation-and-prioritization.md) for the
+complete parent story and include implementation, validation, review, documentation,
+and integration. `estimativa` contains agreed story points, not hours. Leave child
+tasks and epics blank; use task timeboxes where needed. Raise new uncertainty or
+scope changes explicitly rather than adjusting points to justify elapsed time.
+
 ## Quick links
 
 - [Product Backlog](https://github.com/orgs/DatumLex/projects/1)
@@ -191,4 +205,3 @@ deployment, validation, and acceptance are recorded.
 - [QA Guide](qa-guide.md)
 - [Definition of Ready](../agile/definition-of-ready.md)
 - [Definition of Done](../agile/definition-of-done.md)
-

@@ -41,3 +41,13 @@ Wireframes and high-fidelity mockups may be added to this folder when they are
 needed as Definition of Ready evidence for a User Story. Use descriptive English
 filenames and link each artifact to the corresponding GitHub card or Pull
 Request. Do not store temporary exports or duplicate logo files here.
+
+## Sprint scope and estimation
+
+Use the approved shared dashboard for professional audiences. Student/exam
+screens and separate professional portals are outside the agreed plan. Include
+design, accessibility, responsive states, and artifact review in the parent story's
+`estimativa`, following [Planning Poker](../agile/estimation-and-prioritization.md).
+The G1/G2 outcome requirement and existing chart story need the explicit
+[scope reconciliation](../product/client-alignment.md#reconciliation-items-identified-on-september-15);
+the brand guide does not resolve metric semantics.

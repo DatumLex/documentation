@@ -13,7 +13,7 @@ step requires implementation, review, or role-specific detail.
 ## Guiding principles
 
 - The [GitHub Product Backlog](https://github.com/orgs/DatumLex/projects/1) is
-  the live source for scope, hierarchy, assignees, sprint, priority, and status.
+  the live source for scope, hierarchy, assignees, sprint, priority, `estimativa`, and status.
 - The linked GitHub issue is the durable record of acceptance criteria,
   dependencies, decisions, blockers, deliverables, and evidence.
 - Work is not complete merely because code exists, a branch was pushed, or a
@@ -58,7 +58,7 @@ Backlog → Ready → In progress → In review → Done
 
 | Status | Entry condition | Exit condition |
 |---|---|---|
-| `Backlog` | The item is identified but may still need clarification, inputs, prioritization, or dependency resolution. | Applicable readiness criteria are satisfied and the item is intentionally selected for execution. |
+| `Backlog` | Execution waits on a dependency or required input; record the blocker. | The required input exists and applicable readiness criteria are satisfied. |
 | `Ready` | Scope, required inputs, owner, validation approach, and start dependencies satisfy the Definition of Ready. | The assignee actually begins work. |
 | `In progress` | Implementation, research, design, documentation, or another defined activity has started. | Deliverable and evidence are ready for independent review. |
 | `In review` | The author has completed applicable checks and provided a reviewable artifact with evidence. | Changes return the item to `In progress`, or approval and remaining completion steps allow it to become `Done`. |
@@ -131,7 +131,7 @@ The Product Owner explains the ordered backlog and desired value. Developers
 select a realistic plan based on capacity, dependencies, technical sequencing,
 QA effort, and the Sprint Goal. The Scrum Master facilitates and exposes risks.
 
-Confirm sprint, priority, assignee, planned sequence, review capacity, and the
+Confirm story-level `estimativa` from Planning Poker, sprint, priority, assignee, planned sequence, review capacity, and the
 relationship of each selected item to the Sprint Goal. Planning does not change
 an item to `In progress`; execution must actually begin.
 
@@ -358,6 +358,16 @@ until it can be validated.
 | `Ready → In progress` | Assignee has started; branch or working artifact when applicable; initial approach or dependency note. |
 | `In progress → In review` | Reviewable deliverable, PR or artifact link, author-validation results, documentation, and known limitations. |
 | `In review → Done` | Independent approval, QA evidence, merged/integrated result, deployment or reviewed N/A, acceptance where required, and final issue comment. |
+
+## Story estimation through delivery
+
+During refinement, follow [Planning Poker](../agile/estimation-and-prioritization.md)
+and record the agreed story-level `estimativa`. Include implementation, tests,
+review, documentation, and integration; tasks and epics stay blank. Capture
+scope changes without overwriting the planning baseline. During release reporting,
+sum completed stories once and disclose pending estimates; never credit individual
+task points. Keep the [story catalog](../agile/user-stories.md) aligned with approved
+Priority and Sprint changes.
 
 ## Quick links
 

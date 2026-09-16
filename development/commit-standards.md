@@ -55,7 +55,11 @@ Use `Refs #12` instead if the commit is related to the issue but doesn't fully r
 
 ## 📊 Traceability and Progress
 
-Commit history is one input for tracking active work on the repository, but **it is not used as a standalone metric of individual contribution**. Sprint progress and individual delivery are tracked through the GitHub Project board (issue status, story points, sprint burndown) — not by counting commits, which can be easily gamed and doesn't reflect actual effort or quality.
+Commit history supports traceability, not individual productivity scoring. Use
+reviewed outcomes and evidence to understand delivery. Story points in `estimativa`
+support team forecasting only; they are not individual contribution scores. Do not
+claim a points burndown or velocity without a real planning baseline. Follow the
+[estimation agreement](../agile/estimation-and-prioritization.md).
 
 ## ✅ Examples
 
