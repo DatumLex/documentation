@@ -3,8 +3,9 @@
 For the client-facing functions of the software, see the
 [Product Backlog in the repository README](../README.md#product-backlog).
 This detailed catalog also retains the technical and enabling stories needed to
-deliver those functions. README CUS references summarize outcomes and do not
-replace these issue IDs or create additional units for estimation.
+deliver those functions. The README defines a separate product backlog with its own US numbering and
+product priorities; those IDs do not map one-to-one to this implementation catalog.
+The product summary creates no additional units for estimation.
 
 ## Snapshot and reading guide
 
