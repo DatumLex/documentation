@@ -109,8 +109,8 @@ After merge, the author or QA reviewer must:
 QA effort belongs in story-level `estimativa` under the
 [estimation agreement](../agile/estimation-and-prioritization.md). Do not count the
 same tests in both a feature story and a shared test-infrastructure story. Priority
-does not waive validation: a Medium export still requires safe content and
-reconciliation, and a Medium NLP feature still requires evidence and quality checks.
+does not waive validation: a Should Have export still requires safe content and
+reconciliation, and a Should Have NLP feature still requires evidence and quality checks.
 Count completed points only when the whole story meets DoD, never when isolated
 tasks or PRs finish.
 
