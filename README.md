@@ -210,8 +210,11 @@ examples, responsibilities, and recording rules, and the
   improve the experience after core outcome/thesis analysis works. Essential
   navigation, accessibility, source dates, evidence, and human review remain required.
 
-These are product-planning decisions, not an automatic conversion of Project
-High/Medium/Low values or new client acceptance. Planned sprints are retained.
+The GitHub Project now uses the same **Must Have, Should Have, Could Have, and
+Won't Have this time** options in its **Priority** field. The
+[September 17 review](agile/priority-review-2026-09-17.md) aligns implementation
+work by capability and dependency, not by matching US numbers. This planning
+review does not establish new client acceptance. Planned sprints are retained.
 The PO and team review capacity and dependencies at refinement; any change to an
 agreed client delivery must be explicitly reconciled. Required tests, privacy,
 provenance, and quality criteria apply to every delivered feature. A Must Have
