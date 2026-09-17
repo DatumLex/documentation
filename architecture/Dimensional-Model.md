@@ -13,7 +13,7 @@ included in story-level `estimativa`; see the
 
 ## Logical model
 
-<img src="assets/Model_Logic_API5-2026-09-14_23-06.png" width="600">
+<img src="assets/Model_Logic.png" width="700">
 
 ## Physical model
 
