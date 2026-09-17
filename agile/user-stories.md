@@ -1,5 +1,11 @@
 # User Stories, Priorities, and Planned Sprints — DatumLex
 
+For the client-facing functions of the software, see the
+[Product Backlog in the repository README](../README.md#product-backlog).
+This detailed catalog also retains the technical and enabling stories needed to
+deliver those functions. README CUS references summarize outcomes and do not
+replace these issue IDs or create additional units for estimation.
+
 ## Snapshot and reading guide
 
 Snapshot reviewed on **2026-09-15** against the live [GitHub Project](https://github.com/orgs/DatumLex/projects/1)
