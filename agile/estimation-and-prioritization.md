@@ -76,6 +76,13 @@ velocity, and do not move statuses merely to introduce points.
 
 ## Priority: High, Medium, Low
 
+This section governs the GitHub Project's implementation priorities. The
+[README product backlog](../README.md#product-backlog) uses MoSCoW for the
+three-sprint product delivery, with independent US IDs and product priorities.
+Do not automatically copy Must/Should/Could into Project High/Medium/Low fields.
+Review product value, implementation dependencies, and capacity at the appropriate
+level; this distinction does not create duplicate estimates.
+
 | Priority | Decision rule |
 |---|---|
 | High | Absence prevents the minimum Sprint Goal, blocks several necessary outcomes, or makes the selected release unsafe or unreliable. |
