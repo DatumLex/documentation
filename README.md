@@ -66,6 +66,7 @@ documentation/
 ### Agile / Scrum
 - [Agile folder overview](agile/README.md)
 - [User Stories, Priorities, and Planned Sprints](agile/user-stories.md)
+- [MoSCoW and Planning Poker Guide](agile/moscow-and-planning-poker.md)
 - [Planning Poker, estimativa, and Prioritization](agile/estimation-and-prioritization.md)
 - [Agile Glossary (Epics, User Stories, Tasks)](agile/glossary.md)
 - [Backlog / Board (GitHub Project)](https://github.com/orgs/DatumLex/projects/1/views/9?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%5D)
@@ -133,28 +134,28 @@ excluded capabilities are recorded under **Won't Have this time** below.
 The planned sprint remains the target increment. A release-level Must Have does
 not have to be implemented in Sprint 1.
 
-| ID | MoSCoW priority | User story | Planned sprint |
-|---|---|---|---|
-| US-01 | Must Have | As a legal professional, I want to open one shared dashboard by link and explore real TJDFT Civil Liability data from 2023 onward, so that I can research the agreed scope in one place. | Sprint 1 |
-| US-02 | Must Have | As a legal professional, I want to filter the analysis by period and appeal outcome while seeing the fixed court and subject, so that the indicators reflect the scope I am researching. | Sprint 1 |
-| US-03 | Must Have | As a lawyer or judicial advisor, I want to see analyzed appeal counts and evidenced granted/denied indicators, including the grant rate, so that I can understand historical merits within the selected scope. | Sprint 1 |
-| US-04 | Must Have | As a legal professional, I want to compare granted and denied appeals in a chart, so that I can interpret the distribution of evidenced outcomes at a glance. | Sprint 1 |
-| US-06 | Must Have | As a legal professional, I want to see the source, update date, calculation method, denominator, and coverage of the indicators, so that I can interpret and cite them in context. | Sprint 1 |
-| US-07 | Must Have | As a legal professional, I want unknown outcomes, unavailable data, empty results, and loading errors to be clearly identified, so that I do not mistake missing evidence for a denied appeal or a real zero. | Sprint 1 |
-| US-08 | Must Have | As a lawyer or magistrate, I want to consult relevant STJ jurisprudence and precedents alongside TJDFT analysis, so that I can examine the superior-court context for the legal issue. | Sprint 2 |
-| US-09 | Must Have | As a lawyer or magistrate, I want to find related open doctrine from BDJur and other approved sources with attribution and source links, so that I can connect the observed decisions to legal scholarship. | Sprint 2 |
-| US-10 | Must Have | As a legal professional, I want to navigate from an analytical result to related TJDFT, STJ, precedent, and doctrine records and understand why they were linked, so that I can audit the evidence. | Sprint 2 |
-| US-11 | Must Have | As a litigating lawyer, I want to inspect extracted theses and grounds associated with outcomes, with supporting passages, confidence, and review information, so that I can verify the legal reasoning behind the numbers. | Sprint 2 |
-| US-12 | Must Have | As a lawyer or judicial advisor, I want to see how TJDFT decisions adhere to relevant STJ precedents, with methodology and supporting decisions, so that I can assess alignment with superior-court guidance. | Sprint 2 |
-| US-15 | Must Have | As a lawyer, I want to export the selected analysis as a formatted PDF with filters, indicators, charts, methodology, sources, and update date, so that I can present reproducible evidence in an opinion or client meeting. | Sprint 3 |
-| US-05 | Should Have | As a lawyer or magistrate, I want to compare first- and second-instance merit results where evidence supports the comparison, so that I can distinguish initial judgments from appeal outcomes. | Sprint 1 — alignment pending* |
-| US-13 | Should Have | As a lawyer or magistrate, I want to compare how chambers or panels treat the same thesis, with comparable samples and limitations, so that I can identify evidenced divergences in legal understanding. | Sprint 2 |
-| US-16 | Should Have | As a legal operations professional, I want to export filtered evidence and analytical metadata to XLSX, so that I can audit and continue the research in a spreadsheet. | Sprint 3 |
-| US-17 | Should Have | As a litigating lawyer, I want an AI-assisted narrative grounded in the selected indicators and retrieved decisions, with citations and my review before export, so that I can support strategy discussions and explain findings to clients. | Sprint 3 |
-| US-18 | Should Have | As a lawyer or judicial advisor, I want to analyze Consumer Law outcomes and theses using the same traceable analytics, so that I can investigate this additional practice area. | Sprint 3 |
-| US-19 | Should Have | As a lawyer or judicial advisor, I want to analyze contractual disputes, outcomes, and theses using the same traceable analytics, so that I can compare legal reasoning in Contracts. | Sprint 3 |
-| US-14 | Could Have | As a legal professional, I want to explore how outcomes and theses evolve over time, with coverage and methodology changes explained, so that I can identify historical trends. | Sprint 2 |
-| US-20 | Could Have | As a lawyer, magistrate, or judicial advisor, I want fewer repeated steps and clearer transitions between filters, evidence, and report review, so that recurring research is more convenient. | Sprint 3 |
+| ID | MoSCoW priority | User story | Estimate (SP) | Planned sprint |
+|---|---|---|---|---|
+| US-01 | Must Have | As a legal professional, I want to open one shared dashboard by link and explore real TJDFT Civil Liability data from 2023 onward, so that I can research the agreed scope in one place. | Pending | Sprint 1 |
+| US-02 | Must Have | As a legal professional, I want to filter the analysis by period and appeal outcome while seeing the fixed court and subject, so that the indicators reflect the scope I am researching. | Pending | Sprint 1 |
+| US-03 | Must Have | As a lawyer or judicial advisor, I want to see analyzed appeal counts and evidenced granted/denied indicators, including the grant rate, so that I can understand historical merits within the selected scope. | Pending | Sprint 1 |
+| US-04 | Must Have | As a legal professional, I want to compare granted and denied appeals in a chart, so that I can interpret the distribution of evidenced outcomes at a glance. | Pending | Sprint 1 |
+| US-06 | Must Have | As a legal professional, I want to see the source, update date, calculation method, denominator, and coverage of the indicators, so that I can interpret and cite them in context. | Pending | Sprint 1 |
+| US-07 | Must Have | As a legal professional, I want unknown outcomes, unavailable data, empty results, and loading errors to be clearly identified, so that I do not mistake missing evidence for a denied appeal or a real zero. | Pending | Sprint 1 |
+| US-08 | Must Have | As a lawyer or magistrate, I want to consult relevant STJ jurisprudence and precedents alongside TJDFT analysis, so that I can examine the superior-court context for the legal issue. | Pending | Sprint 2 |
+| US-09 | Must Have | As a lawyer or magistrate, I want to find related open doctrine from BDJur and other approved sources with attribution and source links, so that I can connect the observed decisions to legal scholarship. | Pending | Sprint 2 |
+| US-10 | Must Have | As a legal professional, I want to navigate from an analytical result to related TJDFT, STJ, precedent, and doctrine records and understand why they were linked, so that I can audit the evidence. | Pending | Sprint 2 |
+| US-11 | Must Have | As a litigating lawyer, I want to inspect extracted theses and grounds associated with outcomes, with supporting passages, confidence, and review information, so that I can verify the legal reasoning behind the numbers. | Pending | Sprint 2 |
+| US-12 | Must Have | As a lawyer or judicial advisor, I want to see how TJDFT decisions adhere to relevant STJ precedents, with methodology and supporting decisions, so that I can assess alignment with superior-court guidance. | Pending | Sprint 2 |
+| US-15 | Must Have | As a lawyer, I want to export the selected analysis as a formatted PDF with filters, indicators, charts, methodology, sources, and update date, so that I can present reproducible evidence in an opinion or client meeting. | Pending | Sprint 3 |
+| US-05 | Should Have | As a lawyer or magistrate, I want to compare first- and second-instance merit results where evidence supports the comparison, so that I can distinguish initial judgments from appeal outcomes. | Pending | Sprint 1 — alignment pending* |
+| US-13 | Should Have | As a lawyer or magistrate, I want to compare how chambers or panels treat the same thesis, with comparable samples and limitations, so that I can identify evidenced divergences in legal understanding. | Pending | Sprint 2 |
+| US-16 | Should Have | As a legal operations professional, I want to export filtered evidence and analytical metadata to XLSX, so that I can audit and continue the research in a spreadsheet. | Pending | Sprint 3 |
+| US-17 | Should Have | As a litigating lawyer, I want an AI-assisted narrative grounded in the selected indicators and retrieved decisions, with citations and my review before export, so that I can support strategy discussions and explain findings to clients. | Pending | Sprint 3 |
+| US-18 | Should Have | As a lawyer or judicial advisor, I want to analyze Consumer Law outcomes and theses using the same traceable analytics, so that I can investigate this additional practice area. | Pending | Sprint 3 |
+| US-19 | Should Have | As a lawyer or judicial advisor, I want to analyze contractual disputes, outcomes, and theses using the same traceable analytics, so that I can compare legal reasoning in Contracts. | Pending | Sprint 3 |
+| US-14 | Could Have | As a legal professional, I want to explore how outcomes and theses evolve over time, with coverage and methodology changes explained, so that I can identify historical trends. | Pending | Sprint 2 |
+| US-20 | Could Have | As a lawyer, magistrate, or judicial advisor, I want fewer repeated steps and clearer transitions between filters, evidence, and report review, so that recurring research is more convenient. | Pending | Sprint 3 |
 
 ### MoSCoW criteria
 
@@ -166,6 +167,31 @@ not have to be implemented in Sprint 1.
 | Won't Have this time | Explicitly excluded from Sprints 1–3; no delivery sprint is assigned. This is not a promise of a future feature. |
 
 Source: [Agile Business Consortium — MoSCoW prioritization](https://www.agilebusiness.org/resource/what-is-moscow-prioritization/).
+
+### Planning Poker criteria
+
+**MoSCoW defines delivery importance; Planning Poker estimates relative effort.**
+The **Estimate (SP)** column applies Planning Poker to each product user story.
+SP means story points and includes complexity, uncertainty, and the work needed
+to meet the Definition of Done. Points are not hours or a delivery guarantee.
+
+| Scale or state | How to use it |
+|---|---|
+| 1, 2, 3, 5, 8 | Compare increasing effort with reference stories agreed by the team. |
+| 13 | Discuss splitting the story into smaller useful outcomes. |
+| 21 | Coarse estimate for refinement; split before selecting it for a sprint. |
+| Pending | Team estimation has not been recorded. It does not mean zero effort. |
+
+The PO clarifies the story and acceptance criteria. Delivery contributors choose
+cards privately, reveal them together, discuss differences, and vote again until
+they agree. Record the result and session evidence; a proposed number is not team
+consensus. Use `?` in discussion when more information is needed and keep the
+estimate pending. MoSCoW categories do not determine point values.
+
+All 20 estimates are initially **Pending** until the team performs this process.
+See the [MoSCoW and Planning Poker guide](agile/moscow-and-planning-poker.md) for
+examples, responsibilities, and recording rules, and the
+[Planning Poker reference](https://www.mountaingoatsoftware.com/agile/story-points/planning-poker).
 
 ### How this applies to DatumLex
 
@@ -218,8 +244,11 @@ enter in Sprint 3. Source access and reuse rights must be validated. Missing
 evidence stays **unknown/unavailable**, and historical patterns do not guarantee
 future outcomes.
 
-Team Planning Poker estimates remain in the Project's **`estimativa`** field.
-This product summary does not add a second story-point total.
+Operational story estimates remain in the Project's **`estimativa`** field.
+README product estimates support refinement and do not add a second velocity
+total. Because the two story catalogs have independent IDs and scopes, do not
+copy points by US number or add their totals together; see the
+[mapping and counting rules](agile/moscow-and-planning-poker.md#keep-the-readme-and-project-consistent).
 
 ## 📈 Sprint Objectives
 
