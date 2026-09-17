@@ -25,6 +25,15 @@ points field or use `Size` as a competing points total. GitHub exposes fields to
 item types: story-only use is a team agreement, not a UI restriction. Number fields
 support totals but do not enforce Fibonacci values; check the scale during refinement.
 
+## README product estimates
+
+The README combines MoSCoW priority, **Estimate (SP)**, and planned sprint for
+client-facing stories. Its US IDs and scopes are independent of Project stories.
+Product estimates remain `Pending` until the team records an agreed scope and vote.
+Use the [MoSCoW and Planning Poker guide](moscow-and-planning-poker.md) to maintain
+this view. Never copy estimates by matching US numbers or add the two views together;
+sprint reporting counts unique selected Project stories only.
+
 ## Estimate stories once
 
 Estimate the complete outcome: implementation, data work, tests, review,
