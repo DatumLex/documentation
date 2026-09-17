@@ -8,6 +8,7 @@ This folder documents how the LegacyTech team plans, reviews, and tracks DatumLe
 |---|---|---|
 | [User-story catalog](user-stories.md) | Snapshot of all stories, current priorities, and planned delivery. | Refinement and stakeholder review. |
 | [MoSCoW and Planning Poker](moscow-and-planning-poker.md) | Explain the README product priorities, story-point scale, team voting, and relationship with the Project. | Product refinement and estimation sessions. |
+| [Project MoSCoW review — September 17](priority-review-2026-09-17.md) | Record the Priority option migration, reclassifications, and before/after counts. | Audit and stakeholder review. |
 | [Estimation and prioritization](estimation-and-prioritization.md) | Story-only `estimativa`, Planning Poker, priority and capacity rules. | Refinement, planning, and reporting. |
 | [Agile Glossary](glossary.md) | Define the backlog hierarchy, board statuses, and shared agile language. | Onboarding, refinement, and daily work. |
 | [Definition of Ready](definition-of-ready.md) | Explain the clarity and available inputs required to start. | Refinement, Sprint Planning, and transition to Ready. |

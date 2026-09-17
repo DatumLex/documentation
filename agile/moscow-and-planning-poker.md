@@ -35,8 +35,10 @@ needed. Review the balance by estimated effort, not by counting story rows.
 
 These categories follow the [Agile Business Consortium's MoSCoW model](https://www.agilebusiness.org/resource/what-is-moscow-prioritization/).
 DatumLex's current classifications are explained in the
-[README criteria](../README.md#moscow-criteria). They do not automatically replace
-Project High/Medium/Low priorities or establish new client approval.
+[README criteria](../README.md#moscow-criteria). The Project's **Priority** field
+uses these same four options following the [September 17 review](priority-review-2026-09-17.md).
+Map product capabilities to implementation scope and dependencies; independent US
+numbers are not a mapping. Reprioritization does not establish new client approval.
 
 ## Planning Poker: discuss effort together
 

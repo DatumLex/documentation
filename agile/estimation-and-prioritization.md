@@ -48,7 +48,7 @@ or infrastructure stories exist, agree boundaries so shared work is counted once
 feature stories still include their own validation and integration.
 
 Points are not hours, individual performance targets, or delivery guarantees.
-There is no fixed points-to-days conversion or link between High priority and size.
+There is no fixed points-to-days conversion or link between Must Have priority and size.
 
 ## Planning Poker
 
@@ -83,31 +83,41 @@ refinement. Label later sizing of started Sprint 1 stories as retrospective or
 remaining-work analysis; do not fabricate a pre-sprint baseline or historical
 velocity, and do not move statuses merely to introduce points.
 
-## Priority: High, Medium, Low
+## Priority: MoSCoW
 
-This section governs the GitHub Project's implementation priorities. The
-[README product backlog](../README.md#product-backlog) uses MoSCoW for the
-three-sprint product delivery, with independent US IDs and product priorities.
-Do not automatically copy Must/Should/Could into Project High/Medium/Low fields.
-Review product value, implementation dependencies, and capacity at the appropriate
-level; this distinction does not create duplicate estimates.
+The GitHub Project's existing **Priority** single-select field uses **Must Have**,
+**Should Have**, **Could Have**, and **Won't Have this time**, matching the
+[README product backlog](../README.md#product-backlog). The delivery window is
+Sprints 1–3; a Must Have does not necessarily belong in Sprint 1.
 
 | Priority | Decision rule |
 |---|---|
-| High | Absence prevents the minimum Sprint Goal, blocks several necessary outcomes, or makes the selected release unsafe or unreliable. |
-| Medium | Important planned value that follows the foundation and can be sequenced or renegotiated before the minimum core. |
-| Low | Refinement that can be deferred with little impact on the sprint objective. |
+| Must Have | Required for the viable, trustworthy minimum delivery or an essential dependency of that outcome. |
+| Should Have | Important and planned, with a workable temporary alternative. Deferral requires an explicit scope decision. |
+| Could Have | Useful refinement with lower impact if deferred; reconsider first when capacity is tight. |
+| Won't Have this time | Explicitly excluded from Sprints 1–3; no promise of later delivery. This is not a status. |
 
-Applicable DoD is mandatory at every priority. A test, security control, citation,
-or provenance criterion does not alone make an optional feature High. Defer the
-feature rather than dropping its protections. A blocked High stays blocked; a Ready
-Medium may execute first. Do not inherit task priority mechanically from its parent
-or compute story priority from its highest child.
+The [September 17 review](priority-review-2026-09-17.md) records the option migration
+and item-level changes. Match capabilities, acceptance criteria, and dependencies;
+README and Project US IDs remain independent. A required task is protected with
+its outcome. Supporting work with an equivalent temporary approach can have a
+different priority, but its acceptance criteria cannot simply be skipped.
 
-Order within each category by dependency, value, risk, and capacity. There is no
-High quota, but a backlog dominated by High needs a minimum-delivery discussion.
-The [story catalog](user-stories.md) records current fields, not a claim that the
-distribution is final or that proposed changes have been applied.
+Applicable DoD remains mandatory. Safeguards for a Should Have feature remain
+required whenever that feature is delivered; defer the capability as a whole if
+necessary. Tests or security words in a task title do not by themselves promote
+an optional feature to Must Have. Required academic deliverables remain planned.
+
+Keep readiness separate: a blocked Must Have stays blocked, while a Ready Should
+Have may start. Do not infer story priority from its highest child or make all
+children Must Have because their epic includes a core outcome. Review the actual
+dependency. Never change status, Sprint, dates, assignees, or estimates as a side
+effect of priority refinement.
+
+There is no category quota. Discuss excessive protected scope using agreed effort
+and available capacity, not row counts. Splitting one core capability into many
+technical tasks increases the number of Must Have rows without adding client value.
+If the minimum delivery does not fit, negotiate scope explicitly.
 
 ## Sprint planning and reporting
 
