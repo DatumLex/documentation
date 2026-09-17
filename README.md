@@ -120,51 +120,57 @@ from August 31 through September 15, 2026, including unresolved backlog mismatch
 
 ## Product Backlog
 
-These client-facing user stories describe the software's functions and their value
-to lawyers, magistrates, and judicial advisors. They summarize the
-[client direction](product/client-alignment.md) and the [delivery roadmap](product/product-roadmap.md).
-The **CUS** IDs identify this product view; the linked **US** IDs refer to existing
-GitHub stories that deliver it. Several implementation stories may support one
-client outcome. The complete implementation catalog remains in
-[agile/user-stories.md](agile/user-stories.md).
+These user stories describe DatumLex's functions and their value to lawyers,
+magistrates, and judicial advisors, based on the
+[client direction](product/client-alignment.md) and [roadmap](product/product-roadmap.md).
+The **US** IDs below identify this product backlog. Its numbering and priorities
+are independent of the implementation stories in the GitHub Project; consult the
+[implementation catalog](agile/user-stories.md) for engineering work.
 
-**Priority** follows the related stories in the September 15 backlog snapshot,
-except the explicitly marked G1/G2 alignment item. **Planned sprint** is a delivery
-forecast, not a statement that the feature is finished.
+The table is ordered by **High → Medium → Low**, using product value and the
+minimum usable delivery as the criteria. Planned sprints are delivery forecasts.
 
-| ID | Priority | Client user story | Planned sprint | Related backlog stories |
-|---|---|---|---|---|
-| CUS-01 | High | As a legal professional, I want to open one shared dashboard by link and explore real TJDFT Civil Liability data from 2023 onward, so that I can research the agreed scope in one place. | Sprint 1 | [US-16](https://github.com/DatumLex/datumlex-core/issues/21), [US-18](https://github.com/DatumLex/datumlex-core/issues/24) |
-| CUS-02 | High | As a legal professional, I want to filter the analysis by period and appeal outcome while seeing the fixed court and subject, so that the indicators reflect the scope I am researching. | Sprint 1 | [US-15](https://github.com/DatumLex/datumlex-core/issues/20) |
-| CUS-03 | High | As a lawyer or judicial advisor, I want to see analyzed appeal counts and evidenced granted/denied indicators, including the grant rate, so that I can understand historical merits within the selected scope. | Sprint 1 | [US-13](https://github.com/DatumLex/datumlex-core/issues/18) |
-| CUS-04 | High | As a legal professional, I want to compare granted and denied appeals in a chart, so that I can interpret the distribution of evidenced outcomes at a glance. | Sprint 1 | [US-14](https://github.com/DatumLex/datumlex-core/issues/19) |
-| CUS-05 | High* | As a lawyer or magistrate, I want to compare first- and second-instance merit results where evidence supports the comparison, so that I can distinguish initial judgments from appeal outcomes. | Sprint 1 — alignment pending* | [US-03](https://github.com/DatumLex/datumlex-core/issues/5), [US-14](https://github.com/DatumLex/datumlex-core/issues/19) |
-| CUS-06 | High | As a legal professional, I want to see the source, update date, calculation method, denominator, and coverage of the indicators, so that I can interpret and cite them in context. | Sprint 1 | [US-03](https://github.com/DatumLex/datumlex-core/issues/5), [US-13](https://github.com/DatumLex/datumlex-core/issues/18), [US-16](https://github.com/DatumLex/datumlex-core/issues/21) |
-| CUS-07 | High | As a legal professional, I want unknown outcomes, unavailable data, empty results, and loading errors to be clearly identified, so that I do not mistake missing evidence for a denied appeal or a real zero. | Sprint 1 | [US-13](https://github.com/DatumLex/datumlex-core/issues/18), [US-16](https://github.com/DatumLex/datumlex-core/issues/21) |
-| CUS-08 | High | As a lawyer or magistrate, I want to consult relevant STJ jurisprudence and precedents alongside TJDFT analysis, so that I can examine the superior-court context for the legal issue. | Sprint 2 | [US-28](https://github.com/DatumLex/datumlex-core/issues/97) |
-| CUS-09 | High | As a lawyer or magistrate, I want to find related open doctrine from BDJur and other approved sources with attribution and source links, so that I can connect the observed decisions to legal scholarship. | Sprint 2 | [US-29](https://github.com/DatumLex/datumlex-core/issues/100) |
-| CUS-10 | High | As a legal professional, I want to navigate from an analytical result to related TJDFT, STJ, precedent, and doctrine records and understand why they were linked, so that I can audit the evidence. | Sprint 2 | [US-30](https://github.com/DatumLex/datumlex-core/issues/103) |
-| CUS-11 | High | As a litigating lawyer, I want to inspect extracted theses and grounds associated with outcomes, with supporting passages, confidence, and review information, so that I can verify the legal reasoning behind the numbers. | Sprint 2 | [US-31](https://github.com/DatumLex/datumlex-core/issues/107), [US-32](https://github.com/DatumLex/datumlex-core/issues/110), [US-33](https://github.com/DatumLex/datumlex-core/issues/113) |
-| CUS-12 | High | As a lawyer or judicial advisor, I want to see how TJDFT decisions adhere to relevant STJ precedents, with methodology and supporting decisions, so that I can assess alignment with superior-court guidance. | Sprint 2 | [US-34](https://github.com/DatumLex/datumlex-core/issues/117) |
-| CUS-13 | High | As a lawyer or magistrate, I want to compare how chambers or panels treat the same thesis, with comparable samples and limitations, so that I can identify evidenced divergences in legal understanding. | Sprint 2 | [US-35](https://github.com/DatumLex/datumlex-core/issues/120) |
-| CUS-14 | Medium | As a legal professional, I want to explore how outcomes and theses evolve over time, with coverage and methodology changes explained, so that I can identify historical trends. | Sprint 2 | [US-36](https://github.com/DatumLex/datumlex-core/issues/123) |
-| CUS-15 | High | As a lawyer, I want to export the selected analysis as a formatted PDF with filters, indicators, charts, methodology, sources, and update date, so that I can present reproducible evidence in an opinion or client meeting. | Sprint 3 | [US-37](https://github.com/DatumLex/datumlex-core/issues/127) |
-| CUS-16 | Medium | As a legal operations professional, I want to export filtered evidence and analytical metadata to XLSX, so that I can audit and continue the research in a spreadsheet. | Sprint 3 | [US-38](https://github.com/DatumLex/datumlex-core/issues/130) |
-| CUS-17 | High | As a litigating lawyer, I want an AI-assisted narrative grounded in the selected indicators and retrieved decisions, with citations and my review before export, so that I can support strategy discussions and explain findings to clients. | Sprint 3 | [US-39](https://github.com/DatumLex/datumlex-core/issues/133) |
-| CUS-18 | Medium | As a lawyer or judicial advisor, I want to analyze Consumer Law outcomes and theses using the same traceable analytics, so that I can investigate this additional practice area. | Sprint 3 | [US-40](https://github.com/DatumLex/datumlex-core/issues/137) |
-| CUS-19 | Medium | As a lawyer or judicial advisor, I want to analyze contractual disputes, outcomes, and theses using the same traceable analytics, so that I can compare legal reasoning in Contracts. | Sprint 3 | [US-41](https://github.com/DatumLex/datumlex-core/issues/140) |
-| CUS-20 | High | As a lawyer, magistrate, or judicial advisor, I want a clear journey from filtering a question to inspecting evidence, comparing results, and reviewing a report, so that the platform supports my professional research efficiently. | Sprint 3 | [US-42](https://github.com/DatumLex/datumlex-core/issues/143) |
+| ID | Priority | User story | Planned sprint |
+|---|---|---|---|
+| US-01 | High | As a legal professional, I want to open one shared dashboard by link and explore real TJDFT Civil Liability data from 2023 onward, so that I can research the agreed scope in one place. | Sprint 1 |
+| US-02 | High | As a legal professional, I want to filter the analysis by period and appeal outcome while seeing the fixed court and subject, so that the indicators reflect the scope I am researching. | Sprint 1 |
+| US-03 | High | As a lawyer or judicial advisor, I want to see analyzed appeal counts and evidenced granted/denied indicators, including the grant rate, so that I can understand historical merits within the selected scope. | Sprint 1 |
+| US-05 | High | As a lawyer or magistrate, I want to compare first- and second-instance merit results where evidence supports the comparison, so that I can distinguish initial judgments from appeal outcomes. | Sprint 1 — alignment pending* |
+| US-06 | High | As a legal professional, I want to see the source, update date, calculation method, denominator, and coverage of the indicators, so that I can interpret and cite them in context. | Sprint 1 |
+| US-07 | High | As a legal professional, I want unknown outcomes, unavailable data, empty results, and loading errors to be clearly identified, so that I do not mistake missing evidence for a denied appeal or a real zero. | Sprint 1 |
+| US-08 | High | As a lawyer or magistrate, I want to consult relevant STJ jurisprudence and precedents alongside TJDFT analysis, so that I can examine the superior-court context for the legal issue. | Sprint 2 |
+| US-09 | High | As a lawyer or magistrate, I want to find related open doctrine from BDJur and other approved sources with attribution and source links, so that I can connect the observed decisions to legal scholarship. | Sprint 2 |
+| US-10 | High | As a legal professional, I want to navigate from an analytical result to related TJDFT, STJ, precedent, and doctrine records and understand why they were linked, so that I can audit the evidence. | Sprint 2 |
+| US-11 | High | As a litigating lawyer, I want to inspect extracted theses and grounds associated with outcomes, with supporting passages, confidence, and review information, so that I can verify the legal reasoning behind the numbers. | Sprint 2 |
+| US-12 | High | As a lawyer or judicial advisor, I want to see how TJDFT decisions adhere to relevant STJ precedents, with methodology and supporting decisions, so that I can assess alignment with superior-court guidance. | Sprint 2 |
+| US-15 | High | As a lawyer, I want to export the selected analysis as a formatted PDF with filters, indicators, charts, methodology, sources, and update date, so that I can present reproducible evidence in an opinion or client meeting. | Sprint 3 |
+| US-04 | Medium | As a legal professional, I want to compare granted and denied appeals in a chart, so that I can interpret the distribution of evidenced outcomes at a glance. | Sprint 1 |
+| US-13 | Medium | As a lawyer or magistrate, I want to compare how chambers or panels treat the same thesis, with comparable samples and limitations, so that I can identify evidenced divergences in legal understanding. | Sprint 2 |
+| US-14 | Medium | As a legal professional, I want to explore how outcomes and theses evolve over time, with coverage and methodology changes explained, so that I can identify historical trends. | Sprint 2 |
+| US-16 | Medium | As a legal operations professional, I want to export filtered evidence and analytical metadata to XLSX, so that I can audit and continue the research in a spreadsheet. | Sprint 3 |
+| US-17 | Medium | As a litigating lawyer, I want an AI-assisted narrative grounded in the selected indicators and retrieved decisions, with citations and my review before export, so that I can support strategy discussions and explain findings to clients. | Sprint 3 |
+| US-18 | Medium | As a lawyer or judicial advisor, I want to analyze Consumer Law outcomes and theses using the same traceable analytics, so that I can investigate this additional practice area. | Sprint 3 |
+| US-19 | Medium | As a lawyer or judicial advisor, I want to analyze contractual disputes, outcomes, and theses using the same traceable analytics, so that I can compare legal reasoning in Contracts. | Sprint 3 |
+| US-20 | Low | As a lawyer, magistrate, or judicial advisor, I want fewer repeated steps and clearer transitions between filters, evidence, and report review, so that recurring research is more convenient. | Sprint 3 |
 
-**Priority key:** High supports the minimum sprint goal or essential evidence and
-trust; Medium adds important planned value after that foundation; Low identifies
-improvements that can be deferred without compromising the goal. No Low items are
-listed in this client-outcome summary. Priority does not waive quality criteria.
+### Priority criteria
 
-\* **CUS-05:** this is the latest client expectation, with High recommended at the
-product level. Its metric, source feasibility, and chart acceptance criteria still
-need [G1/G2 reconciliation](product/client-alignment.md#reconciliation-items-identified-on-september-15).
-It is not a newly created or reprioritized GitHub issue. A second-instance record
-alone does not establish a linked appeal, reversal, or success.
+| Priority | Meaning |
+|---|---|
+| High | Essential to deliver useful, trustworthy merit and thesis analytics: a working dashboard, filters, evidenced outcomes, source transparency, cross-source research, precedent adherence, and a reproducible report. |
+| Medium | Important analytical depth or additional value after the core: graphical outcome comparison, divergence and temporal views, XLSX, assisted narratives, and Consumer Law/Contracts expansion. |
+| Low | Convenience refinements that can be deferred while the complete professional research journey remains usable. |
+
+US-20 covers fewer repeated steps and clearer transitions in an already working
+journey. Essential navigation, accessibility, evidence, and report review remain
+part of the core features at every priority. Deferring convenience must not remove
+quality safeguards. A High item may belong to a later sprint when it depends on
+earlier capabilities; priority and delivery sequence are different decisions.
+
+\* **US-05:** the latest client expectation is a Sprint 1 G1/G2 merit comparison.
+Its metric, source feasibility, and chart acceptance criteria still need
+[G1/G2 reconciliation](product/client-alignment.md#reconciliation-items-identified-on-september-15).
+A second-instance record alone does not establish a linked appeal, reversal, or success.
 
 Sprint 1 uses **DataJud only**. STJ, precedents, and approved open doctrine enter in
 Sprint 2; PDF/XLSX, cited narratives, new subjects, and professional refinements
@@ -172,9 +178,8 @@ enter in Sprint 3. Source access and reuse rights must be validated. Missing
 evidence stays **unknown/unavailable**, and historical patterns do not guarantee
 future outcomes.
 
-Estimates remain on the linked GitHub stories in **`estimativa`**, pending team
-Planning Poker. CUS rows are a many-to-many product summary, so they receive no
-separate point totals; this avoids counting the same delivery work twice.
+Team Planning Poker estimates remain in the Project's **`estimativa`** field.
+This product summary does not add a second story-point total.
 
 ## 📈 Sprint Objectives
 
