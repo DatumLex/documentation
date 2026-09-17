@@ -127,45 +127,85 @@ The **US** IDs below identify this product backlog. Its numbering and priorities
 are independent of the implementation stories in the GitHub Project; consult the
 [implementation catalog](agile/user-stories.md) for engineering work.
 
-The table is ordered by **High → Medium → Low**, using product value and the
-minimum usable delivery as the criteria. Planned sprints are delivery forecasts.
+The table uses **MoSCoW**, a prioritization technique, for the product delivered
+across **Sprints 1–3**. It is ordered by **Must Have → Should Have → Could Have**;
+excluded capabilities are recorded under **Won't Have this time** below.
+The planned sprint remains the target increment. A release-level Must Have does
+not have to be implemented in Sprint 1.
 
-| ID | Priority | User story | Planned sprint |
+| ID | MoSCoW priority | User story | Planned sprint |
 |---|---|---|---|
-| US-01 | High | As a legal professional, I want to open one shared dashboard by link and explore real TJDFT Civil Liability data from 2023 onward, so that I can research the agreed scope in one place. | Sprint 1 |
-| US-02 | High | As a legal professional, I want to filter the analysis by period and appeal outcome while seeing the fixed court and subject, so that the indicators reflect the scope I am researching. | Sprint 1 |
-| US-03 | High | As a lawyer or judicial advisor, I want to see analyzed appeal counts and evidenced granted/denied indicators, including the grant rate, so that I can understand historical merits within the selected scope. | Sprint 1 |
-| US-05 | High | As a lawyer or magistrate, I want to compare first- and second-instance merit results where evidence supports the comparison, so that I can distinguish initial judgments from appeal outcomes. | Sprint 1 — alignment pending* |
-| US-06 | High | As a legal professional, I want to see the source, update date, calculation method, denominator, and coverage of the indicators, so that I can interpret and cite them in context. | Sprint 1 |
-| US-07 | High | As a legal professional, I want unknown outcomes, unavailable data, empty results, and loading errors to be clearly identified, so that I do not mistake missing evidence for a denied appeal or a real zero. | Sprint 1 |
-| US-08 | High | As a lawyer or magistrate, I want to consult relevant STJ jurisprudence and precedents alongside TJDFT analysis, so that I can examine the superior-court context for the legal issue. | Sprint 2 |
-| US-09 | High | As a lawyer or magistrate, I want to find related open doctrine from BDJur and other approved sources with attribution and source links, so that I can connect the observed decisions to legal scholarship. | Sprint 2 |
-| US-10 | High | As a legal professional, I want to navigate from an analytical result to related TJDFT, STJ, precedent, and doctrine records and understand why they were linked, so that I can audit the evidence. | Sprint 2 |
-| US-11 | High | As a litigating lawyer, I want to inspect extracted theses and grounds associated with outcomes, with supporting passages, confidence, and review information, so that I can verify the legal reasoning behind the numbers. | Sprint 2 |
-| US-12 | High | As a lawyer or judicial advisor, I want to see how TJDFT decisions adhere to relevant STJ precedents, with methodology and supporting decisions, so that I can assess alignment with superior-court guidance. | Sprint 2 |
-| US-15 | High | As a lawyer, I want to export the selected analysis as a formatted PDF with filters, indicators, charts, methodology, sources, and update date, so that I can present reproducible evidence in an opinion or client meeting. | Sprint 3 |
-| US-04 | Medium | As a legal professional, I want to compare granted and denied appeals in a chart, so that I can interpret the distribution of evidenced outcomes at a glance. | Sprint 1 |
-| US-13 | Medium | As a lawyer or magistrate, I want to compare how chambers or panels treat the same thesis, with comparable samples and limitations, so that I can identify evidenced divergences in legal understanding. | Sprint 2 |
-| US-14 | Medium | As a legal professional, I want to explore how outcomes and theses evolve over time, with coverage and methodology changes explained, so that I can identify historical trends. | Sprint 2 |
-| US-16 | Medium | As a legal operations professional, I want to export filtered evidence and analytical metadata to XLSX, so that I can audit and continue the research in a spreadsheet. | Sprint 3 |
-| US-17 | Medium | As a litigating lawyer, I want an AI-assisted narrative grounded in the selected indicators and retrieved decisions, with citations and my review before export, so that I can support strategy discussions and explain findings to clients. | Sprint 3 |
-| US-18 | Medium | As a lawyer or judicial advisor, I want to analyze Consumer Law outcomes and theses using the same traceable analytics, so that I can investigate this additional practice area. | Sprint 3 |
-| US-19 | Medium | As a lawyer or judicial advisor, I want to analyze contractual disputes, outcomes, and theses using the same traceable analytics, so that I can compare legal reasoning in Contracts. | Sprint 3 |
-| US-20 | Low | As a lawyer, magistrate, or judicial advisor, I want fewer repeated steps and clearer transitions between filters, evidence, and report review, so that recurring research is more convenient. | Sprint 3 |
+| US-01 | Must Have | As a legal professional, I want to open one shared dashboard by link and explore real TJDFT Civil Liability data from 2023 onward, so that I can research the agreed scope in one place. | Sprint 1 |
+| US-02 | Must Have | As a legal professional, I want to filter the analysis by period and appeal outcome while seeing the fixed court and subject, so that the indicators reflect the scope I am researching. | Sprint 1 |
+| US-03 | Must Have | As a lawyer or judicial advisor, I want to see analyzed appeal counts and evidenced granted/denied indicators, including the grant rate, so that I can understand historical merits within the selected scope. | Sprint 1 |
+| US-04 | Must Have | As a legal professional, I want to compare granted and denied appeals in a chart, so that I can interpret the distribution of evidenced outcomes at a glance. | Sprint 1 |
+| US-06 | Must Have | As a legal professional, I want to see the source, update date, calculation method, denominator, and coverage of the indicators, so that I can interpret and cite them in context. | Sprint 1 |
+| US-07 | Must Have | As a legal professional, I want unknown outcomes, unavailable data, empty results, and loading errors to be clearly identified, so that I do not mistake missing evidence for a denied appeal or a real zero. | Sprint 1 |
+| US-08 | Must Have | As a lawyer or magistrate, I want to consult relevant STJ jurisprudence and precedents alongside TJDFT analysis, so that I can examine the superior-court context for the legal issue. | Sprint 2 |
+| US-09 | Must Have | As a lawyer or magistrate, I want to find related open doctrine from BDJur and other approved sources with attribution and source links, so that I can connect the observed decisions to legal scholarship. | Sprint 2 |
+| US-10 | Must Have | As a legal professional, I want to navigate from an analytical result to related TJDFT, STJ, precedent, and doctrine records and understand why they were linked, so that I can audit the evidence. | Sprint 2 |
+| US-11 | Must Have | As a litigating lawyer, I want to inspect extracted theses and grounds associated with outcomes, with supporting passages, confidence, and review information, so that I can verify the legal reasoning behind the numbers. | Sprint 2 |
+| US-12 | Must Have | As a lawyer or judicial advisor, I want to see how TJDFT decisions adhere to relevant STJ precedents, with methodology and supporting decisions, so that I can assess alignment with superior-court guidance. | Sprint 2 |
+| US-15 | Must Have | As a lawyer, I want to export the selected analysis as a formatted PDF with filters, indicators, charts, methodology, sources, and update date, so that I can present reproducible evidence in an opinion or client meeting. | Sprint 3 |
+| US-05 | Should Have | As a lawyer or magistrate, I want to compare first- and second-instance merit results where evidence supports the comparison, so that I can distinguish initial judgments from appeal outcomes. | Sprint 1 — alignment pending* |
+| US-13 | Should Have | As a lawyer or magistrate, I want to compare how chambers or panels treat the same thesis, with comparable samples and limitations, so that I can identify evidenced divergences in legal understanding. | Sprint 2 |
+| US-16 | Should Have | As a legal operations professional, I want to export filtered evidence and analytical metadata to XLSX, so that I can audit and continue the research in a spreadsheet. | Sprint 3 |
+| US-17 | Should Have | As a litigating lawyer, I want an AI-assisted narrative grounded in the selected indicators and retrieved decisions, with citations and my review before export, so that I can support strategy discussions and explain findings to clients. | Sprint 3 |
+| US-18 | Should Have | As a lawyer or judicial advisor, I want to analyze Consumer Law outcomes and theses using the same traceable analytics, so that I can investigate this additional practice area. | Sprint 3 |
+| US-19 | Should Have | As a lawyer or judicial advisor, I want to analyze contractual disputes, outcomes, and theses using the same traceable analytics, so that I can compare legal reasoning in Contracts. | Sprint 3 |
+| US-14 | Could Have | As a legal professional, I want to explore how outcomes and theses evolve over time, with coverage and methodology changes explained, so that I can identify historical trends. | Sprint 2 |
+| US-20 | Could Have | As a lawyer, magistrate, or judicial advisor, I want fewer repeated steps and clearer transitions between filters, evidence, and report review, so that recurring research is more convenient. | Sprint 3 |
 
-### Priority criteria
+### MoSCoW criteria
 
-| Priority | Meaning |
+| Priority | Delivery decision |
 |---|---|
-| High | Essential to deliver useful, trustworthy merit and thesis analytics: a working dashboard, filters, evidenced outcomes, source transparency, cross-source research, precedent adherence, and a reproducible report. |
-| Medium | Important analytical depth or additional value after the core: graphical outcome comparison, divergence and temporal views, XLSX, assisted narratives, and Consumer Law/Contracts expansion. |
-| Low | Convenience refinements that can be deferred while the complete professional research journey remains usable. |
+| Must Have | Required for a viable, trustworthy release. Without it, the minimum product goal is not met. |
+| Should Have | Important and planned, but a workable temporary alternative exists. Defer only through an explicit scope decision. |
+| Could Have | Useful enhancement with a smaller impact if deferred; the first scope to reconsider when capacity is tight. |
+| Won't Have this time | Explicitly excluded from Sprints 1–3; no delivery sprint is assigned. This is not a promise of a future feature. |
 
-US-20 covers fewer repeated steps and clearer transitions in an already working
-journey. Essential navigation, accessibility, evidence, and report review remain
-part of the core features at every priority. Deferring convenience must not remove
-quality safeguards. A High item may belong to a later sprint when it depends on
-earlier capabilities; priority and delivery sequence are different decisions.
+Source: [Agile Business Consortium — MoSCoW prioritization](https://www.agilebusiness.org/resource/what-is-moscow-prioritization/).
+
+### How this applies to DatumLex
+
+- **Must Have:** the shared real-data dashboard, filters, initial merit metrics
+  and outcome chart, transparent evidence, STJ/open-doctrine integration,
+  explainable theses, precedent adherence, and reproducible PDF reporting deliver
+  the core client value. US-04's chart is part of the visual analytics baseline
+  and supports the charts required in US-15's PDF.
+- **Should Have:** G1/G2 comparison, chamber/panel divergence, XLSX, AI-assisted
+  narratives, and Consumer Law/Contracts expansion add substantial value. The
+  core appeal analysis remains useful while G1/G2 is reconciled; professionals
+  can inspect source evidence and write their own narrative, and Civil Liability
+  remains the initial subject. These alternatives involve a real loss of convenience
+  or coverage, which is why these features remain planned.
+- **Could Have:** US-14's temporal exploration and US-20's fewer repeated steps
+  improve the experience after core outcome/thesis analysis works. Essential
+  navigation, accessibility, source dates, evidence, and human review remain required.
+
+These are product-planning decisions, not an automatic conversion of Project
+High/Medium/Low values or new client acceptance. Planned sprints are retained.
+The PO and team review capacity and dependencies at refinement; any change to an
+agreed client delivery must be explicitly reconciled. Required tests, privacy,
+provenance, and quality criteria apply to every delivered feature. A Must Have
+must include its necessary dependencies in the protected scope.
+
+Review the balance using **estimated effort**, not the number of rows. Twelve
+Must Have stories out of twenty do not prove that only 60% of the effort is
+mandatory. Team estimates are still needed to assess capacity and leave room
+for uncertainty; if the protected scope does not fit, renegotiate or split scope.
+
+### Won't Have this time — Sprints 1–3
+
+| Capability outside this delivery | Reason |
+|---|---|
+| Student learning paths, OAB or competitive-exam preparation | The agreed audience is lawyers, magistrates, and judicial advisors. |
+| Case management, deadlines, and electronic filing | The product focuses on legal analytics and research. |
+| Separate portals or complex permission tiers for each professional role | A shared dashboard with interactive filters meets the agreed access model. |
+
+Guaranteed case-outcome prediction and replacing professional legal judgment
+remain outside the product's purpose, not features deferred to a later sprint.
 
 \* **US-05:** the latest client expectation is a Sprint 1 G1/G2 merit comparison.
 Its metric, source feasibility, and chart acceptance criteria still need
