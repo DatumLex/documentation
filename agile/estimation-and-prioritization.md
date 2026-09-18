@@ -97,8 +97,7 @@ Sprints 1–3; a Must Have does not necessarily belong in Sprint 1.
 | Could Have | Useful refinement with lower impact if deferred; reconsider first when capacity is tight. |
 | Won't Have this time | Explicitly excluded from Sprints 1–3; no promise of later delivery. This is not a status. |
 
-The [September 17 review](priority-review-2026-09-17.md) records the option migration
-and item-level changes. Match capabilities, acceptance criteria, and dependencies;
+Match capabilities, acceptance criteria, and dependencies;
 README and Project US IDs remain independent. A required task is protected with
 its outcome. Supporting work with an equivalent temporary approach can have a
 different priority, but its acceptance criteria cannot simply be skipped.
@@ -113,6 +112,34 @@ Have may start. Do not infer story priority from its highest child or make all
 children Must Have because their epic includes a core outcome. Review the actual
 dependency. Never change status, Sprint, dates, assignees, or estimates as a side
 effect of priority refinement.
+
+Apply a stricter dependency test before selecting Must Have: identify the minimum
+outcome that would fail and check whether a practical alternative preserves it.
+An important supporting task does not automatically inherit the parent's category.
+
+- **Consolidated documentation:** existing versioned architecture decisions and
+  endpoint contracts can support implementation while a unified reference is
+  completed. Required stack, API, modeling, and dictionary deliverables still belong
+  in the academic release; Should Have does not cancel that obligation.
+- **Environment and execution automation:** documented setup and reproducible
+  commands can support development and run automated suites/static analysis while
+  broader local-service standardization and CI orchestration are completed. Existing
+  required CI checks must still pass; no quality gate is disabled or waived.
+- **Release evidence:** reuse the same verified deployment, reconciliation, and
+  smoke results across issues. A concise checklist linking those results can serve
+  the release while additional automation and artifact consolidation are completed.
+  Tests, deployed checks, accessible behavior, and release evidence remain required.
+- **Cross-source matching:** an initial bounded set of human-reviewed links can
+  preserve the core evidence journey while deterministic candidate matching is
+  developed. Retain identifiers, source evidence, reviewer, method, uncertainty,
+  and coverage. Never present the bounded set as exhaustive or an unvalidated link
+  as established legal correspondence.
+
+These are temporary approaches to evaluate and validate, not claims that fallback
+implementations already exist. Before deferring a supporting item, verify the
+alternative satisfies every affected parent criterion and DoD. If it does not,
+the dependency remains protected. A lower priority neither completes the issue
+nor changes its acceptance criteria, planned sprint, or required release evidence.
 
 There is no category quota. Discuss excessive protected scope using agreed effort
 and available capacity, not row counts. Splitting one core capability into many

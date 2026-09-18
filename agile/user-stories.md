@@ -15,8 +15,8 @@ and `datumlex-core` issue bodies. Includes all **42 existing user stories**:
 stories are included for complete traceability; they are not verbatim client requests.
 Each linked issue remains authoritative for full acceptance criteria and dependencies.
 
-**Priority** below is the verified story-level Project value after the
-[MoSCoW review](priority-review-2026-09-17.md). It is independent of task priority.
+**Priority** below is the verified story-level Project value. It is independent
+of task priority and follows the [prioritization policy](estimation-and-prioritization.md#priority-moscow).
 **Planned delivery** is not a completion claim. Apply the
 [MoSCoW policy](estimation-and-prioritization.md#priority-moscow) to scope and
 dependencies; a safety criterion does not make every feature Must Have.
@@ -38,7 +38,7 @@ exports, grounded narratives, subject expansion, and professional refinement are
 | Story / issue | User need and value | Current Priority | Planned delivery | estimativa (SP) |
 |---|---|---|---|---|
 | [US-01 — Validate DataJud Access and Merit Feasibility (#3)](https://github.com/DatumLex/datumlex-core/issues/3) | As the data team, I want to validate access and actual outcome evidence, so that the merit indicator is traceable. | Must Have | Sprint 1 | Pending |
-| [US-02 — Document Stack, Architecture, and Scope Rationale (#4)](https://github.com/DatumLex/datumlex-core/issues/4) | As a team member, I want one consolidated technical decision document, so that I can understand and reproduce the solution. | Must Have | Sprint 1 | Pending |
+| [US-02 — Document Stack, Architecture, and Scope Rationale (#4)](https://github.com/DatumLex/datumlex-core/issues/4) | As a team member, I want one consolidated technical decision document, so that I can understand and reproduce the solution. | Should Have | Sprint 1 | Pending |
 | [US-03 — Define Sprint 1 Scope and Metric Methodology (#5)](https://github.com/DatumLex/datumlex-core/issues/5) | As the PO, I want an explicit scope and metric specification, so that the team implements consistent analytics. | Must Have | Sprint 1 | Pending |
 | [US-04 — Produce and Validate the Conceptual and Dimensional Model (#6)](https://github.com/DatumLex/datumlex-core/issues/6) | As a data engineer, I want a conceptual DW model with explicit grain, so that the model represents merit analysis correctly. | Must Have | Sprint 1 | Pending |
 | [US-05 — Produce Logical and Physical DW Models (#7)](https://github.com/DatumLex/datumlex-core/issues/7) | As a data engineer, I want detailed logical and physical models, so that the DW can be implemented with data integrity. | Must Have | Sprint 1 | Pending |
@@ -55,15 +55,15 @@ exports, grounded narratives, subject expansion, and professional refinement are
 | [US-16 — Integrate the Dashboard with Real Data (#21)](https://github.com/DatumLex/datumlex-core/issues/21) | As a team member, I want the mockup implemented as a working dashboard, so that the complete pipeline is demonstrable. | Must Have | Sprint 1 | Pending |
 | [US-17 — Provision PostgreSQL on Railway (#23)](https://github.com/DatumLex/datumlex-core/issues/23) | As a DevOps engineer, I want a Railway PostgreSQL environment, so that the approved DW is available to the backend. | Must Have | Sprint 1 | Pending |
 | [US-18 — Deploy the Dashboard on Vercel (#24)](https://github.com/DatumLex/datumlex-core/issues/24) | As a stakeholder, I want the first-sprint dashboard accessible by link, so that I can evaluate the working product. | Must Have | Sprint 1 | Pending |
-| [US-19 — Standardize Local Development (#25)](https://github.com/DatumLex/datumlex-core/issues/25) | As a developer, I want a reproducible local environment, so that I can run the solution and tests consistently. | Must Have | Sprint 1 | Pending |
+| [US-19 — Standardize Local Development (#25)](https://github.com/DatumLex/datumlex-core/issues/25) | As a developer, I want a reproducible local environment, so that I can run the solution and tests consistently. | Should Have | Sprint 1 | Pending |
 | [US-20 — Document the Approved Color Palette (#27)](https://github.com/DatumLex/datumlex-core/issues/27) | As a designer, I want documented color tokens from the approved mockup, so that the dashboard and presentation remain consistent. | Should Have | Sprint 1 | Pending |
 | [US-21 — Document and Apply the Dashboard Style Guide (#28)](https://github.com/DatumLex/datumlex-core/issues/28) | As a designer, I want a concise style guide for the supplied mockup, so that the implementation stays visually consistent. | Should Have | Sprint 1 | Pending |
 | [US-22 — Organize Approved Brand Assets (#29)](https://github.com/DatumLex/datumlex-core/issues/29) | As a team member, I want a lightweight repository brand center, so that I can reuse approved logo assets in the product and presentation. | Could Have | Sprint 1 | Pending |
-| [US-23 — Document the Analytics API (#74)](https://github.com/DatumLex/datumlex-core/issues/74) | As an API consumer, I want an accurate API reference with examples, so that I can integrate and test the dashboard reliably. | Must Have | Sprint 1 (issue scope; Project unset) | Pending |
+| [US-23 — Document the Analytics API (#74)](https://github.com/DatumLex/datumlex-core/issues/74) | As an API consumer, I want an accurate API reference with examples, so that I can integrate and test the dashboard reliably. | Should Have | Sprint 1 (issue scope; Project unset) | Pending |
 | [US-24 — Automate Unit and Integration Tests (#78)](https://github.com/DatumLex/datumlex-core/issues/78) | As a data engineer, I want automated checks for transformations and persistence, so that data and metrics remain correct as code changes. | Must Have | Sprint 1 | Pending |
 | [US-25 — Automate Functional System API Tests (#81)](https://github.com/DatumLex/datumlex-core/issues/81) | As an API consumer, I want automated black-box tests against the running backend, so that API behavior matches documented analytics. | Must Have | Sprint 1 | Pending |
 | [US-26 — Automate Functional System UI Tests (#84)](https://github.com/DatumLex/datumlex-core/issues/84) | As a stakeholder, I want automated browser tests of the dashboard journey, so that the released UI behaves as expected. | Must Have | Sprint 1 | Pending |
-| [US-27 — Run Static Analysis and Automated Tests in CI (#87)](https://github.com/DatumLex/datumlex-core/issues/87) | As a developer, I want repeatable CI quality checks, so that regressions are detected before release. | Must Have | Sprint 1 | Pending |
+| [US-27 — Run Static Analysis and Automated Tests in CI (#87)](https://github.com/DatumLex/datumlex-core/issues/87) | As a developer, I want repeatable CI quality checks, so that regressions are detected before release. | Should Have | Sprint 1 | Pending |
 
 ## Sprint 2
 
@@ -92,9 +92,9 @@ exports, grounded narratives, subject expansion, and professional refinement are
 
 ## Gaps and maintenance
 
-- **US-23 / #74:** Priority is now **Must Have**, reflecting the API contract and
-  reference needed for integration. Sprint remains blank in the Project; the issue
-  explicitly specifies Sprint 1. This priority-only review did not change Sprint.
+- **US-23 / #74:** Priority is **Should Have** for the consolidated API reference;
+  versioned endpoint contracts remain necessary for integration. Sprint remains
+  blank in the Project; the issue explicitly specifies Sprint 1.
 - **G1/G2:** the latest client request and US-14's replacement of the older G1/G2
   chart need reconciliation. See the [alignment record](../product/client-alignment.md#reconciliation-items-identified-on-september-15).
 - **NLP source text:** make TJDFT/STJ text retrieval and coverage dependencies
@@ -105,6 +105,5 @@ exports, grounded narratives, subject expansion, and professional refinement are
 When approved scope, priority, or planned delivery changes, update the Project and
 refresh this dated catalog through a reviewed PR. Preserve release snapshots for
 historical comparison. Do not copy task priorities into stories or infer completion
-from elapsed dates. The September 17 review changed only Project Priority options
-and classifications; issue status, assignee, dates, Sprint, estimates, and acceptance
-criteria were preserved.
+from elapsed dates. Priority maintenance does not change status, assignee, dates,
+Sprint, estimates, or acceptance criteria.
