@@ -154,6 +154,6 @@ NLP/generation models and export libraries require reviewed decisions; this docu
 does not select them implicitly. Versions, alternatives, operational limits, and
 court-selection evidence remain deliverables of US-02, not proven by this summary.
 
-Track effort in story-level `estimativa`, including migrations, source feasibility,
+Track effort in story-level `Estimate`, including migrations, source feasibility,
 validation, and documentation. See the [roadmap](../product/product-roadmap.md) and
 [estimation agreement](../agile/estimation-and-prioritization.md).

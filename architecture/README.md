@@ -24,7 +24,7 @@ This is the folder evaluators will check first to understand *why* the system is
 ## Backlog and estimation
 
 Modeling, source investigation, contracts, migrations, and tests contribute to
-the parent story's `estimativa`; do not duplicate points on tasks. Follow the
+the parent story's `Estimate`; do not duplicate points on tasks. Follow the
 [estimation policy](../agile/estimation-and-prioritization.md) and
 [roadmap](../product/product-roadmap.md). Diagrams alone do not establish an approved
 dictionary, implementation, or validated source coverage.

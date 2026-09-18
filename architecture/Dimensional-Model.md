@@ -4,7 +4,7 @@ These diagrams are modeling artifacts, not proof of approval or implementation.
 US-04–US-06 require consistent grain, keys, outcomes, source mapping, and a reviewed
 data dictionary before dependent implementation. Sprint 1 is DataJud-only; Sprint 2
 provenance extensions require explicit reviewed revisions. Modeling effort is
-included in story-level `estimativa`; see the
+included in story-level `Estimate`; see the
 [planning agreement](../agile/estimation-and-prioritization.md).
 
 ## Conceptual model
