@@ -58,8 +58,10 @@ presented as verbatim client requests.
    acceptance criteria or claim a G1/G2 merit comparison is implemented.
 2. **US-23 metadata:** [#74](https://github.com/DatumLex/datumlex-core/issues/74) describes
    Sprint 1 API documentation. Priority and Sprint were blank on September 15.
-   The [September 17 review](../agile/priority-review-2026-09-17.md) set Priority to
-   Must Have. Sprint remains blank in the Project; its issue scope still says Sprint 1.
+   Priority is now Should Have for the consolidated API reference, following the
+   [prioritization policy](../agile/estimation-and-prioritization.md#priority-moscow).
+   Required endpoint contracts and API documentation remain part of delivery.
+   Sprint remains blank in the Project; its issue scope still says Sprint 1.
 3. **TJDFT text for NLP:** DataJud-only Sprint 1 evidence does not prove full-text
    availability for Sprint 2. US-28–US-33 need explicit TJDFT/STJ text-access and
    coverage evidence. Existing research is an input, not a validated connector;
