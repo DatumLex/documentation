@@ -33,7 +33,7 @@ Sprint Reviews and the final presentations are graded events, and both the indiv
 Use the [README sprint objectives](../README.md#-sprint-objectives),
 [roadmap](../product/product-roadmap.md), and [story catalog](../agile/user-stories.md)
 to distinguish planned from delivered scope. Include Priority and story-level
-`estimativa` when reporting a real planning baseline; disclose blank estimates
+`Estimate` when reporting a real planning baseline; disclose blank estimates
 and scope changes. Do not count child tasks again, invent historical velocity,
 or describe Sprint 1 as the complete MVP. Present the final thesis/evidence
 objective and known source limitations alongside release evidence.
