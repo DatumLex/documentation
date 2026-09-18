@@ -212,9 +212,11 @@ examples, responsibilities, and recording rules, and the
 
 The GitHub Project now uses the same **Must Have, Should Have, Could Have, and
 Won't Have this time** options in its **Priority** field. The
-[September 17 review](agile/priority-review-2026-09-17.md) aligns implementation
-work by capability and dependency, not by matching US numbers. This planning
-review does not establish new client acceptance. Planned sprints are retained.
+[prioritization policy](agile/estimation-and-prioritization.md#priority-moscow)
+maps implementation work by capability and dependency, not by matching US numbers.
+Supporting documentation, environment standardization, and additional automation
+can be Should Have when an equivalent temporary approach preserves the required
+outcome. Planned sprints and client acceptance criteria remain unchanged.
 The PO and team review capacity and dependencies at refinement; any change to an
 agreed client delivery must be explicitly reconciled. Required tests, privacy,
 provenance, and quality criteria apply to every delivered feature. A Must Have
