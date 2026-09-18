@@ -3,7 +3,7 @@
 Central documentation repository for **DatumLex** — an analytical platform (Data Warehouse + Web Dashboard) for consolidating and analyzing judicial decisions, jurisprudence, and academic doctrines.
 
 > 💻 Source code: [datumlex-core](https://github.com/DatumLex/datumlex-core)
-> 📋 Board / Backlog: [GitHub Project](https://github.com/orgs/DatumLex/projects/1/views/9?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%5D](https://github.com/orgs/DatumLex/projects/1/views/9?visibleFields=%5B%22Title%22%2C411889410%2C411889512%2C%22Assignees%22%2C%22Status%22%2C%22Sub-issues+progress%22%5D)
+> 📋 Board / Backlog: [GitHub Project](https://github.com/orgs/DatumLex/projects/1/views/9?visibleFields=%5B%22Title%22%2C411889410%2C411889512%2C%22Assignees%22%2C%22Status%22%2C%22Sub-issues+progress%22%5D)
 > 🎯 Client features: [Product Backlog](#product-backlog)
 
 ---
