@@ -106,7 +106,7 @@ After merge, the author or QA reviewer must:
 
 ## Quality and estimation
 
-QA effort belongs in story-level `estimativa` under the
+QA effort belongs in story-level `Estimate` under the
 [estimation agreement](../agile/estimation-and-prioritization.md). Do not count the
 same tests in both a feature story and a shared test-infrastructure story. Priority
 does not waive validation: a Should Have export still requires safe content and

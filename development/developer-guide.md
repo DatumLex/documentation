@@ -190,7 +190,7 @@ deployment, validation, and acceptance are recorded.
 
 Participate in [Planning Poker](../agile/estimation-and-prioritization.md) for the
 complete parent story and include implementation, validation, review, documentation,
-and integration. `estimativa` contains agreed story points, not hours. Leave child
+and integration. `Estimate` contains agreed story points, not hours. Leave child
 tasks and epics blank; use task timeboxes where needed. Raise new uncertainty or
 scope changes explicitly rather than adjusting points to justify elapsed time.
 

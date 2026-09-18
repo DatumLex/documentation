@@ -13,7 +13,7 @@ step requires implementation, review, or role-specific detail.
 ## Guiding principles
 
 - The [GitHub Product Backlog](https://github.com/orgs/DatumLex/projects/1) is
-  the live source for scope, hierarchy, assignees, sprint, priority, `estimativa`, and status.
+  the live source for scope, hierarchy, assignees, sprint, priority, `Estimate`, and status.
 - The linked GitHub issue is the durable record of acceptance criteria,
   dependencies, decisions, blockers, deliverables, and evidence.
 - Work is not complete merely because code exists, a branch was pushed, or a
@@ -131,7 +131,7 @@ The Product Owner explains the ordered backlog and desired value. Developers
 select a realistic plan based on capacity, dependencies, technical sequencing,
 QA effort, and the Sprint Goal. The Scrum Master facilitates and exposes risks.
 
-Confirm story-level `estimativa` from Planning Poker, sprint, priority, assignee, planned sequence, review capacity, and the
+Confirm story-level `Estimate` from Planning Poker, sprint, priority, assignee, planned sequence, review capacity, and the
 relationship of each selected item to the Sprint Goal. Planning does not change
 an item to `In progress`; execution must actually begin.
 
@@ -362,7 +362,7 @@ until it can be validated.
 ## Story estimation through delivery
 
 During refinement, follow [Planning Poker](../agile/estimation-and-prioritization.md)
-and record the agreed story-level `estimativa`. Include implementation, tests,
+and record the agreed story-level `Estimate`. Include implementation, tests,
 review, documentation, and integration; tasks and epics stay blank. Capture
 scope changes without overwriting the planning baseline. During release reporting,
 sum completed stories once and disclose pending estimates; never credit individual

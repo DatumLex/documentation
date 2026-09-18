@@ -56,7 +56,7 @@ Use `Refs #12` instead if the commit is related to the issue but doesn't fully r
 ## 📊 Traceability and Progress
 
 Commit history supports traceability, not individual productivity scoring. Use
-reviewed outcomes and evidence to understand delivery. Story points in `estimativa`
+reviewed outcomes and evidence to understand delivery. Story points in `Estimate`
 support team forecasting only; they are not individual contribution scores. Do not
 claim a points burndown or velocity without a real planning baseline. Follow the
 [estimation agreement](../agile/estimation-and-prioritization.md).
