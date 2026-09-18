@@ -173,7 +173,7 @@ small convenience sample.
 US-42 validates the shared path from research question to evidence, comparison,
 and reviewed report. Capture feedback from lawyers and judicial professionals;
 do not introduce student/exam workflows or separate portals. Estimate the whole
-story in `estimativa`, including usability and accessibility work, under the
+story in `Estimate`, including usability and accessibility work, under the
 [Planning Poker agreement](../agile/estimation-and-prioritization.md).
 
 ## Related documents

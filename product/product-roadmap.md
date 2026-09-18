@@ -7,7 +7,7 @@ to the legal theses, precedents, and evidence behind them. Depth and cross-sourc
 analysis precede broader coverage. This plan reflects [client alignment through
 September 15, 2026](client-alignment.md) and the [42-story catalog](../agile/user-stories.md).
 Assignments are planned delivery, not completion claims. The [Project](https://github.com/orgs/DatumLex/projects/1)
-holds live Priority, Sprint, `estimativa`, ownership, dates, and status.
+holds live Priority, Sprint, `Estimate`, ownership, dates, and status.
 
 ## Sprint objectives
 

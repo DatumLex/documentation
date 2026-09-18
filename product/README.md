@@ -19,7 +19,7 @@ documentation by providing the product rationale behind backlog decisions.
 
 - The [Product Vision](product-vision.md) provides long-term direction.
 - The [GitHub Product Backlog](https://github.com/orgs/DatumLex/projects/1)
-  remains the live source for priorities, sprint scope, `estimativa`, status, and ownership.
+  remains the live source for priorities, sprint scope, `Estimate`, status, and ownership.
 - The [Product Owner Guide](../agile/product-owner-guide.md) defines how product
   decisions, refinement, and acceptance are managed.
 - The [End-to-End Development Process](../development/development-process.md)
