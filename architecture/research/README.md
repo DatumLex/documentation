@@ -16,6 +16,6 @@ coverage, rights, and constraints before implementation. Do not infer full text
 or successful outcome classification from the existence of an endpoint.
 
 Research tasks use explicit timeboxes; effort is counted once in the parent
-story's `estimativa`. See [estimation](../../agile/estimation-and-prioritization.md),
+story's `Estimate`. See [estimation](../../agile/estimation-and-prioritization.md),
 [client alignment](../../product/client-alignment.md), and the
 [story catalog](../../agile/user-stories.md).
