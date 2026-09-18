@@ -162,12 +162,12 @@ review, QA, security checks, automated tests, or the shared Definition of Done.
 - [ ] Reviews assess an integrated result with real evidence.
 - [ ] Acceptance and follow-up work are explicit before `Done`.
 
-## Priority, planned delivery, and estimativa
+## Priority, planned delivery, and Estimate
 
 Maintain the [story catalog](user-stories.md) after approved scope changes and
 use the [estimation and prioritization agreement](estimation-and-prioritization.md).
 The PO owns Priority and clarifies Sprint intent; delivery contributors own the
-consensus `estimativa`. Explain scope without anchoring the vote. Estimate full
+consensus `Estimate`. Explain scope without anchoring the vote. Estimate full
 stories including quality work, keep tasks/epics unpointed, and order the minimum
 sprint outcome before dependent enhancements. A planned sprint is not a delivery
 guarantee, and an estimate does not establish Ready or Done.

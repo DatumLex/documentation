@@ -6,7 +6,7 @@ Use this guide with the [README product backlog](../README.md#product-backlog).
 The README keeps the client-facing stories, priorities, estimates, and planned
 sprints together. This guide explains how to make and maintain those decisions.
 The [estimation agreement](estimation-and-prioritization.md) defines the operational
-rules for the GitHub Project's `estimativa` field and sprint reporting.
+rules for the GitHub Project's `Estimate` field and sprint reporting.
 
 | Backlog column | Question it answers | Owner |
 |---|---|---|
@@ -76,15 +76,17 @@ single person's proposed number as a team vote.
 3. Identify the implementation issues that deliver that outcome and clarify shared
    work. Broad or overlapping product stories may need refinement before estimation.
 4. Run Planning Poker using the agreed scope and reference stories.
-5. Replace `Pending` in **Estimate (SP)** only after agreement, and retain a linked
-   session record with date, participants, scope, assumptions, and agreed points.
+5. Record the estimate and its basis. A Planning Poker session record identifies
+   actual participants and votes; an adopted planning decision identifies its scope
+   and assumptions without implying that a vote took place.
 6. Review capacity and dependencies separately. Revise planned delivery only through
    an explicit planning decision; estimates do not move board status or dates.
 
-All 20 README estimates initially remain **Pending** because no team voting record
-has been supplied. This introduces the model without inventing historical estimates.
-For work already started, label later sizing as remaining-work or retrospective
-analysis, following the estimation agreement.
+The current **20 README values and 42 Project story values** are adopted planning
+estimates dated 2026-09-17. Their scope, reference sizes, and assumptions are in the
+[estimation basis](estimation-and-prioritization.md#adopted-planning-estimates).
+They are not a historical voting record. Started Sprint 1 stories use retrospective
+full-scope sizing; future Planning Poker discussions can refine these values.
 
 ## Keep the README and Project consistent
 
@@ -92,9 +94,9 @@ README product US IDs and [implementation story IDs](user-stories.md) are indepe
 Always identify the document or issue URL when recording a vote; matching numbers
 do not establish a relationship.
 
-- **README Estimate (SP):** a product planning view, with scope and session evidence.
+- **README Estimate (SP):** a product planning view, with scope and estimation basis.
   It is not an additional sprint velocity total.
-- **Project `estimativa`:** the numeric estimate for each implementation user story,
+- **Project `Estimate`:** the numeric estimate for each implementation user story,
   including enabler stories. Tasks and epics remain unscored; unresolved values stay
   blank, because the field cannot contain `Pending` or `?`.
 - Copy a value between views only when the team explicitly confirms that both

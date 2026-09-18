@@ -100,7 +100,7 @@ Policy: https://github.com/DatumLex/documentation/blob/main/agile/definition-of-
 
 ## Estimation and release evidence
 
-Priority and `estimativa` do not waive any quality criterion. Count a story's
+Priority and `Estimate` do not waive any quality criterion. Count a story's
 points once only after the integrated story meets DoD; finished child tasks do
 not earn partial story points. Preserve the planning baseline and disclose scope
 changes under [Estimation and Prioritization](estimation-and-prioritization.md).

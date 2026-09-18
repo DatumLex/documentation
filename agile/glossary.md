@@ -200,7 +200,7 @@ indicate that coding is merely finished.
 
 ## Priority and estimation
 
-`Priority` orders work by product value, dependency, and risk; `estimativa`
+`Priority` orders work by product value, dependency, and risk; `Estimate`
 measures relative effort in story points. Use the Fibonacci scale **1, 2, 3, 5,
 8, 13, 21** on user stories only, including enablers. Leave tasks and epics blank
 to avoid double counting. Points are not hours or individual performance scores.

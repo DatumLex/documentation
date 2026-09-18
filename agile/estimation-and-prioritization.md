@@ -6,11 +6,11 @@ Separate product priority, relative effort, and execution readiness. The PO orde
 the backlog; delivery contributors estimate together; the Scrum Master facilitates.
 Neither priority nor points automatically changes status, assignee, dates, or Sprint.
 
-## Project field: `estimativa`
+## Project field: `Estimate`
 
 | Property | Agreement |
 |---|---|
-| Exact name | `estimativa` (requested Portuguese field name; documents remain in English) |
+| Exact name | `Estimate` (English field name; value in story points) |
 | GitHub type | Number |
 | Unit | Story points: relative effort, complexity, and uncertainty, including quality work |
 | Allowed team scale | `1, 2, 3, 5, 8, 13, 21` |
@@ -19,8 +19,9 @@ Neither priority nor points automatically changes status, assignee, dates, or Sp
 | Does not apply to | Child tasks or epics |
 | Source of truth | [GitHub Project](https://github.com/orgs/DatumLex/projects/1) |
 
-The existing numeric `Estimate` field was renamed to `estimativa` and exposed in
-the **Product Backlog** table, preserving its field identity. Do not create another
+The existing numeric field is named **Estimate** and displayed in the
+**Product Backlog** table, preserving its field identity and existing values.
+Use **Estimate** for the field/value and **estimation** for the sizing process. Do not create another
 points field or use `Size` as a competing points total. GitHub exposes fields to all
 item types: story-only use is a team agreement, not a UI restriction. Number fields
 support totals but do not enforce Fibonacci values; check the scale during refinement.
@@ -29,7 +30,8 @@ support totals but do not enforce Fibonacci values; check the scale during refin
 
 The README combines MoSCoW priority, **Estimate (SP)**, and planned sprint for
 client-facing stories. Its US IDs and scopes are independent of Project stories.
-Product estimates remain `Pending` until the team records an agreed scope and vote.
+The current product values are adopted planning estimates under the policy below.
+New unresolved estimates remain `Pending` until a planning decision is recorded.
 Use the [MoSCoW and Planning Poker guide](moscow-and-planning-poker.md) to maintain
 this view. Never copy estimates by matching US numbers or add the two views together;
 sprint reporting counts unique selected Project stories only.
@@ -42,7 +44,7 @@ outcome is delivered; scoring both levels duplicates effort. Epics group objecti
 and may span sprints, so they receive no independent points.
 
 Use task timeboxes or remaining-work notes in issue bodies when useful. Never enter
-hours, dates, or task timeboxes into `estimativa`. Independent work needs a suitable
+hours, dates, or task timeboxes into `Estimate`. Independent work needs a suitable
 story/enabler before joining a story-point forecast. Where separate QA, modeling,
 or infrastructure stories exist, agree boundaries so shared work is counted once;
 feature stories still include their own validation and integration.
@@ -74,14 +76,48 @@ Research may use an explicit timebox while its answer remains unknown.
 - Date and participants: <YYYY-MM-DD / delivery contributors>
 - Reference stories: <links and points>
 - Assumptions and uncertainties: <summary>
-- Agreed estimativa: <1, 2, 3, 5, 8, 13, or 21; blank if unresolved>
+- Agreed Estimate: <1, 2, 3, 5, 8, 13, or 21; blank if unresolved>
 - Split or follow-up: <links or none>
 ```
 
-At rollout, no consensus estimates are invented. Estimate future work during
-refinement. Label later sizing of started Sprint 1 stories as retrospective or
-remaining-work analysis; do not fabricate a pre-sprint baseline or historical
-velocity, and do not move statuses merely to introduce points.
+## Adopted planning estimates
+
+The current values were adopted for project planning on **2026-09-17** at the
+project representative's request. They size the documented story scope using the
+Fibonacci scale, acceptance criteria, implementation complexity, uncertainty,
+integration, review, and applicable quality work. This is a planning decision,
+not a record of a past Planning Poker vote. Future collaborative refinement can
+revise a value when assumptions or scope change.
+
+All **42 implementation stories** have numeric values in the Project and the
+[story catalog](user-stories.md); the **20 README product stories** have separate
+product-level estimates. These two views overlap and must never be added together
+or mapped solely by US number. Tasks and epics remain blank.
+
+| Points | Reference scope for this planning set |
+|---|---|
+| 2 | Approved palette or asset organization with focused checks: implementation #27 and #29. |
+| 3 | A bounded component, reference, or deployment using established contracts: #15, #18, #19, #74. |
+| 5 | Several coordinated rules, setup steps, or interactions with validation: #5, #20, #25, #81. |
+| 8 | A substantial pipeline, integration, test suite, or report: #10, #11, #84, #97, #127. |
+| 13 | Cross-source reasoning or NLP with substantial uncertainty: #103, #107, #110, #117, #133. Discuss splitting. |
+| 21 | A broad product capability requiring decomposition: README US-11 includes extraction, validation, and explainable results. Do not select it as one implementation story. |
+
+Each number sizes that story's own deliverables and validation; prerequisite
+stories are assumed available and are not charged again. Shared test harnesses
+and independent system suites belong to #78/#81/#84; feature stories retain their
+own correctness checks and integration. Reusing reports does not create extra points.
+
+Sprint 2 assumes approved, usable TJDFT/STJ text and an approved doctrine source;
+Sprint 3 assumes the earlier source, NLP, and analytical foundation. Points account
+for technical uncertainty, not calendar waiting time for access or reviewers.
+README US-05's G1/G2 value is a coarse scope estimate; it does not resolve its
+open acceptance alignment or establish readiness.
+
+For started or completed Sprint 1 work, these are retrospective **full-scope**
+estimates, not remaining effort, a pre-sprint baseline, or historical velocity.
+No completion, capacity, or delivery guarantee follows from assigning points.
+Keep status, priority, assignee, Sprint, Start, and End unchanged.
 
 ## Priority: MoSCoW
 

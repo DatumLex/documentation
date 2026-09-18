@@ -23,7 +23,7 @@ The PO validates story value and acceptance criteria. Assignees and relevant rev
 - [ ] **Sufficient rules and inputs:** required references, business rules, data types/sources, validation, null handling, or contracts are linked. Unknowns being investigated are explicit research questions.
 - [ ] **Start dependencies resolved:** prerequisite issues and required outputs are linked, with evidence that inputs are available. Accepting a risk does not make an unavailable input available.
 - [ ] **Access available:** required tools, repository permissions, environments, and source access work. Reference secret configuration instructions without exposing credentials.
-- [ ] **Feasible plan:** assignee, planned sequence/dates, capacity, and review time are understood. For future sprint selection, stories have a team-agreed `estimativa` under the [Planning Poker policy](estimation-and-prioritization.md). Child tasks use scope/timeboxes where useful and leave `estimativa` blank. Split oversized stories; a blank is not zero. Already-started work follows the documented rollout exception, without invented retrospective baselines.
+- [ ] **Feasible plan:** assignee, planned sequence/dates, capacity, and review time are understood. For future sprint selection, stories have a team-agreed `Estimate` under the [Planning Poker policy](estimation-and-prioritization.md). Child tasks use scope/timeboxes where useful and leave `Estimate` blank. Split oversized stories; a blank is not zero. Already-started work follows the documented rollout exception, without invented retrospective baselines.
 - [ ] **Validation planned:** identify applicable tests or artifact checks, expected results, and evidence location.
 - [ ] **Scope aligned:** the PO has validated the story; the assignee and relevant reviewers understand the task and its start conditions.
 
@@ -66,7 +66,7 @@ Policy: https://github.com/DatumLex/documentation/blob/main/agile/definition-of-
 - Scope and acceptance criteria: <link or section>
 - Start prerequisites: <issue → required output → evidence available>
 - Completion dependencies: <later integration/validation requirements>
-- Story estimativa / Planning Poker record: <link, or rollout exception>
+- Story Estimate / Planning Poker record: <link, or rollout exception>
 - Task scope/timebox, access, assignee and dates: <record; task points stay blank>
 - Validation approach: <scenarios/checks and evidence location>
 - N/A items: <criterion and reason, or none>

@@ -8,7 +8,7 @@ This folder documents how the LegacyTech team plans, reviews, and tracks DatumLe
 |---|---|---|
 | [User-story catalog](user-stories.md) | Snapshot of all stories, current priorities, and planned delivery. | Refinement and stakeholder review. |
 | [MoSCoW and Planning Poker](moscow-and-planning-poker.md) | Explain the README product priorities, story-point scale, team voting, and relationship with the Project. | Product refinement and estimation sessions. |
-| [Estimation and prioritization](estimation-and-prioritization.md) | Story-only `estimativa`, Planning Poker, priority and capacity rules. | Refinement, planning, and reporting. |
+| [Estimation and prioritization](estimation-and-prioritization.md) | Story-only `Estimate`, Planning Poker, priority and capacity rules. | Refinement, planning, and reporting. |
 | [Agile Glossary](glossary.md) | Define the backlog hierarchy, board statuses, and shared agile language. | Onboarding, refinement, and daily work. |
 | [Definition of Ready](definition-of-ready.md) | Explain the clarity and available inputs required to start. | Refinement, Sprint Planning, and transition to Ready. |
 | [Definition of Done](definition-of-done.md) | Explain quality, review, validation, and documentation required for completion. | Task review, story completion, integrated delivery. |
@@ -21,7 +21,7 @@ Acceptance criteria remain in each issue and describe its outcome. DoR/DoD compl
 
 ## Live planning and evidence
 
-The [GitHub Project](https://github.com/orgs/DatumLex/projects/1) is the live source for backlog items, Priority, Sprint, `estimativa`, assignees, status, and dates. Use [datumlex-core issues](https://github.com/DatumLex/datumlex-core/issues) for stories, tasks, acceptance criteria, blockers, and deliverable/validation links.
+The [GitHub Project](https://github.com/orgs/DatumLex/projects/1) is the live source for backlog items, Priority, Sprint, `Estimate`, assignees, status, and dates. Use [datumlex-core issues](https://github.com/DatumLex/datumlex-core/issues) for stories, tasks, acceptance criteria, blockers, and deliverable/validation links.
 
 The workflow is `Backlog → Ready → In progress → In review → Done`. Backlog tasks wait on dependencies; Ready tasks can start. See [transition rules](definition-of-ready.md#board-transitions) and [completion workflow](definition-of-done.md#review-and-board-workflow). Planned dates do not prove work has started or finished.
 
