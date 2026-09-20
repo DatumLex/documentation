@@ -17,7 +17,7 @@ included in story-level `Estimate`; see the
 
 ## Physical model
 
-<img src="assets/Model_physical.png" width="500">
+<img src="assets/Model_Physical.png" width="500">
 
 ## Review observations — September 15, 2026
 
