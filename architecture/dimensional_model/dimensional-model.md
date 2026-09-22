@@ -9,7 +9,7 @@ included in story-level `Estimate`; see the
 
 ## Conceptual model
 
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/5066f0c5-3008-41aa-add0-d3c6551826ea" />
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/5066f0c5-3008-41aa-add0-d3c6551826ea"/>
 
 ## Logical model
 
