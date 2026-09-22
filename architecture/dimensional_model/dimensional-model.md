@@ -13,11 +13,11 @@ included in story-level `Estimate`; see the
 
 ## Logical model
 
-<img src="assets/Model_Logic.png" width="700">
+<img src="../assets/Model_Logic.png" width="700">
 
 ## Physical model
 
-<img src="assets/Model_Physical.png" width="500">
+<img src="../assets/Model_Physical.png" width="500">
 
 ## Review observations — September 15, 2026
 
