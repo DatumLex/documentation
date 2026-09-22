@@ -21,6 +21,9 @@ compare outcomes, and understand relevant judicial context more efficiently.
 Rather than replacing professional legal judgment, DatumLex is intended to
 provide reliable, structured evidence that supports analysis and decision-making.
 
+<img width="998" height="936" alt="image" src="https://github.com/user-attachments/assets/cbe63a1a-bc11-4435-b95b-912b1a55d027" />
+
+
 ### Product goals
 
 - Consolidate official judicial data into a structured analytical repository.
