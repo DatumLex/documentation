@@ -72,7 +72,7 @@ documentation/
 - [MoSCoW and Planning Poker Guide](agile/moscow-and-planning-poker.md)
 - [Planning Poker, Estimate, and Prioritization](agile/estimation-and-prioritization.md)
 - [Agile Glossary (Epics, User Stories, Tasks)](agile/glossary.md)
-- [Backlog / Board (GitHub Project)](https://github.com/orgs/DatumLex/projects/1/views/9?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%5D)
+- [Backlog / Board (GitHub Project)](https://github.com/orgs/DatumLex/projects/1/views/9?visibleFields=%5B%22Title%22%2C411889410%2C411889512%2C%22Assignees%22%2C%22Status%22%2C%22Sub-issues+progress%22%5D)
 - [Definition of Ready](agile/definition-of-ready.md)
 - [Definition of Done](agile/definition-of-done.md)
 - [Product Owner Guide](agile/product-owner-guide.md)
