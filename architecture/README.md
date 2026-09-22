@@ -12,7 +12,7 @@ This folder documents the technical architecture of **DatumLex** — how the sys
 
 ## Documents
 
-- [Dimensional Models](/dimensional_model/dimensional-model.md) — existing conceptual/logical/physical diagrams; review and dictionary evidence remain required.
+- [Dimensional Models](https://github.com/DatumLex/documentation/blob/main/architecture/dimensional_model/dimensional-model.md) — existing conceptual/logical/physical diagrams; review and dictionary evidence remain required.
 - [Data-Dictionary](https://github.com/DatumLex/documentation/blob/main/architecture/dimensional_model/data-dictionary.md) - existing data-dictionary; Document all tables, columns and data lineages.
 - [Source Research](research/README.md) — source notes and their sprint boundaries.
 - [Technology Stack and Rationale](technology-stack.md) — selected technologies,
