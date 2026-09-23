@@ -13,7 +13,7 @@ included in story-level `Estimate`; see the
 
 ## Logical model
 
-<img src="../assets/Model_Logic.png" width="700">
+<img width="725" height="638" alt="Model_Logic" src="https://github.com/user-attachments/assets/03abf697-f9c6-4d8c-bb51-2313d582401e" />
 
 ## Physical model
 
