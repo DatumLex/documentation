@@ -2,100 +2,115 @@
 
 ## Overview
 
-This data dictionary describes the dimensional model used by the Legal Analytics platform. The model follows a star schema and is centered on the Fact_Resource fact table, which stores information about judicial resources and connects them to descriptive dimensions such as process, class, organization, degree, result, time, and subject.
+This data dictionary describes the dimensional model used by the Legal Analytics platform.
 
-## 1. Fact Tables
+The model follows a star schema and is centered on the `Fact_Resource` fact table, which stores information about judicial resources and connects them to descriptive dimensions such as process, class, organization, degree, result, time, and subject.
 
-### Fact_Resource
+For each attribute, this dictionary documents:
 
-| Column | Data Type | Key | Description |
-|---|---|---|---|
-| `id_resource` | Integer | PK | Unique identifier of the judicial resource. |
-| `id_time` | Integer | FK | Reference to the time dimension. |
-| `id_class` | Integer | FK | Reference to the procedural class. |
-| `id_org` | Integer | FK | Reference to the judicial organization. |
-| `id_degree` | Integer | FK | Reference to the judicial degree or instance. |
-| `id_result` | Integer | FK | Reference to the resource result. |
-| `id_process` | Integer | FK | Reference to the related judicial process. |
-| `quant_resource` | Integer | — | Quantity of resources represented by the record. |
+- Database constraints
+- Accepted business domains
+- Original source field
+- ETL/ELT transformation
+- Data type and role in the dimensional model
 
-### Fact_Process_Subject
 
-| Column | Data Type | Key | Description |
-|---|---|---|---|
-| `id_subject` | Integer | PK, FK | Reference to the legal subject. |
-| `id_process` | Integer | PK, FK | Reference to the judicial process. |
-| `id_resource` | Integer | PK, FK | Reference to the judicial resource. |
-| `id_class` | Integer | FK | Reference to the procedural class. |
-| `id_org` | Integer | FK | Reference to the judicial organization. |
-| `id_result` | Integer | FK | Reference to the result. |
-| `id_degree` | Integer | FK | Reference to the judicial degree or instance. |
-| `id_time` | Integer | FK | Reference to the time dimension. |
+# 1. Fact Tables
 
----
+## 1.1 Fact_Resource
+
+| Column | Data Type | Key | Nullable | Constraints | Domain | Description |
+|---|---|---|---|---|---|---|
+| `id_resource` | Integer | PK | NOT NULL | PRIMARY KEY, UNIQUE | Positive integer |   | Unique identifier of the judicial resource. |
+| `id_time` | Integer | FK | NOT NULL | FOREIGN KEY → `DIM_Time.id_time` | Existing `DIM_Time.id_time` | Reference to the time dimension. |
+| `id_class` | Integer | FK | NOT NULL | FOREIGN KEY → `DIM_Class.id_class` | Existing `DIM_Class.id_class` | Reference to the procedural class. |
+| `id_org` | Integer | FK | NOT NULL | FOREIGN KEY → `DIM_Org.id_org` | Existing `DIM_Org.id_org` | Reference to the judicial organization. |
+| `id_degree` | Integer | FK | NOT NULL | FOREIGN KEY → `DIM_Degree.id_degree` | Existing `DIM_Degree.id_degree` | Reference to the judicial degree or instance. |
+| `id_result` | Integer | FK | NOT NULL | FOREIGN KEY → `DIM_Result.id_result` | Existing `DIM_Result.id_result` | Reference to the resource result. |
+| `id_process` | Integer | FK | NOT NULL | FOREIGN KEY → `DIM_Process.id_process` | Existing `DIM_Process.id_process` | Reference to the related judicial process. |
+| `quant_resource` | Integer | — | NOT NULL | Non-negative quantity | Integer ≥ 0 | Quantity of resources represented by the record. |
+
+
+## 1.2 Fact_Process_Subject
+
+| Column | Data Type | Key | Nullable | Constraints | Domain |  Description |
+|---|---|---|---|---|---|---|
+| `id_subject` | Integer | PK, FK | NOT NULL | PRIMARY KEY, FOREIGN KEY → `DIM_Subject.id_subject` | Existing `DIM_Subject.id_subject` |  Reference to the legal subject. |
+| `id_process` | Integer | PK, FK | NOT NULL | PRIMARY KEY, FOREIGN KEY → `DIM_Process.id_process` | Existing `DIM_Process.id_process` | Reference to the judicial process. |
+| `id_resource` | Integer | PK, FK | NOT NULL | PRIMARY KEY, FOREIGN KEY → `Fact_Resource.id_resource` | Existing resource identifier | Reference to the judicial resource. |
+| `id_class` | Integer | FK | NOT NULL | FOREIGN KEY → `DIM_Class.id_class` | Existing `DIM_Class.id_class` | Reference to the procedural class. |
+| `id_org` | Integer | FK | NOT NULL | FOREIGN KEY → `DIM_Org.id_org` | Existing `DIM_Org.id_org` | Reference to the judicial organization. |
+| `id_result` | Integer | FK | NOT NULL | FOREIGN KEY → `DIM_Result.id_result` | Existing `DIM_Result.id_result` | Reference to the result. |
+| `id_degree` | Integer | FK | NOT NULL | FOREIGN KEY → `DIM_Degree.id_degree` | Existing `DIM_Degree.id_degree` | Reference to the judicial degree or instance. |
+| `id_time` | Integer | FK | NOT NULL | FOREIGN KEY → `DIM_Time.id_time` | Existing `DIM_Time.id_time` | Reference to the time dimension. |
 
 # 2. Dimension Tables
 
-### DIM_Process
+## 2.1 DIM_Process
 
-| Column | Data Type | Key | Description |
-|---|---|---|---|
-| `id_process` | Integer | PK | Unique identifier of the judicial process. |
-| `number_process` | Char(20) | — | Official identification number of the judicial process. |
-| `secrecy_level` | Integer | — | Confidentiality or secrecy level of the process. |
+| Column | Data Type | Key | Nullable | Constraints | Domain | Description |
+|---|---|---|---|---|---|---|
+| `id_process` | Integer | PK | NOT NULL | PRIMARY KEY, UNIQUE | Positive integer | Unique identifier of the judicial process. |
+| `number_process` | Char(20) | — | NOT NULL | Process number format validation | Valid judicial process number | Official identification number of the judicial process. |
+| `secrecy_level` | Integer | — | NOT NULL | Domain validation | Business-defined secrecy levels | Confidentiality or secrecy level of the process. |
 
-### DIM_Class
 
-| Column | Data Type | Key | Description |
-|---|---|---|---|
-| `id_class` | Integer | PK | Unique identifier of the procedural class. |
-| `code_cls` | Integer | — | Official code of the procedural class. |
-| `name_cla` | Varchar(100) | — | Name or description of the procedural class. |
+## 2.2 DIM_Class
 
-### DIM_Org
+| Column | Data Type | Key | Nullable | Constraints | Domain | Description |
+|---|---|---|---|---|---|---|
+| `id_class` | Integer | PK | NOT NULL | PRIMARY KEY, UNIQUE | Positive integer | Unique identifier of the procedural class. |
+| `code_cls` | Integer | — | NOT NULL | Business code validation | Valid CNJ procedural class code | Official code of the procedural class. |
+| `name_cla` | Varchar(100) | — | NOT NULL | Maximum length 100 | Valid procedural class name | Name or description of the procedural class. |
 
-| Column | Data Type | Key | Description |
-|---|---|---|---|
-| `id_org` | Integer | PK | Unique identifier of the judicial organization. |
-| `code_org` | Integer | — | Official code of the judicial organization. |
-| `name_org` | Varchar(100) | — | Name of the judicial organization. |
-| `IBGE_code` | Integer | — | IBGE code associated with the organization. |
 
-### DIM_Degree
+## 2.3 DIM_Org
 
-| Column | Data Type | Key | Description |
-|---|---|---|---|
-| `id_degree` | Integer | PK | Unique identifier of the judicial degree. |
-| `code_degree` | Varchar(50) | — | Code representing the judicial degree or instance. |
-| `name_degree` | Varchar(100) | — | Name or description of the judicial degree. |
+| Column | Data Type | Key | Nullable | Constraints | Domain | Description |
+|---|---|---|---|---|---|---|
+| `id_org` | Integer | PK | NOT NULL | PRIMARY KEY, UNIQUE | Positive integer | Unique identifier of the judicial organization. |
+| `code_org` | Integer | — | NOT NULL | Business code validation | Valid organization code | Official code of the judicial organization. |
+| `name_org` | Varchar(100) | — | NOT NULL | Maximum length 100 | Valid organization name | Name of the judicial organization. |
+| `IBGE_code` | Integer | — | NOT NULL | Valid IBGE code | Valid IBGE municipality code | IBGE code associated with the organization. |
 
-### DIM_Time
 
-| Column | Data Type | Key | Description |
-|---|---|---|---|
-| `id_time` | Integer | PK | Unique identifier of the date record. |
-| `date` | Date | — | Calendar date associated with the record. |
-| `year` | Integer | — | Year of the corresponding date. |
-| `month` | Integer | — | Month of the corresponding date. |
-| `day` | Integer | — | Day of the corresponding date. |
-| `quarter` | Integer | — | Quarter of the corresponding date. |
+## 2.4 DIM_Degree
 
-### DIM_Result
+| Column | Data Type | Key | Nullable | Constraints | Domain | Description |
+|---|---|---|---|---|---|---|
+| `id_degree` | Integer | PK | NOT NULL | PRIMARY KEY, UNIQUE | Positive integer | Unique identifier of the judicial degree. |
+| `code_degree` | Varchar(50) | — | NOT NULL | Maximum length 50 | Valid judicial degree code | Code representing the judicial degree or instance. |
+| `name_degree` | Varchar(100) | — | NOT NULL | Maximum length 100 | Valid judicial degree name | Name or description of the judicial degree. |
 
-| Column | Data Type | Key | Description |
-|---|---|---|---|
-| `id_result` | Integer | PK | Unique identifier of the result. |
-| `name_result` | Varchar(20) | — | Name or classification of the judicial result. |
 
-### DIM_Subject
+## 2.5 DIM_Time
 
-| Column | Data Type | Key | Description |
-|---|---|---|---|
-| `id_subject` | Integer | PK | Unique identifier of the legal subject. |
-| `code_subject` | Integer | — | Official code representing the legal subject. |
-| `name_subject` | Varchar(100) | — | Name or description of the legal subject. |
+| Column | Data Type | Key | Nullable | Constraints | Domain | Description |
+|---|---|---|---|---|---|---|---|---|
+| `id_time` | Integer | PK | NOT NULL | PRIMARY KEY, UNIQUE | Positive integer | Unique identifier of the date record. |
+| `date` | Date | — | NOT NULL | Valid calendar date | Valid date | Calendar date associated with the record. |
+| `year` | Integer | — | NOT NULL | Four-digit year | Valid year | Year of the corresponding date. |
+| `month` | Integer | — | NOT NULL | Range 1–12 | 1–12 | Month of the corresponding date. |
+| `day` | Integer | — | NOT NULL | Range 1–31 | 1–31 | Day of the corresponding date. |
+| `quarter` | Integer | — | NOT NULL | Range 1–4 | 1–4 | Quarter of the corresponding date. |
 
----
+
+## 2.6 DIM_Result
+
+| Column | Data Type | Key | Nullable | Constraints | Domain | Description |
+|---|---|---|---|---|---|---|
+| `id_result` | Integer | PK | NOT NULL | PRIMARY KEY, UNIQUE | Positive integer | Unique identifier of the result. |
+| `name_result` | Varchar(20) | — | NOT NULL | Maximum length 20 | Business-defined result values | Name or classification of the judicial result. |
+
+
+## 2.7 DIM_Subject
+
+| Column | Data Type | Key | Nullable | Constraints | Domain | Description |
+|---|---|---|---|---|---|---|
+| `id_subject` | Integer | PK | NOT NULL | PRIMARY KEY, UNIQUE | Positive integer | Unique identifier of the legal subject. |
+| `code_subject` | Integer | — | NOT NULL | Business code validation | Valid legal subject code | Official code representing the legal subject. |
+| `name_subject` | Varchar(100) | — | NOT NULL | Maximum length 100 | Valid legal subject name | Name or description of the legal subject. |
+
 
 # 3. Relationships
 
@@ -116,4 +131,73 @@ This data dictionary describes the dimensional model used by the Legal Analytics
 | `Fact_Process_Subject.id_degree` | N:1 | `DIM_Degree.id_degree` | Associates the subject with a judicial degree. |
 | `Fact_Process_Subject.id_time` | N:1 | `DIM_Time.id_time` | Associates the subject with a date. |
 
-The Fact_Resource table is the main analytical fact, allowing the dashboard to analyze judicial resources by time, procedural class, organization, degree, result, and process. Fact_Process_Subject provides the additional relationship between resources/processes and their legal subjects, supporting subject-based analysis.
+
+# 4. Data Quality and Business Rules
+
+The following rules must be enforced during the ETL/ELT process:
+
+- Primary keys must be unique and NOT NULL.
+- Foreign keys must reference existing records in their respective dimensions.
+- Integer code fields must contain valid business identifiers.
+- Date attributes must contain valid calendar dates.
+- `DIM_Time.month` must contain values from 1 to 12.
+- `DIM_Time.day` must contain values from 1 to 31.
+- `DIM_Time.quarter` must contain values from 1 to 4.
+- Character fields must respect their defined maximum length.
+- Resource quantities must not contain negative values.
+- Domain-specific values must be validated according to the source API and business rules.
+
+
+# 5. Source and Transformation Notes
+
+Source fields and transformation rules must correspond to the actual ETL implementation.
+
+Where the source field or transformation has not yet been formally defined in the ETL documentation, it is marked as `To be confirmed`.
+
+The source systems currently considered by the model include:
+
+- DataJud API
+- JurisDF API
+
+Source fields must be documented using the exact field name provided by the respective API.
+
+Transformations must describe the actual operation performed by the ETL/ELT process, such as:
+
+- Direct load (1:1)
+- String-to-integer conversion
+- Date parsing
+- Text normalization
+- Dimension lookup
+- Surrogate key generation
+- Aggregation
+- Business-rule classification
+- Extraction of decision/result information from textual data
+
+
+# 6. Relationship and Referential Integrity Rules
+
+- `Fact_Resource.id_class` must reference an existing `DIM_Class.id_class`.
+- `Fact_Resource.id_org` must reference an existing `DIM_Org.id_org`.
+- `Fact_Resource.id_degree` must reference an existing `DIM_Degree.id_degree`.
+- `Fact_Resource.id_time` must reference an existing `DIM_Time.id_time`.
+- `Fact_Resource.id_result` must reference an existing `DIM_Result.id_result`.
+- `Fact_Resource.id_process` must reference an existing `DIM_Process.id_process`.
+- `Fact_Process_Subject.id_subject` must reference an existing `DIM_Subject.id_subject`.
+- `Fact_Process_Subject.id_process` must reference an existing `DIM_Process.id_process`.
+- `Fact_Process_Subject.id_resource` must reference an existing `Fact_Resource.id_resource`.
+
+
+# 7. Analytical Purpose
+
+`Fact_Resource` is the main analytical fact table. It allows judicial resources to be analyzed by:
+
+- Time
+- Procedural class
+- Organization
+- Judicial degree
+- Result
+- Process
+
+`Fact_Process_Subject` provides the additional relationship between judicial resources/processes and legal subjects, allowing subject-based analysis.
+
+The dimensional model supports the construction of analytical dashboards focused on judicial resources and their characteristics.
