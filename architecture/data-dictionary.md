@@ -86,7 +86,7 @@ For each attribute, this dictionary documents:
 ## 2.5 DIM_Time
 
 | Column | Data Type | Key | Nullable | Constraints | Domain | Description |
-|---|---|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|
 | `id_time` | Integer | PK | NOT NULL | PRIMARY KEY, UNIQUE | Positive integer | Unique identifier of the date record. |
 | `date` | Date | — | NOT NULL | Valid calendar date | Valid date | Calendar date associated with the record. |
 | `year` | Integer | — | NOT NULL | Four-digit year | Valid year | Year of the corresponding date. |
