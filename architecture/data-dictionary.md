@@ -19,97 +19,95 @@ For each attribute, this dictionary documents:
 
 ## 1.1 Fact_Resource
 
-| Column | Data Type | Key | Nullable | Constraints | Domain | Description |
-|---|---|---|---|---|---|---|
-| `id_resource` | Integer | PK | NOT NULL | PRIMARY KEY, UNIQUE | Positive integer |   | Unique identifier of the judicial resource. |
-| `id_time` | Integer | FK | NOT NULL | FOREIGN KEY → `DIM_Time.id_time` | Existing `DIM_Time.id_time` | Reference to the time dimension. |
-| `id_class` | Integer | FK | NOT NULL | FOREIGN KEY → `DIM_Class.id_class` | Existing `DIM_Class.id_class` | Reference to the procedural class. |
-| `id_org` | Integer | FK | NOT NULL | FOREIGN KEY → `DIM_Org.id_org` | Existing `DIM_Org.id_org` | Reference to the judicial organization. |
-| `id_degree` | Integer | FK | NOT NULL | FOREIGN KEY → `DIM_Degree.id_degree` | Existing `DIM_Degree.id_degree` | Reference to the judicial degree or instance. |
-| `id_result` | Integer | FK | NOT NULL | FOREIGN KEY → `DIM_Result.id_result` | Existing `DIM_Result.id_result` | Reference to the resource result. |
-| `id_process` | Integer | FK | NOT NULL | FOREIGN KEY → `DIM_Process.id_process` | Existing `DIM_Process.id_process` | Reference to the related judicial process. |
-| `quant_resource` | Integer | — | NOT NULL | Non-negative quantity | Integer ≥ 0 | Quantity of resources represented by the record. |
+| Column | Data Type | Key | Nullable | Constraints | Domain | Source Field | Transformation | Description |
+|---|---|---|---|---|---|---|---|---|
+| `id_resource` | Integer | PK | NOT NULL | PRIMARY KEY, UNIQUE | Positive integer | Generated ETL | Generated ETL | Unique identifier of the judicial resource. |
+| `id_time` | Integer | FK | NOT NULL | FOREIGN KEY → `DIM_Time.id_time` | Existing `DIM_Time.id_time` | DataJud source.dataAjuizamento | Dimension lookup | Reference to the time dimension. |
+| `id_class` | Integer | FK | NOT NULL | FOREIGN KEY → `DIM_Class.id_class` | Existing `DIM_Class.id_class` | DataJud classe.codigo | Dimension lookup | Reference to the procedural class. |
+| `id_org` | Integer | FK | NOT NULL | FOREIGN KEY → `DIM_Org.id_org` | Existing `DIM_Org.id_org` | DataJud orgaoJulgador.codigo | Dimension lookup | Reference to the judicial organization. |
+| `id_degree` | Integer | FK | NOT NULL | FOREIGN KEY → `DIM_Degree.id_degree` | Existing `DIM_Degree.id_degree` | DataJud source.grau | Dimension lookup | Reference to the judicial degree or instance. |
+| `id_result` | Integer | FK | NOT NULL | FOREIGN KEY → `DIM_Result.id_result` | Existing `DIM_Result.id_result` | JuriDF registros.decisao | Dimension lookup | Reference to the resource result. |
+| `id_process` | Integer | FK | NOT NULL | FOREIGN KEY → `DIM_Process.id_process` | Existing `DIM_Process.id_process` | DataJud source.nivelSigilo | Dimension lookup | Reference to the related judicial process. |
+| `quant_resource` | Integer | — | NOT NULL | Non-negative quantity | Integer ≥ 0 | N/A (Metric) | Hardcoded value = 1 | Quantity of resources represented by the record. |
 
 
 ## 1.2 Fact_Process_Subject
 
-| Column | Data Type | Key | Nullable | Constraints | Domain |  Description |
-|---|---|---|---|---|---|---|
-| `id_subject` | Integer | PK, FK | NOT NULL | PRIMARY KEY, FOREIGN KEY → `DIM_Subject.id_subject` | Existing `DIM_Subject.id_subject` |  Reference to the legal subject. |
-| `id_process` | Integer | PK, FK | NOT NULL | PRIMARY KEY, FOREIGN KEY → `DIM_Process.id_process` | Existing `DIM_Process.id_process` | Reference to the judicial process. |
-| `id_resource` | Integer | PK, FK | NOT NULL | PRIMARY KEY, FOREIGN KEY → `Fact_Resource.id_resource` | Existing resource identifier | Reference to the judicial resource. |
-| `id_class` | Integer | FK | NOT NULL | FOREIGN KEY → `DIM_Class.id_class` | Existing `DIM_Class.id_class` | Reference to the procedural class. |
-| `id_org` | Integer | FK | NOT NULL | FOREIGN KEY → `DIM_Org.id_org` | Existing `DIM_Org.id_org` | Reference to the judicial organization. |
-| `id_result` | Integer | FK | NOT NULL | FOREIGN KEY → `DIM_Result.id_result` | Existing `DIM_Result.id_result` | Reference to the result. |
-| `id_degree` | Integer | FK | NOT NULL | FOREIGN KEY → `DIM_Degree.id_degree` | Existing `DIM_Degree.id_degree` | Reference to the judicial degree or instance. |
-| `id_time` | Integer | FK | NOT NULL | FOREIGN KEY → `DIM_Time.id_time` | Existing `DIM_Time.id_time` | Reference to the time dimension. |
+| Column | Data Type | Key | Nullable | Constraints | Domain | Source Field | Transformation |  Description |
+|---|---|---|---|---|---|---|---|---|
+| `id_subject` | Integer | PK, FK | NOT NULL | PRIMARY KEY, FOREIGN KEY → `DIM_Subject.id_subject` | Existing `DIM_Subject.id_subject` | DataJud assuntos[].codigo | Dimension lookup | Reference to the legal subject. |
+| `id_process` | Integer | PK, FK | NOT NULL | PRIMARY KEY, FOREIGN KEY → `DIM_Process.id_process` | Existing `DIM_Process.id_process` | DataJud source.nivelSigilo | Dimension lookup | Reference to the judicial process. |
+| `id_resource` | Integer | PK, FK | NOT NULL | PRIMARY KEY, FOREIGN KEY → `Fact_Resource.id_resource` | Existing resource identifier | Generated by ETL and referenced -> Fact_Resource | Dimension lookup | Reference to the judicial resource. |
+| `id_class` | Integer | FK | NOT NULL | FOREIGN KEY → `DIM_Class.id_class` | Existing `DIM_Class.id_class` | DataJud classe.codigo | Dimension lookup | Reference to the procedural class. |
+| `id_org` | Integer | FK | NOT NULL | FOREIGN KEY → `DIM_Org.id_org` | Existing `DIM_Org.id_org` | DataJud orgaoJulgador.codigo | Dimension lookup  Reference to the judicial organization. |
+| `id_result` | Integer | FK | NOT NULL | FOREIGN KEY → `DIM_Result.id_result` | Existing `DIM_Result.id_result` | JuriDF registros.decisao | Dimension lookup | Reference to the result. |
+| `id_degree` | Integer | FK | NOT NULL | FOREIGN KEY → `DIM_Degree.id_degree` | Existing `DIM_Degree.id_degree` | DataJud source.grau | Dimension lookup | Reference to the judicial degree or instance. |
+| `id_time` | Integer | FK | NOT NULL | FOREIGN KEY → `DIM_Time.id_time` | Existing `DIM_Time.id_time` | DataJud source.dataAjuizamento | Dimension lookup | Reference to the time dimension. |
 
 # 2. Dimension Tables
 
 ## 2.1 DIM_Process
 
-| Column | Data Type | Key | Nullable | Constraints | Domain | Description |
-|---|---|---|---|---|---|---|
-| `id_process` | Integer | PK | NOT NULL | PRIMARY KEY, UNIQUE | Positive integer | Unique identifier of the judicial process. |
-| `number_process` | Char(20) | — | NOT NULL | Process number format validation | Valid judicial process number | Official identification number of the judicial process. |
-| `secrecy_level` | Integer | — | NOT NULL | Domain validation | Business-defined secrecy levels | Confidentiality or secrecy level of the process. |
-
+| Column | Data Type | Key | Nullable | Constraints | Domain | Source Field | Transformation | Description |
+|---|---|---|---|---|---|---|---|---|
+| `id_process` | Integer | PK | NOT NULL | PRIMARY KEY, UNIQUE | Positive integer | Generated ETL | Generated ETL | Unique identifier of the judicial process. |
+| `number_process` | Char(20) | — | NOT NULL | Process number format validation | Valid judicial process number | DataJud numero.processo | positive_code() → conversion to integer and positive value validation | Official identification number of the judicial process. |
+| `secrecy_level` | Integer | — | NOT NULL | Domain validation | Business-defined secrecy levels | DataJud source.nivelSigilo | positive_code() → conversion to integer and positive value validation | Confidentiality or secrecy level of the process. |
 
 ## 2.2 DIM_Class
 
-| Column | Data Type | Key | Nullable | Constraints | Domain | Description |
-|---|---|---|---|---|---|---|
-| `id_class` | Integer | PK | NOT NULL | PRIMARY KEY, UNIQUE | Positive integer | Unique identifier of the procedural class. |
-| `code_cls` | Integer | — | NOT NULL | Business code validation | Valid CNJ procedural class code | Official code of the procedural class. |
-| `name_cla` | Varchar(100) | — | NOT NULL | Maximum length 100 | Valid procedural class name | Name or description of the procedural class. |
+| Column | Data Type | Key | Nullable | Constraints | Domain| Source Field | Transformation | Description |
+|---|---|---|---|---|---|---|---|---|
+| `id_class` | Integer | PK | NOT NULL | PRIMARY KEY, UNIQUE | Positive integer | Generated ETL | Generated ETL | Unique identifier of the procedural class. |
+| `code_class` | Integer | — | NOT NULL | Business code validation | Valid CNJ procedural class code | DataJud classe.codigo | positive_code() → conversion to integer and positive value validation | Official code of the procedural class. |
+| `name_class` | Varchar(100) | — | NOT NULL | Maximum length 100 | Valid procedural class name | DataJud classe.nome | Conversion to str + 255-character limit | Name or description of the procedural class. |
 
 
 ## 2.3 DIM_Org
 
-| Column | Data Type | Key | Nullable | Constraints | Domain | Description |
-|---|---|---|---|---|---|---|
-| `id_org` | Integer | PK | NOT NULL | PRIMARY KEY, UNIQUE | Positive integer | Unique identifier of the judicial organization. |
-| `code_org` | Integer | — | NOT NULL | Business code validation | Valid organization code | Official code of the judicial organization. |
-| `name_org` | Varchar(100) | — | NOT NULL | Maximum length 100 | Valid organization name | Name of the judicial organization. |
-| `IBGE_code` | Integer | — | NOT NULL | Valid IBGE code | Valid IBGE municipality code | IBGE code associated with the organization. |
+| Column | Data Type | Key | Nullable | Constraints | Domain | Source Field | Transformation | Description |
+|---|---|---|---|---|---|---|---|---|
+| `id_org` | Integer | PK | NOT NULL | PRIMARY KEY, UNIQUE | Positive integer | Generated ETL | Generated ETL | Unique identifier of the judicial organization. |
+| `code_org` | Integer | — | NOT NULL | Business code validation | Valid organization code | DataJud orgaoJulgador.codigo | positive_code() | Official code of the judicial organization. |
+| `name_org` | Varchar(100) | — | NOT NULL | Maximum length 100 | Valid organization name | DataJud orgaoJulgador.nome | str() + truncation | Name of the judicial organization. |
+| `IBGE_code` | Integer | — | NOT NULL | Valid IBGE code | Valid IBGE municipality code | DataJud orgaoJulgador.codigoMunicipioIBGE | str() + 16 character limit| IBGE code associated with the organization. |
 
 
 ## 2.4 DIM_Degree
 
-| Column | Data Type | Key | Nullable | Constraints | Domain | Description |
-|---|---|---|---|---|---|---|
-| `id_degree` | Integer | PK | NOT NULL | PRIMARY KEY, UNIQUE | Positive integer | Unique identifier of the judicial degree. |
-| `code_degree` | Varchar(50) | — | NOT NULL | Maximum length 50 | Valid judicial degree code | Code representing the judicial degree or instance. |
-| `name_degree` | Varchar(100) | — | NOT NULL | Maximum length 100 | Valid judicial degree name | Name or description of the judicial degree. |
-
+| Column | Data Type | Key | Nullable | Constraints | Domain | Source Field | Transformation | Description |
+|---|---|---|---|---|---|---|---|---|
+| `id_degree` | Integer | PK | NOT NULL | PRIMARY KEY, UNIQUE | Positive integer | Generated ETL | Generated ETL | Unique identifier of the judicial degree. |
+| `code_degree` | Varchar(50) | — | NOT NULL | Maximum length 50 | Valid judicial degree code | DataJud source.grau | positive_code() → conversion to int and positive validation | Code representing the judicial degree or instance. |
+| `name_degree` | Varchar(100) | — | NOT NULL | Maximum length 100 | Valid judicial degree name | DataJud source.grau | Value mapping (e.g., 'G1' → '1st Instance') | Name or description of the judicial degree. |
 
 ## 2.5 DIM_Time
 
-| Column | Data Type | Key | Nullable | Constraints | Domain | Description |
-|---|---|---|---|---|---|---|
-| `id_time` | Integer | PK | NOT NULL | PRIMARY KEY, UNIQUE | Positive integer | Unique identifier of the date record. |
-| `date` | Date | — | NOT NULL | Valid calendar date | Valid date | Calendar date associated with the record. |
-| `year` | Integer | — | NOT NULL | Four-digit year | Valid year | Year of the corresponding date. |
-| `month` | Integer | — | NOT NULL | Range 1–12 | 1–12 | Month of the corresponding date. |
-| `day` | Integer | — | NOT NULL | Range 1–31 | 1–31 | Day of the corresponding date. |
-| `quarter` | Integer | — | NOT NULL | Range 1–4 | 1–4 | Quarter of the corresponding date. |
+| Column | Data Type | Key | Nullable | Constraints | Domain | Source Field | Transformation | Description |
+|---|---|---|---|---|---|---|---|---|
+| `id_time` | Integer | PK | NOT NULL | PRIMARY KEY, UNIQUE | Positive integer | Generated ETL | Generated ETL | Unique identifier of the date record. |
+| `date` | Date | — | NOT NULL | Valid calendar date | Valid date | DataJud source.dataAjuizamento | ISO/14-digit timestamp parsing → date | Calendar date associated with the record. |
+| `year` | Integer | — | NOT NULL | Four-digit year | Valid year | Derived from date | date.year | Year of the corresponding date. |
+| `month` | Integer | — | NOT NULL | Range 1–12 | 1–12 | Derived from date | date.month | Month of the corresponding date. |
+| `day` | Integer | — | NOT NULL | Range 1–31 | 1–31 | Derived from date | date.day | Day of the corresponding date. |
+| `quarter` | Integer | — | NOT NULL | Range 1–4 | 1–4 | Derived from date | (month - 1) // 3 + 1 | Quarter of the corresponding date. |
 
 
 ## 2.6 DIM_Result
 
-| Column | Data Type | Key | Nullable | Constraints | Domain | Description |
-|---|---|---|---|---|---|---|
-| `id_result` | Integer | PK | NOT NULL | PRIMARY KEY, UNIQUE | Positive integer | Unique identifier of the result. |
-| `name_result` | Varchar(20) | — | NOT NULL | Maximum length 20 | Business-defined result values | Name or classification of the judicial result. |
+| Column | Data Type | Key | Nullable | Constraints | Domain | Source Field | Transformation | Description |
+|---|---|---|---|---|---|---|---|---|
+| `id_result` | Integer | PK | NOT NULL | PRIMARY KEY, UNIQUE | Positive integer | Generated ETL | Generated ETL | Unique identifier of the result. |
+| `name_result` | Varchar(20) | — | NOT NULL | Maximum length 20 | Business-defined result values | JuriDF registros.decisao | Value mapping (PROVIDO, DESPROVIDO) | Name or classification of the judicial result. |
 
 
 ## 2.7 DIM_Subject
 
-| Column | Data Type | Key | Nullable | Constraints | Domain | Description |
-|---|---|---|---|---|---|---|
-| `id_subject` | Integer | PK | NOT NULL | PRIMARY KEY, UNIQUE | Positive integer | Unique identifier of the legal subject. |
-| `code_subject` | Integer | — | NOT NULL | Business code validation | Valid legal subject code | Official code representing the legal subject. |
-| `name_subject` | Varchar(100) | — | NOT NULL | Maximum length 100 | Valid legal subject name | Name or description of the legal subject. |
+| Column | Data Type | Key | Nullable | Constraints | Domain | Source Field | Transformation | Description |
+|---|---|---|---|---|---|---|---|---|
+| `id_subject` | Integer | PK | NOT NULL | PRIMARY KEY, UNIQUE | Positive integer | Generated ETL | Generated ETL | Unique identifier of the legal subject. |
+| `code_subject` | Integer | — | NOT NULL | Business code validation | Valid legal subject code | DataJud assuntos[].codigo | positive_code() | Official code representing the legal subject. |
+| `name_subject` | Varchar(100) | — | NOT NULL | Maximum length 100 | Valid legal subject name | DataJud assuntos[].nome | str() + truncation to 255 | Name or description of the legal subject. |
 
 
 # 3. Relationships
