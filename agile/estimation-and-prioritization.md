@@ -89,9 +89,13 @@ integration, review, and applicable quality work. This is a planning decision,
 not a record of a past Planning Poker vote. Future collaborative refinement can
 revise a value when assumptions or scope change.
 
-All **42 implementation stories** have numeric values in the Project and the
-[story catalog](user-stories.md); the **20 README product stories** have separate
-product-level estimates. These two views overlap and must never be added together
+The original **42 implementation stories** retain numeric planning values in the
+Project and [story catalog](user-stories.md); the original **20 README product
+stories** retain separate product-level estimates. The October 7 refinement adds
+implementation US-43–US-45 and README US-21 with **pending** estimates, producing
+45 implementation stories and 21 product stories. Re-estimate affected existing
+Sprint 2 scope with the team; these values are not a new sprint commitment.
+These two views overlap and must never be added together
 or mapped solely by US number. Tasks and epics remain blank.
 
 | Points | Reference scope for this planning set |
@@ -108,7 +112,12 @@ stories are assumed available and are not charged again. Shared test harnesses
 and independent system suites belong to #78/#81/#84; feature stories retain their
 own correctness checks and integration. Reusing reports does not create extra points.
 
-Sprint 2 assumes approved, usable TJDFT/STJ text and an approved doctrine source;
+The earlier Sprint 2 estimates assumed approved, usable TJDFT/STJ text and an
+approved doctrine source. US-43 now makes the TJDFT retrieval work explicit;
+US-44 covers multiselect and US-45 integrated release validation. Check overlap
+when estimating them: feature tests stay in each feature, while #170 reconciles
+the complete increment rather than duplicating every unit suite.
+
 Sprint 3 assumes the earlier source, NLP, and analytical foundation. Points account
 for technical uncertainty, not calendar waiting time for access or reviewers.
 README US-05's G1/G2 value is a coarse scope estimate; it does not resolve its

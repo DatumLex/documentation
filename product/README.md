@@ -9,6 +9,7 @@ documentation by providing the product rationale behind backlog decisions.
 | Document | Purpose |
 |---|---|
 | [Client Alignment](client-alignment.md) | Record the conversation through September 25, 2026, including Sprint 2 PDF/NLP feedback, multiselect filters, and planning mismatches. |
+| [Sprint 2 plan](../agile/sprint-2-plan.md) | Link every Sprint 2 epic/story/task, execution dependencies and the team assignment agenda. |
 | [Story catalog](../agile/user-stories.md) | List every story, current priority, planned sprint, and estimation status. |
 | [Product Vision](product-vision.md) | Define the product purpose, value proposition, focus, principles, boundaries, and success signals. |
 | [Personas and Primary Audiences](personas.md) | Describe the principal users, their needs, decisions, pain points, and expected value. |
@@ -18,8 +19,9 @@ documentation by providing the product rationale behind backlog decisions.
 ## Sources of truth
 
 - The [Client Alignment](client-alignment.md) record preserves dated proposals and
-  client responses. Its September 22/25 update identifies changes still to reconcile
-  with the roadmap, story catalog, and live backlog, especially PDF delivery timing.
+  client responses. Its October 7 follow-up records the backlog/roadmap reconciliation
+  of the September 22/25 feedback, including PDF and multiselect in Sprint 2.
+  Implementation, source access and release acceptance still require evidence.
 - The [Product Vision](product-vision.md) provides long-term direction.
 - The [GitHub Product Backlog](https://github.com/orgs/DatumLex/projects/1)
   remains the live source for priorities, sprint scope, `Estimate`, status, and ownership.

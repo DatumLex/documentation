@@ -88,8 +88,8 @@ professional legal decision-support goals.
 
 Turivius is a useful benchmark for professional workflows and analytical UX.
 Competitor predictive language and commercial scale are not DatumLex commitments.
-The client-aligned roadmap does include grounded narrative drafts and exports in
-Sprint 3, built on validated descriptive indicators and real-data reconciliation.
+The client-aligned roadmap includes PDF in Sprint 2 and XLSX/grounded narrative
+drafts in Sprint 3, built on validated descriptive indicators and real-data reconciliation.
 
 ## Reference — Data Lawyer Insights
 

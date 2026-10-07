@@ -119,7 +119,9 @@ record; they are not presented as verbatim client statements.
 
 ## Backlog traceability
 
-The IDs below refer to the **42 implementation stories** in the
+The historical mapping below refers to the **42 implementation stories** existing
+at the October 2 inspection. The October 7 refinement adds US-43–US-45; see the
+[planning follow-up](#planning-follow-up--october-7-2026) and the current
 [story catalog](../agile/user-stories.md), not the independently numbered product
 stories in the repository README. This maps outcomes to refinement targets; it
 does not change issue criteria, Project fields, estimates, or completion status.
@@ -194,6 +196,36 @@ core at
 and the [GitHub Project](https://github.com/orgs/DatumLex/projects/1) inspected on
 **October 2, 2026**. They describe the reviewed source and planning state, not a
 fresh runtime test or a claim that a release was accepted.
+
+## Planning follow-up — October 7, 2026
+
+At the project representative's request, the September 22/25 direction has now
+been reconciled into the live backlog and planning documentation. This is a
+planning update, not a later client conversation or evidence of implementation.
+The dated October 2 findings above are retained for traceability.
+
+- PDF US-37 / [#127](https://github.com/DatumLex/datumlex-core/issues/127) and
+  tasks #128/#129 move to Sprint 2 under the new experience/delivery epic
+  [#160](https://github.com/DatumLex/datumlex-core/issues/160). XLSX and grounded
+  narratives remain Sprint 3.
+- US-43 / [#161](https://github.com/DatumLex/datumlex-core/issues/161) explicitly
+  covers TJDFT text access and ingestion; DataJud metadata is not enough for NLP.
+- US-44 / [#164](https://github.com/DatumLex/datumlex-core/issues/164) covers
+  dynamic court/outcome/legal-source multiselect and a shared API/UI/PDF context.
+- US-45 / [#168](https://github.com/DatumLex/datumlex-core/issues/168) covers
+  baseline blockers, integrated validation, deployment and release evidence.
+- All Sprint 2 epics, stories and tasks now have specific outcomes, acceptance
+  criteria and start/completion dependencies. Explainable rankings, Ver fontes,
+  direct PDF links, counting unit, coverage and NLP criteria are explicit.
+- G1/G2 interpretation, hosting, actual source access and NLP quality remain
+  execution/review questions. [#169](https://github.com/DatumLex/datumlex-core/issues/169)
+  records baseline and deployment reconciliation; this update does not claim
+  those issues are resolved. US-23's historical missing Sprint field also remains
+  visible in the catalog rather than silently rescheduling Sprint 1.
+
+The [Sprint 2 plan](../agile/sprint-2-plan.md) contains all 4 epics, 13 stories and
+28 tasks. The original estimates are references to revalidate; new story estimates,
+assignees, dates and capacity decisions are reserved for team planning.
 
 ## Change control
 

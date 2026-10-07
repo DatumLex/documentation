@@ -5,6 +5,7 @@ Central documentation repository for **DatumLex** — an analytical platform (Da
 > 💻 Source code: [datumlex-core](https://github.com/DatumLex/datumlex-core)
 > 📋 Board / Backlog: [GitHub Project](https://github.com/orgs/DatumLex/projects/1/views/9?visibleFields=%5B%22Title%22%2C411889410%2C411889512%2C%22Assignees%22%2C%22Status%22%2C%22Sub-issues+progress%22%5D)
 > 🎯 Client features: [Product Backlog](#product-backlog)
+> 📌 Next planning meeting: [Sprint 2 scope, tasks and dependencies](agile/sprint-2-plan.md)
 
 ---
 
@@ -37,7 +38,7 @@ provide reliable, structured evidence that supports analysis and decision-making
 | **Team** | LegacyTech |
 | **Academic Partner** | Xertica (Juan Hassam, Gerson Rolim) |
 | **Professors / Evaluators** | Eduardo Sakaue, Juliana Pasquini |
-| **Stack** | Python/Django, React/Tailwind, PostgreSQL DW, Vercel + Railway; DataJud-only Sprint 1, cross-source NLP in later sprints |
+| **Stack** | Python/Django, React/Tailwind, PostgreSQL DW; hosting to reconcile with current deployment evidence; DataJud-only Sprint 1, cross-source NLP and PDF in Sprint 2 |
 
 ## 👥 Team
 
@@ -69,6 +70,7 @@ documentation/
 ### Agile / Scrum
 - [Agile folder overview](agile/README.md)
 - [User Stories, Priorities, and Planned Sprints](agile/user-stories.md)
+- [Sprint 2 Plan and Assignment Agenda](agile/sprint-2-plan.md)
 - [MoSCoW and Planning Poker Guide](agile/moscow-and-planning-poker.md)
 - [Planning Poker, Estimate, and Prioritization](agile/estimation-and-prioritization.md)
 - [Agile Glossary (Epics, User Stories, Tasks)](agile/glossary.md)
@@ -152,7 +154,8 @@ not have to be implemented in Sprint 1.
 | US-10 | Must Have | As a legal professional, I want to navigate from an analytical result to related TJDFT, STJ, precedent, and doctrine records and understand why they were linked, so that I can audit the evidence. | 13 | Sprint 2 |
 | US-11 | Must Have | As a litigating lawyer, I want to inspect extracted theses and grounds associated with outcomes, with supporting passages, confidence, and review information, so that I can verify the legal reasoning behind the numbers. | 21 | Sprint 2 |
 | US-12 | Must Have | As a lawyer or judicial advisor, I want to see how TJDFT decisions adhere to relevant STJ precedents, with methodology and supporting decisions, so that I can assess alignment with superior-court guidance. | 13 | Sprint 2 |
-| US-15 | Must Have | As a lawyer, I want to export the selected analysis as a formatted PDF with filters, indicators, charts, methodology, sources, and update date, so that I can present reproducible evidence in an opinion or client meeting. | 8 | Sprint 3 |
+| US-15 | Must Have | As a lawyer, I want to export the selected analysis as a formatted PDF with filters, indicators, charts, supporting excerpts, direct source links, counting unit, coverage, NLP criteria, and update date, so that I can present reproducible evidence in an opinion or client meeting. | 8 | Sprint 2 |
+| US-21 | Must Have | As a legal professional, I want to select multiple courts, outcomes and legal sources in the shared dashboard, so that I can compare TJDFT alone or TJDFT + STJ and export the same analytical context. | Pending | Sprint 2 |
 | US-05 | Should Have | As a lawyer or magistrate, I want to compare first- and second-instance merit results where evidence supports the comparison, so that I can distinguish initial judgments from appeal outcomes. | 13 | Sprint 1 — alignment pending* |
 | US-13 | Should Have | As a lawyer or magistrate, I want to compare how chambers or panels treat the same thesis, with comparable samples and limitations, so that I can identify evidenced divergences in legal understanding. | 8 | Sprint 2 |
 | US-16 | Should Have | As a legal operations professional, I want to export filtered evidence and analytical metadata to XLSX, so that I can audit and continue the research in a spreadsheet. | 5 | Sprint 3 |
@@ -198,6 +201,9 @@ The table contains **20 adopted planning estimates**, recorded on 2026-09-17
 using story scope, complexity, uncertainty, and applicable quality work. See the
 [estimation basis](agile/estimation-and-prioritization.md#adopted-planning-estimates).
 These values are a planning decision, not evidence of a past voting session.
+The October 7 refinement adds US-21 with a pending estimate and brings PDF
+US-15 into Sprint 2. Revalidate affected scope with the team; no new consensus
+estimate is implied. Implementation US-43–US-45 are separate engineering stories.
 US-05 still requires G1/G2 alignment; US-11 is a coarse product estimate whose
 implementation is split across extraction, human validation, and explainability.
 See the [MoSCoW and Planning Poker guide](agile/moscow-and-planning-poker.md) for
@@ -227,15 +233,16 @@ Won't Have this time** options in its **Priority** field. The
 maps implementation work by capability and dependency, not by matching US numbers.
 Supporting documentation, environment standardization, and additional automation
 can be Should Have when an equivalent temporary approach preserves the required
-outcome. Planned sprints and client acceptance criteria remain unchanged.
+outcome. The October 7 refinement reconciles Sprint 2 scope and acceptance
+criteria with the September 22/25 client feedback.
 The PO and team review capacity and dependencies at refinement; any change to an
 agreed client delivery must be explicitly reconciled. Required tests, privacy,
 provenance, and quality criteria apply to every delivered feature. A Must Have
 must include its necessary dependencies in the protected scope.
 
-Review the balance using **estimated effort**, not the number of rows. Twelve
-Must Have stories out of twenty do not prove that only 60% of the effort is
-mandatory. Compare the adopted estimates with team availability and observed delivery
+Review the balance using **estimated effort**, not the number of rows. Thirteen
+Must Have stories out of twenty-one do not establish the mandatory share of effort.
+Compare the adopted estimates with team availability and observed delivery
 capacity, leaving room for uncertainty; if the protected scope does not fit,
 renegotiate or split scope.
 
@@ -256,8 +263,9 @@ Its metric, source feasibility, and chart acceptance criteria still need
 A second-instance record alone does not establish a linked appeal, reversal, or success.
 
 Sprint 1 uses **DataJud only**. STJ, precedents, and approved open doctrine enter in
-Sprint 2; PDF/XLSX, cited narratives, new subjects, and professional refinements
-enter in Sprint 3. Source access and reuse rights must be validated. Missing
+Sprint 2, together with dynamic multiselect filters and PDF. XLSX, cited
+narratives, new subjects, and professional refinements enter in Sprint 3.
+Source access and reuse rights must be validated. Missing
 evidence stays **unknown/unavailable**, and historical patterns do not guarantee
 future outcomes.
 
@@ -277,28 +285,38 @@ evidenced merit indicator for appeal outcomes and the latest requested G1/G2
 results where supported by source evidence and reconciled contracts; volume alone
 is insufficient. DataJud is the only source. Deliver reviewed models and dictionary,
 stack/scope rationale, API documentation, automated tests, static analysis, and a
-Vercel frontend with Railway backend/database. This is the first usable increment,
+deployment originally planned as Vercel frontend with Railway backend/database.
+Current hosting must be reconciled with the September 22 constraint and deployed
+evidence in [#169](https://github.com/DatumLex/datumlex-core/issues/169). This is the first usable increment,
 not the full product MVP. Delivery is planned for **September 27, 2026**.
 
 ### Sprint 2 — Explainable intelligence across legal sources
 
-Deepen the analysis by connecting TJDFT data to STJ jurisprudence, precedents,
-and approved open doctrine, prioritizing BDJur. Preserve provenance and rights,
-extract theses and grounds using NLP with supporting passages, and validate
-quality with human review. Add methodology-backed precedent adherence, chamber/panel
-divergence, and temporal trends, keeping uncertainty and unavailable data explicit.
+Deepen Civil Liability analysis with real TJDFT decision text, STJ jurisprudence
+and precedents, and an initial approved BDJur doctrine corpus. Preserve source
+rights, provenance and actual coverage. Extract theses and grounds with exact
+supporting passages; validate NLP through a human-reviewed benchmark and agreed
+quality thresholds. Show explainable rankings and **Ver fontes** evidence cards.
 
-### Sprint 3 — Reproducible reports and professional workflows
+Deliver methodology-backed adherence, with possible divergence (Should Have)
+and temporal exploration (Could Have) reviewed against team capacity. Add dynamic
+multiselect filters for courts, outcomes and legal sources: TJDFT alone and
+TJDFT + STJ must work in the same dashboard. Export the captured analysis to
+**PDF in Sprint 2**, including clickable original-source links, coverage, counting
+unit, NLP criteria and limitations. Reconcile source records, API, dashboard and
+PDF in a deployed increment. See the [Sprint 2 plan](agile/sprint-2-plan.md) for all stories, tasks,
+dependencies and the team planning agenda.
 
-Deliver reproducible PDF and XLSX exports and grounded, cited narrative drafts
-that users review before export. Extend validated analytics to Consumer Law and
-Contracts and improve workflows for lawyers, magistrates, and judicial advisors.
-The final product must explain the evidenced theses behind outcomes using the
-cross-source/NLP foundation, not merely present counts. Sprint 2 and 3 dates remain
-subject to team planning; none are invented here.
+### Sprint 3 — Exports, grounded narratives and expanded subjects
+
+Deliver XLSX exports and grounded, cited narrative drafts that users review
+before export, reusing the Sprint 2 PDF and analytical context. Extend validated
+analytics to Consumer Law and Contracts and improve professional workflows.
+The final product must explain evidenced theses behind outcomes using the
+cross-source/NLP foundation. Sprint 2 and 3 dates remain subject to team planning.
 
 See the [roadmap](product/product-roadmap.md) for delivery evidence and the
-[user-story catalog](agile/user-stories.md) for all 42 stories, current priorities,
+[user-story catalog](agile/user-stories.md) for all 45 stories, current priorities,
 and planned sprints. Planning Poker uses the numeric Project column **`Estimate`**
 on user stories only, with **1, 2, 3, 5, 8, 13, 21** story points. Tasks and epics
 are not scored; blank means not yet estimated. See the
