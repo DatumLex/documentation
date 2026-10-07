@@ -120,7 +120,9 @@ indicators, comparisons, and thesis evidence for legal strategy and client
 communication. One shared dashboard serves lawyers, magistrates, and advisors;
 student/exam features and case/deadline management are outside this delivery plan.
 The [client alignment record](product/client-alignment.md) explains the decisions
-from August 31 through September 15, 2026, including unresolved backlog mismatches.
+from August 31 through September 25, 2026, including Sprint 2 PDF/NLP feedback,
+multiselect filters, and unresolved backlog mismatches. The September 22/25 update
+records planning changes still to reconcile with the roadmap and Project.
 
 ## Product Backlog
 
