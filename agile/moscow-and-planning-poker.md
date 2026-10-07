@@ -82,11 +82,13 @@ single person's proposed number as a team vote.
 6. Review capacity and dependencies separately. Revise planned delivery only through
    an explicit planning decision; estimates do not move board status or dates.
 
-The current **20 README values and 42 Project story values** are adopted planning
+The original **20 README values and 42 Project story values** are adopted planning
 estimates dated 2026-09-17. Their scope, reference sizes, and assumptions are in the
 [estimation basis](estimation-and-prioritization.md#adopted-planning-estimates).
 They are not a historical voting record. Started Sprint 1 stories use retrospective
 full-scope sizing; future Planning Poker discussions can refine these values.
+The October 7 additions (README US-21 and implementation US-43–US-45) remain
+pending. Revalidate changed Sprint 2 scope before confirming capacity.
 
 ## Keep the README and Project consistent
 

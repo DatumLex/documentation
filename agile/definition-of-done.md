@@ -107,9 +107,10 @@ changes under [Estimation and Prioritization](estimation-and-prioritization.md).
 
 Sprint 2 additionally requires source/provenance validation, matching evidence,
 versioned human-reviewed NLP evaluation and thresholds, and reconciled analytical
-results. Sprint 3 additionally requires reproducible PDF/XLSX validation, safe
-spreadsheet content, citation/grounding checks, human review, and validated new
-subjects and professional journeys. See the [roadmap](../product/product-roadmap.md).
+results, consistent multiselect behavior, reproducible PDF rendering/direct-source
+link checks, and source/API/UI/PDF reconciliation in the deployed increment.
+Sprint 3 adds XLSX validation and safe spreadsheet content, citation/grounding
+checks, human review, and validated new subjects and professional journeys. See the [roadmap](../product/product-roadmap.md).
 These requirements describe planned release evidence, not completed work.
 
 ## References

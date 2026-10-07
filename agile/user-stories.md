@@ -9,9 +9,9 @@ The product summary creates no additional units for estimation.
 
 ## Snapshot and reading guide
 
-Priority snapshot refreshed on **2026-09-17** against the live [GitHub Project](https://github.com/orgs/DatumLex/projects/1)
-and `datumlex-core` issue bodies. Includes all **42 existing user stories**:
-27 planned for Sprint 1, 9 for Sprint 2, and 6 for Sprint 3. Technical/enabler
+Sprint 2 scope and priority snapshot refreshed on **2026-10-07** against the live [GitHub Project](https://github.com/orgs/DatumLex/projects/1)
+and `datumlex-core` issue bodies. Includes all **45 implementation user stories**:
+27 planned for Sprint 1, 13 for Sprint 2, and 5 for Sprint 3. Technical/enabler
 stories are included for complete traceability; they are not verbatim client requests.
 Each linked issue remains authoritative for full acceptance criteria and dependencies.
 
@@ -22,8 +22,11 @@ of task priority and follows the [prioritization policy](estimation-and-prioriti
 dependencies; a safety criterion does not make every feature Must Have.
 
 The numeric Project field **`Estimate`** is used only on stories. Values below are
-the **adopted planning estimates of 2026-09-17**, covering each story's complete
-scope and applicable DoD. They follow the [estimation basis](estimation-and-prioritization.md#adopted-planning-estimates).
+the **adopted planning estimates of 2026-09-17** for the original 42 stories.
+Revalidate the affected Sprint 2 scope against the October 7 refinement;
+US-43–US-45 remain **Pending** until team estimation. Each estimate covers the
+story's own complete scope and applicable DoD, without counting dependencies twice.
+They follow the [estimation basis](estimation-and-prioritization.md#adopted-planning-estimates).
 Tasks and epics receive no points. Started Sprint 1 work is sized retrospectively;
 these values do not establish historical velocity or remaining effort.
 
@@ -31,8 +34,10 @@ these values do not establish historical velocity or remaining effort.
 
 See [client alignment](../product/client-alignment.md) and the [roadmap](../product/product-roadmap.md)
 for the dated requirement history, professional audience, safeguards, and sprint
-objectives. DataJud is the only Sprint 1 source; cross-source/NLP work is Sprint 2;
-exports, grounded narratives, subject expansion, and professional refinement are Sprint 3.
+objectives. DataJud is the only Sprint 1 source. Cross-source/NLP work, dynamic
+multiselect and PDF are Sprint 2; XLSX, grounded narratives, subject expansion
+and professional refinement are Sprint 3. The [Sprint 2 plan](sprint-2-plan.md)
+links every epic/story/task and the proposed execution sequence.
 
 ## Sprint 1
 
@@ -79,12 +84,15 @@ exports, grounded narratives, subject expansion, and professional refinement are
 | [US-34 — Measure Adherence to Superior-Court Precedents (#117)](https://github.com/DatumLex/datumlex-core/issues/117) | As a litigating lawyer or judicial advisor, I want to compare TJDFT decisions with relevant STJ precedents, so that I can assess whether local decisions follow superior-court guidance. | Must Have | Sprint 2 | 13 |
 | [US-35 — Identify Divergent Understandings (#120)](https://github.com/DatumLex/datumlex-core/issues/120) | As a lawyer or magistrate, I want to compare how TJDFT chambers or panels treat the same thesis, so that I can detect legally relevant disagreement before choosing a strategy. | Should Have | Sprint 2 | 8 |
 | [US-36 — Explore Temporal Trends and Main Theses (#123)](https://github.com/DatumLex/datumlex-core/issues/123) | As a legal professional, I want to see how outcomes and legal theses evolve over time, so that I can identify changes in legal understanding without mistaking them for predictions. | Could Have | Sprint 2 | 8 |
+| [US-37 — Export a Reproducible PDF Report (#127)](https://github.com/DatumLex/datumlex-core/issues/127) | As a lawyer, I want to export the current analysis as a polished PDF, so that I can attach evidence-based analytics to an opinion or present it to a client. | Must Have | Sprint 2 | 8 |
+| [US-43 — Retrieve Traceable TJDFT Decision Text (#161)](https://github.com/DatumLex/datumlex-core/issues/161) | As a legal professional, I want TJDFT decision text linked to its analytical record, so that extracted grounds and theses can be checked against the original decision. | Must Have | Sprint 2 | Pending |
+| [US-44 — Explore a Shared Dashboard with Dynamic Multiselect Filters (#164)](https://github.com/DatumLex/datumlex-core/issues/164) | As a lawyer, magistrate or judicial advisor, I want to combine courts, outcomes and legal sources using dynamic multiselect filters, so that I can change the analytical scope without switching dashboards. | Must Have | Sprint 2 | Pending |
+| [US-45 — Validate and Publish the Sprint 2 Increment (#168)](https://github.com/DatumLex/datumlex-core/issues/168) | As the Product Owner, I want a deployed, reconciled Sprint 2 increment with evidence and known limits, so that the team and client can evaluate the complete research-to-PDF journey. | Must Have | Sprint 2 | Pending |
 
 ## Sprint 3
 
 | Story / issue | User need and value | Current Priority | Planned delivery | Estimate (SP) |
 |---|---|---|---|---|
-| [US-37 — Export a Reproducible PDF Report (#127)](https://github.com/DatumLex/datumlex-core/issues/127) | As a lawyer, I want to export the current analysis as a polished PDF, so that I can attach evidence-based analytics to an opinion or present it to a client. | Must Have | Sprint 3 | 8 |
 | [US-38 — Export Research Data as a Spreadsheet (#130)](https://github.com/DatumLex/datumlex-core/issues/130) | As a researcher or legal operations professional, I want to download the filtered evidence and metadata as a spreadsheet, so that I can audit and continue analysis outside the platform. | Should Have | Sprint 3 | 5 |
 | [US-39 — Generate Grounded Legal Analysis Narratives (#133)](https://github.com/DatumLex/datumlex-core/issues/133) | As a litigating lawyer, I want to generate a cited narrative from the selected research, so that I can evaluate appeal or settlement strategy without manually summarizing every result. | Should Have | Sprint 3 | 13 |
 | [US-40 — Add Consumer Law Analytics (#137)](https://github.com/DatumLex/datumlex-core/issues/137) | As a lawyer or judicial advisor, I want to analyze Consumer Law outcomes and theses, so that I can use DatumLex on a high-volume professional practice area. | Should Have | Sprint 3 | 8 |
@@ -98,8 +106,12 @@ exports, grounded narratives, subject expansion, and professional refinement are
   blank in the Project; the issue explicitly specifies Sprint 1.
 - **G1/G2:** the latest client request and US-14's replacement of the older G1/G2
   chart need reconciliation. See the [alignment record](../product/client-alignment.md#reconciliation-items-identified-on-september-15).
-- **NLP source text:** make TJDFT/STJ text retrieval and coverage dependencies
-  explicit during refinement; DataJud metadata alone does not establish them.
+- **NLP source text:** US-43 / [#161](https://github.com/DatumLex/datumlex-core/issues/161)
+  now covers TJDFT text access/ingestion. STJ text is covered by US-28. Actual
+  access and coverage still require execution evidence.
+- **Sprint 2 readiness:** all 45 planned items remain Backlog and unassigned.
+  Start/completion dependencies are explicit; dates, capacity, new estimates and
+  re-estimation of changed scope belong to the team planning meeting.
 - Numeric estimates now support refinement, but historical velocity and sprint
   capacity are not established by this sizing exercise. Sprint 1's deadline is
   September 27; Sprint 2/3 dates are not specified here.
@@ -107,5 +119,7 @@ exports, grounded narratives, subject expansion, and professional refinement are
 When approved scope, priority, or planned delivery changes, update the Project and
 refresh this dated catalog through a reviewed PR. Preserve release snapshots for
 historical comparison. Do not copy task priorities into stories or infer completion
-from elapsed dates. Priority maintenance does not change status, assignee, dates,
-Sprint, estimates, or acceptance criteria.
+from elapsed dates. The October 7 scope refinement moves PDF and its tasks to
+Sprint 2, adds the
+missing text/filter/release work, and revises affected acceptance criteria and
+dependencies. Status, assignees, dates and existing estimates remain unchanged.

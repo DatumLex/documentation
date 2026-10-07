@@ -6,6 +6,7 @@ This folder documents how the LegacyTech team plans, reviews, and tracks DatumLe
 
 | Document | Purpose | Applied when |
 |---|---|---|
+| [Sprint 2 plan](sprint-2-plan.md) | Scope, every issue link, dependencies and assignment agenda. | Sprint 2 planning and delivery review. |
 | [User-story catalog](user-stories.md) | Snapshot of all stories, current priorities, and planned delivery. | Refinement and stakeholder review. |
 | [MoSCoW and Planning Poker](moscow-and-planning-poker.md) | Explain the README product priorities, story-point scale, team voting, and relationship with the Project. | Product refinement and estimation sessions. |
 | [Estimation and prioritization](estimation-and-prioritization.md) | Story-only `Estimate`, Planning Poker, priority and capacity rules. | Refinement, planning, and reporting. |

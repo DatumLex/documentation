@@ -166,8 +166,9 @@ See the [Product Owner Guide](../agile/product-owner-guide.md),
 
 The [September client alignment](client-alignment.md) requires initial merit
 analytics in Sprint 1, cross-source TJDFT/STJ/precedent/open-doctrine integration
-and explainable NLP in Sprint 2, and reproducible exports, grounded narrative,
-Consumer Law/Contracts, and professional journeys in Sprint 3. The final user
+and explainable NLP, dynamic multiselect filters and reproducible PDF in Sprint 2.
+XLSX, grounded narratives, Consumer Law/Contracts and professional journey
+refinements remain Sprint 3 under the September 22/25 direction. The final user
 must understand which evidenced thesis relates to an outcome. See the
 [roadmap](product-roadmap.md) and [story catalog](../agile/user-stories.md).
 Public DataJud access does not imply complete merits or decision text: missing
