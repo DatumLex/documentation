@@ -44,6 +44,11 @@ the milestone applies to the currently planned baseline; future refinement is
 not implicitly due in that sprint. Milestone issue counts include the hierarchy
 and must not be interpreted as story-point velocity or product completion.
 
+The Project's **Iteration** calendar also records the three sprint windows and
+their following Review / Planning or Review periods. **Sprint** and **Milestone**
+remain the issue allocation and deadline references; calendar periods do not
+replace task-level Start/End dates.
+
 ## Sprint objectives
 
 ### Sprint 1 — A deployed merit analytics foundation
