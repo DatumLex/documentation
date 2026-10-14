@@ -1,4 +1,4 @@
-# Sprint 2 — Planning and Assignment Guide
+# Sprint 2 — Planning, Assignment and Delivery Guide
 
 Refined **2026-10-07** from the [live Project](https://github.com/orgs/DatumLex/projects/1),
 the repositories and the [September 22/25 client direction](../product/client-alignment.md).
@@ -6,6 +6,20 @@ This is the planning handoff for the team's assignment meeting. It is not a
 completed sprint report or a claim that all source access is already available.
 Issue bodies hold the full acceptance criteria and start/completion dependencies;
 the Project remains authoritative for live status, owners, dates and estimates.
+
+## Confirmed calendar — October 14, 2026
+
+- Sprint 1 Review / Sprint 2 Planning: **September 28–October 2, 2026**.
+- Sprint 2 execution: **October 5–25, 2026**; delivery due **October 25**.
+- Sprint 2 Review / Sprint 3 Planning: **October 26–30, 2026**.
+- Sprint 3 execution: **November 2–22, 2026**; delivery due **November 22**.
+- Sprint 3 Review: **November 23–27, 2026**.
+
+These dates come from the [official academic calendar](../product/product-roadmap.md#academic-calendar).
+The October 7 scope refinement occurred inside Sprint 2; it does not move its
+start or deadline. The refinement snapshot below remains dated October 7.
+Assign and sequence remaining work against October 25, including integration,
+review and deployment. The October 26–30 planning period prepares Sprint 3.
 
 Open the saved [Sprint 2 Planning view](https://github.com/orgs/DatumLex/projects/1/views/15)
 for the meeting. It filters Sprint 2 and shows the epic → story → task hierarchy,
@@ -93,8 +107,10 @@ does not need every downstream integration result before independent work starts
 1. Confirm the goal and capacity; select the Should/Could scope explicitly and
    split oversized work if needed. Estimate the three new stories and revalidate
    changed estimates without counting feature tests or shared dependencies twice.
-2. Assign each task and an independent reviewer, then agree dates/sequence and
-   research timeboxes. Keep legal/PO methodology review available when needed.
+2. Assign each task and an independent reviewer, then agree task dates/sequence and
+   research timeboxes within the October 5–25 sprint window. Reserve integration,
+   review and deployment time before October 25. Keep legal/PO methodology review
+   available when needed.
 3. Confirm source access and evidence, bounded sample/period coverage, text rights,
    and the fallback decision route when a required source is unavailable.
 4. Resolve counting/filter semantics and establish numeric NLP/matching quality

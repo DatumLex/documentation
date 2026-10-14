@@ -28,6 +28,11 @@ The workflow is `Backlog → Ready → In progress → In review → Done`. Back
 
 ## Sprint records
 
+Use the [official academic calendar](../product/product-roadmap.md#academic-calendar)
+for sprint boundaries: **September 7–27**, **October 5–25** and **November 2–22, 2026**.
+Review / Planning: **September 28–October 2** and **October 26–30**;
+final Review: **November 23–27**. Individual task dates remain execution planning.
+
 When an academic delivery needs a snapshot, add a dated `sprint-<n>-user-stories.md` here with sprint goal, included issue links, applied readiness/acceptance evidence, and delivery references. These are historical snapshots, not a second live backlog. No snapshot is implied to exist until its file is committed.
 
 Use English for documents and issues, including `Given / When / Then` scenarios when useful. Epics group product objectives and may span sprints; stories and tasks are planned within sprint capacity.

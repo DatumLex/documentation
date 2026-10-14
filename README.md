@@ -5,7 +5,8 @@ Central documentation repository for **DatumLex** — an analytical platform (Da
 > 💻 Source code: [datumlex-core](https://github.com/DatumLex/datumlex-core)
 > 📋 Board / Backlog: [GitHub Project](https://github.com/orgs/DatumLex/projects/1/views/9?visibleFields=%5B%22Title%22%2C411889410%2C411889512%2C%22Assignees%22%2C%22Status%22%2C%22Sub-issues+progress%22%5D)
 > 🎯 Client features: [Product Backlog](#product-backlog)
-> 📌 Next planning meeting: [Sprint 2 scope, tasks and dependencies](agile/sprint-2-plan.md)
+> 📅 Calendar: [official academic dates](product/product-roadmap.md#academic-calendar) — Sprint 2 delivery **October 25**; Review / Planning **October 26–30**; Sprint 3 **November 2–22, 2026**.
+> 📌 Sprint 2 execution: [scope, tasks and dependencies](agile/sprint-2-plan.md)
 
 ---
 
@@ -277,6 +278,18 @@ copy points by US number or add their totals together; see the
 
 ## 📈 Sprint Objectives
 
+The [official academic calendar](product/product-roadmap.md#academic-calendar),
+confirmed on October 14, 2026, sets these inclusive execution and review windows:
+
+| Sprint | Execution | Delivery | Review / Planning |
+|---|---|---|---|
+| 1 | September 7–27, 2026 | September 27 | September 28–October 2 |
+| 2 | October 5–25, 2026 | October 25 | October 26–30 |
+| 3 | November 2–22, 2026 | November 22 | November 23–27 (Review) |
+
+Solutions Fair: **December 3**. TG presentations: **December 7–11**.
+Classes end: **December 14, 2026**. Review weeks do not extend delivery deadlines.
+
 ### Sprint 1 — A deployed merit analytics foundation
 
 Deliver a real DataJud → ETL → PostgreSQL Data Warehouse → API → dashboard
@@ -291,6 +304,9 @@ evidence in [#169](https://github.com/DatumLex/datumlex-core/issues/169). This i
 not the full product MVP. Delivery is planned for **September 27, 2026**.
 
 ### Sprint 2 — Explainable intelligence across legal sources
+
+Execution: **October 5–25, 2026**. Delivery: **October 25**.
+Sprint 2 Review / Sprint 3 Planning: **October 26–30**.
 
 Deepen Civil Liability analysis with real TJDFT decision text, STJ jurisprudence
 and precedents, and an initial approved BDJur doctrine corpus. Preserve source
@@ -313,7 +329,8 @@ Deliver XLSX exports and grounded, cited narrative drafts that users review
 before export, reusing the Sprint 2 PDF and analytical context. Extend validated
 analytics to Consumer Law and Contracts and improve professional workflows.
 The final product must explain evidenced theses behind outcomes using the
-cross-source/NLP foundation. Sprint 2 and 3 dates remain subject to team planning.
+cross-source/NLP foundation. Delivery is due **November 22, 2026**, following the
+**November 2–22** execution window and **October 26–30** Review / Planning period.
 
 See the [roadmap](product/product-roadmap.md) for delivery evidence and the
 [user-story catalog](agile/user-stories.md) for all 45 stories, current priorities,
