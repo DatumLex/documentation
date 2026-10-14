@@ -32,6 +32,13 @@ these values do not establish historical velocity or remaining effort.
 
 ## Client outcomes and delivery scope
 
+Calendar confirmed on **October 14, 2026**: Sprint 1 **September 7–27**;
+Sprint 2 **October 5–25**; Sprint 3 **November 2–22**. Review / Planning windows
+are **September 28–October 2** and **October 26–30**; final Sprint Review is
+**November 23–27**. Delivery is due on each sprint's last day. See the
+[complete academic calendar](../product/product-roadmap.md#academic-calendar).
+This calendar update does not refresh the October 7 status/estimate snapshot.
+
 See [client alignment](../product/client-alignment.md) and the [roadmap](../product/product-roadmap.md)
 for the dated requirement history, professional audience, safeguards, and sprint
 objectives. DataJud is the only Sprint 1 source. Cross-source/NLP work, dynamic
@@ -109,12 +116,13 @@ links every epic/story/task and the proposed execution sequence.
 - **NLP source text:** US-43 / [#161](https://github.com/DatumLex/datumlex-core/issues/161)
   now covers TJDFT text access/ingestion. STJ text is covered by US-28. Actual
   access and coverage still require execution evidence.
-- **Sprint 2 readiness:** all 45 planned items remain Backlog and unassigned.
-  Start/completion dependencies are explicit; dates, capacity, new estimates and
-  re-estimation of changed scope belong to the team planning meeting.
+- **Sprint 2 readiness (October 7 snapshot):** all 45 planned items were Backlog
+  and unassigned. Start/completion dependencies are explicit; owners, individual
+  task dates, capacity, new estimates and re-estimation of changed scope require
+  team planning within the confirmed October 5–25 execution window.
 - Numeric estimates now support refinement, but historical velocity and sprint
   capacity are not established by this sizing exercise. Sprint 1's deadline is
-  September 27; Sprint 2/3 dates are not specified here.
+  September 27; Sprint 2 delivery is October 25 and Sprint 3 delivery is November 22.
 
 When approved scope, priority, or planned delivery changes, update the Project and
 refresh this dated catalog through a reviewed PR. Preserve release snapshots for
@@ -122,4 +130,6 @@ historical comparison. Do not copy task priorities into stories or infer complet
 from elapsed dates. The October 7 scope refinement moves PDF and its tasks to
 Sprint 2, adds the
 missing text/filter/release work, and revises affected acceptance criteria and
-dependencies. Status, assignees, dates and existing estimates remain unchanged.
+dependencies. That refinement preserved status, assignees, dates and existing
+estimates. The October 14 update records the official sprint/review calendar;
+individual task scheduling and completion still require separate evidence.

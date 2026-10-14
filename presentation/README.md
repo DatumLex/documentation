@@ -12,11 +12,17 @@ Each Sprint Review has a separate presentation so the team can preserve the
 product evolution, technical decisions, delivered work, validation evidence,
 and next steps.
 
-| Sprint | Presentation | Status |
-|---|---|---|
-| Sprint 1 | [Google Slides](https://docs.google.com/presentation/d/15ZrHGEJONJXZg2ENUoq1YoI8AjIF6A7Wol1-tTPDVHM/edit?usp=sharing) | Available |
-| Sprint 2 | Link to be added | Planned |
-| Sprint 3 | Link to be added | Planned |
+| Sprint | Delivery deadline (2026) | Review window (2026) | Presentation | Status |
+|---|---|---|---|---|
+| Sprint 1 | September 27 | September 28–October 2 | [Google Slides](https://docs.google.com/presentation/d/15ZrHGEJONJXZg2ENUoq1YoI8AjIF6A7Wol1-tTPDVHM/edit?usp=sharing) | Available |
+| Sprint 2 | October 25 | October 26–30 | Link to be added | Planned |
+| Sprint 3 | November 22 | November 23–27 | Link to be added | Planned |
+
+The first two review windows also include planning for the following sprint.
+The [official academic calendar](../product/product-roadmap.md#academic-calendar)
+also schedules the **Solutions Fair on December 3**, **TG presentations on
+December 7–11**, and **end of classes on December 14, 2026**. Dates were confirmed
+from the supplied calendar on October 14; presentation availability is a separate status.
 
 For every sprint, add the correct Google Slides, PDF, or PowerPoint link as
 soon as it is created. The presentation should include the Sprint Goal,

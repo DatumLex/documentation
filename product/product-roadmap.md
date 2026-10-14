@@ -9,6 +9,41 @@ September 25, 2026](client-alignment.md), the October 7 refinement and the [45-s
 Assignments are planned delivery, not completion claims. The [Project](https://github.com/orgs/DatumLex/projects/1)
 holds live Priority, Sprint, `Estimate`, ownership, dates, and status.
 
+## Academic calendar
+
+The project representative supplied the official **second-semester 2026** calendar
+on **October 14, 2026**. The dates below replace earlier statements that Sprint 2
+and Sprint 3 dates were pending. All ranges are inclusive, in **America/Sao_Paulo**.
+Source: [supplied academic calendar](../agile/assets/academic-calendar-2026-2.png).
+
+| Academic activity | Start | End / delivery |
+|---|---|---|
+| Start of classes | August 3, 2026 | August 3, 2026 |
+| General kick-off | August 24, 2026 | August 28, 2026 |
+| Product backlog construction / Planning | August 31, 2026 | September 4, 2026 |
+| Sprint 1 | September 7, 2026 | **September 27, 2026** |
+| Sprint 1 Review / Sprint 2 Planning | September 28, 2026 | October 2, 2026 |
+| Sprint 2 | October 5, 2026 | **October 25, 2026** |
+| Sprint 2 Review / Sprint 3 Planning | October 26, 2026 | October 30, 2026 |
+| Sprint 3 | November 2, 2026 | **November 22, 2026** |
+| Sprint 3 Review | November 23, 2026 | November 27, 2026 |
+| Solutions Fair (Feira de Solucoes) | December 3, 2026 | December 3, 2026 |
+| Graduation project presentations (TGs) | December 7, 2026 | December 11, 2026 |
+| End of classes | December 14, 2026 | December 14, 2026 |
+
+Sprint delivery is due on the final day of its execution window. The following
+Review / Planning week does not extend that deadline. Individual task Start/End
+dates describe the team's execution plan within these windows; the calendar
+does not assert that work started, finished, passed review, or met DoD. Preserve
+historical task dates and record any carry-over explicitly.
+
+The [repository milestones](https://github.com/DatumLex/datumlex-core/milestones)
+record these three delivery deadlines for the existing sprint allocations.
+Their descriptions include execution and review windows. For cross-sprint epics,
+the milestone applies to the currently planned baseline; future refinement is
+not implicitly due in that sprint. Milestone issue counts include the hierarchy
+and must not be interpreted as story-point velocity or product completion.
+
 ## Sprint objectives
 
 ### Sprint 1 — A deployed merit analytics foundation
@@ -22,9 +57,13 @@ stack/scope rationale, API documentation, automated tests, static analysis, and 
 deployment originally planned as Vercel frontend with Railway backend/database.
 The September 22 hosting constraint and current environment must be reconciled
 through Sprint 2 baseline task [#169](https://github.com/DatumLex/datumlex-core/issues/169). This is the first usable increment,
-not the full product MVP. Delivery is planned for **September 27, 2026**.
+not the full product MVP. Sprint 1 runs **September 7–27, 2026**, with delivery
+due **September 27** and Review / Planning on **September 28–October 2**.
 
 ### Sprint 2 — Explainable intelligence across legal sources
+
+Execution: **October 5–25, 2026**. Delivery: **October 25**.
+Sprint 2 Review / Sprint 3 Planning: **October 26–30, 2026**.
 
 Deepen Civil Liability analysis with real TJDFT decision text, STJ jurisprudence
 and precedents, and an initial approved BDJur doctrine corpus. Preserve source
@@ -47,7 +86,8 @@ Deliver XLSX exports and grounded, cited narrative drafts that users review
 before export, reusing the Sprint 2 PDF and analytical context. Extend validated
 analytics to Consumer Law and Contracts and improve professional workflows.
 The final product must explain evidenced theses behind outcomes using the
-cross-source/NLP foundation. Sprint 2 and 3 dates remain subject to team planning.
+cross-source/NLP foundation. Sprint 3 runs **November 2–22, 2026**, with delivery
+due **November 22** and Sprint Review on **November 23–27**.
 
 ## Delivery evidence by sprint
 
@@ -77,10 +117,13 @@ cross-source/NLP foundation. Sprint 2 and 3 dates remain subject to team plannin
 
 Use [Planning Poker](../agile/estimation-and-prioritization.md) on stories only.
 Points include necessary quality work, do not convert to days, and do not override
-dependency sequencing. Preserve Sprint 1's September 14 lower date boundary,
-September 17–18 modeling concentration, and September 24–25 integration/deploy
-concentration when assessing risk. The October 7 refinement preserves Sprint 1 history and leaves Sprint 2
-assignment, dates and capacity selection for team planning.
+dependency sequencing. Sprint 1's official start is **September 7**. Its historical
+internal replan used a September 14 lower task-date boundary, September 17–18
+modeling concentration, and September 24–25 integration/deploy concentration;
+those execution dates do not redefine the sprint window. The October 7 refinement
+preserves Sprint 1 history. The October 14 calendar confirmation fixes Sprint 2/3
+windows and review periods; owners, individual task dates and capacity selection
+still require team planning within those windows.
 
 Keep one professional dashboard. Student/exam features, role-specific portals,
 case/deadline management, and guaranteed-result prediction are outside scope.

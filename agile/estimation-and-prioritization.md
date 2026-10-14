@@ -204,10 +204,18 @@ If the minimum delivery does not fit, negotiate scope explicitly.
 - Plan from availability, dependencies, review, and integration. Thursday/Friday
   are strongest, Monday/Tuesday moderate, Wednesday should avoid execution
   commitments, and weekends support light work or contingency.
-- Sprint 1 delivery is **2026-09-27**. Its replan starts no earlier than
-  **2026-09-14**, concentrates modeling on **September 17–18** and integration/deploy
-  on **September 24–25**, with little buffer. Points do not remove this risk.
-- Sprint 2/3 dates require team planning; do not infer them from story counts.
+- The [official academic calendar](../product/product-roadmap.md#academic-calendar),
+  confirmed October 14, sets Sprint 1 to **September 7–27**, Sprint 2 to
+  **October 5–25**, and Sprint 3 to **November 2–22, 2026**. Delivery is due on
+  the last day of each window.
+- Review / Planning runs **September 28–October 2** and **October 26–30**;
+  final Sprint Review runs **November 23–27**. These periods do not extend delivery.
+- Sprint 1's historical internal replan began no earlier than **September 14**,
+  concentrated modeling on **September 17–18** and integration/deploy on
+  **September 24–25**, with little buffer. This was a task schedule, not a change
+  to the official September 7 sprint start. Points do not remove this risk.
+- Plan owners, task Start/End dates and capacity inside the confirmed windows;
+  do not infer execution dates or completed work from story counts.
 
 ## References
 

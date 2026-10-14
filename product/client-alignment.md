@@ -229,6 +229,18 @@ assignees, dates and capacity decisions are reserved for team planning.
 
 ## Change control
 
+### Academic calendar confirmation — October 14, 2026
+
+The project representative supplied the second-semester academic calendar.
+Sprint 1 runs September 7–27; Sprint 2 October 5–25; Sprint 3 November 2–22, 2026.
+Review / Planning runs September 28–October 2 and October 26–30; final Sprint
+Review runs November 23–27. Delivery is due at each sprint end. The Solutions
+Fair is December 3, TG presentations December 7–11, and classes end December 14.
+The [roadmap calendar](product-roadmap.md#academic-calendar) retains all dates
+and the supplied image. This is academic scheduling confirmation from the team,
+not a later client scope decision or evidence of completion. The dated client
+and refinement records above retain their original chronology.
+
 The PO records subsequent decisions on affected stories. Update roadmap, catalog,
 contracts, presentation, release criteria, and
 [estimates](../agile/estimation-and-prioritization.md) when scope or effort changes.
