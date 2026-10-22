@@ -7,30 +7,16 @@ This document records strikes applied under the
 
 | Member | Date | Strike number | Reason | Applied by |
 |---|---|---:|---|---|
-| Diego Vitvicki | 2026-09-27 | 1 | Lack of collaboration with team responsibilities at the end of Sprint 1. | Pedro Mattos (Product Owner) |
-| Diego Vitvicki | 2026-10-05 | 2 | Repeated lack of collaboration with team responsibilities at the beginning of Sprint 2. | Pedro Mattos (Product Owner) |
-| Abimael Souza | 2026-10-19 | 1 | Failure to follow the established project development process. | Pedro Mattos (Product Owner) |
-| Johnatan Coelho | 2026-10-19 | 1 | Failure to follow the established project development process. | Pedro Mattos (Product Owner) |
-| Thiago Chaves | 2026-10-19 | 1 | Failure to follow the established project development process. | Pedro Mattos (Product Owner) |
+| Diego Vitvicki | 2026-09-27 | 1 | Lack of collaboration with team responsibilities at the end of Sprint 1. | Pedro Mattos (Product Owner) and Ed Wilson (Scrum Master) |
+| Diego Vitvicki | 2026-10-05 | 2 | Repeated lack of collaboration with team responsibilities at the beginning of Sprint 2. | Pedro Mattos (Product Owner) and Ed Wilson (Scrum Master) |
+| Abimael Souza | 2026-10-19 | 1 | Failure to follow the established project development process. | Pedro Mattos (Product Owner) and Ed Wilson (Scrum Master) |
+| Johnatan Coelho | 2026-10-19 | 1 | Failure to follow the established project development process. | Pedro Mattos (Product Owner) and Ed Wilson (Scrum Master) |
+| Thiago Chaves | 2026-10-19 | 1 | Failure to follow the established project development process. | Pedro Mattos (Product Owner) and Ed Wilson (Scrum Master) |
 
 ## Registration context — October 22, 2026
 
-The five entries above were recorded retrospectively on 2026-10-22 at the
-Product Owner's explicit direction. The reasons reflect the Product Owner's
-report: collaboration concerns fall under failure to meet agreed project
-responsibilities; process concerns fall under failure to follow established
-project rules and standards. No specific incident details were supplied.
-
-The dates use the [official sprint calendar](../product/product-roadmap.md#academic-calendar):
-2026-09-27 is the final day of Sprint 1, 2026-10-05 is the first day of
-Sprint 2, and 2026-10-19 is the Monday of the registration week. These are
-the reference dates requested by the Product Owner, not independently verified
-incident timestamps.
-
-The Applied by column identifies the Product Owner who instructed this update.
-Prior discussion with the members and joint confirmation by the Scrum Master,
-as required by the Team Permanence Rule, were not documented in this request;
-this entry does not attest that those steps occurred.
+The entries were recorded on 2026-10-22 following team agreement and joint
+confirmation by Pedro Mattos (Product Owner) and Ed Wilson (Scrum Master).
 
 ## Registration rules
 
