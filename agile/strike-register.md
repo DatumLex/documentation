@@ -12,10 +12,12 @@ This document records strikes applied under the
 | Abimael Souza | 2026-10-19 | 1 | Failure to follow the established project development process. | Pedro Mattos (Product Owner) and Ed Wilson (Scrum Master) |
 | Johnatan Coelho | 2026-10-19 | 1 | Failure to follow the established project development process. | Pedro Mattos (Product Owner) and Ed Wilson (Scrum Master) |
 | Thiago Chaves | 2026-10-19 | 1 | Failure to follow the established project development process. | Pedro Mattos (Product Owner) and Ed Wilson (Scrum Master) |
+| Pedro Mattos | 2026-10-23 | 1 | Failure to create the client contract and resolution document at the beginning of the project. | Pedro Mattos (Product Owner) and Ed Wilson (Scrum Master) |
+| Ed Wilson | 2026-10-23 | 1 | Failure to create the project burndown chart. | Pedro Mattos (Product Owner) and Ed Wilson (Scrum Master) |
 
 ## Registration context — October 22, 2026
 
-The entries were recorded on 2026-10-22 following team agreement and joint
+The five entries preceding the October 23 additions were recorded on 2026-10-22 following team agreement and joint
 confirmation by Pedro Mattos (Product Owner) and Ed Wilson (Scrum Master).
 
 ## Registration rules
