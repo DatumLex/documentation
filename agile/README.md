@@ -6,6 +6,7 @@ This folder documents how the LegacyTech team plans, reviews, and tracks DatumLe
 
 | Document | Purpose | Applied when |
 |---|---|---|
+| [Sprint 3 & Solutions Fair delivery](sprint-3-delivery.md) | Consolidated Sprint 3 delivery snapshot, live production dataset counts, real NLP/RAG evidence, and SonarCloud Quality Gate. | Sprint 3 review and Solutions Fair evaluation. |
 | [Sprint 2 plan](sprint-2-plan.md) | Scope, every issue link, dependencies and assignment agenda. | Sprint 2 planning and delivery review. |
 | [User-story catalog](user-stories.md) | Snapshot of all stories, current priorities, and planned delivery. | Refinement and stakeholder review. |
 | [MoSCoW and Planning Poker](moscow-and-planning-poker.md) | Explain the README product priorities, story-point scale, team voting, and relationship with the Project. | Product refinement and estimation sessions. |

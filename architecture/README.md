@@ -12,11 +12,12 @@ This folder documents the technical architecture of **DatumLex** — how the sys
 
 ## Documents
 
-- [Dimensional Models](https://github.com/DatumLex/documentation/blob/main/architecture/dimensional-model.md) — existing conceptual/logical/physical diagrams; review and dictionary evidence remain required.
-- [Data-Dictionary](https://github.com/DatumLex/documentation/blob/main/architecture/data-dictionary.md) - existing data-dictionary; Document all tables, columns and data lineages.
-- [Source Research](research/README.md) — source notes and their sprint boundaries.
-- [Technology Stack and Rationale](technology-stack.md) — selected technologies,
-  their responsibilities, and the rationale for each architectural decision.
+- [Technology Stack and Rationale](technology-stack.md) — updated production stack (`Django 5.2`, `React 19`, `PostgreSQL 18`, `spaCy + scikit-learn`, `Gemini RAG`, `Vercel + Railway`, `SonarCloud`) and architectural decision records.
+- [Cloud Hosting, Multi-Sphere Scalability & 36-Month FinOps Plan](hosting-and-scalability.md) — production topology diagram, migration from Render Free, multi-sphere (including municipal) expansion strategy, 36-month cost projection, and handover terms.
+- [Dimensional Models](dimensional-model.md) — conceptual, logical, and physical DW diagrams.
+- [Data Dictionary](data-dictionary.md) — tables, columns, constraints, and data lineage.
+- [ETL Overview](etl-overview.md) and [ETL Operations](etl-operations.md) — extraction, transformation, deduplication, and incremental loading procedures.
+- [Source Research](research/README.md) — official API analyses (DataJud, TJDFT, Pangea/BNP).
 
 ## Why it matters
 

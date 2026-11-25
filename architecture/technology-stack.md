@@ -1,159 +1,73 @@
 # Technology Stack and Rationale
 
+**Last updated:** November 25, 2026  
+**Status:** Active production architecture (`datumlex-core.vercel.app` + Railway + PostgreSQL 18 + SonarCloud)
+
 ## Purpose
 
-This document records the technologies adopted for DatumLex and the reasoning
-behind each choice. It is a living architectural decision record: whenever a
-material technology choice changes, this document must be updated together
-with the relevant implementation and pull request.
+This document records the technologies adopted for **DatumLex** and the architectural rationale behind each decision. It reflects the real production stack delivered through Sprint 3 and refined for the Solutions Fair (December 3, 2026), replacing earlier exploratory drafts.
 
-DatumLex is a legal analytics platform that ingests judicial data, stores it in
-a structured analytical database, and presents a web dashboard for exploring
-appeal outcomes. The stack prioritizes clarity, maintainability, traceability,
-and an accessible user experience for the scope of the project.
+DatumLex is a legal intelligence and analytics platform that consolidates judicial records, jurisprudence, precedents, and open doctrine from official Brazilian public sources into a structured analytical repository, exposing statistical indicators, real Natural Language Processing (NLP), source-grounded generative AI (RAG), and reproducible PDF/XLSX exports.
 
 ## Stack at a Glance
 
-| Area | Technology | Primary responsibility |
-|---|---|---|
-| Backend and data processing | Python | API logic, data transformation, and integration workflows |
-| Backend framework | Django | Structured web application and API foundation |
-| Frontend language | JavaScript | Browser-side interface behavior |
-| Frontend framework | React | Reusable dashboard components and UI state |
-| Frontend styling | Tailwind CSS | Responsive, consistent interface styling |
-| Relational database | PostgreSQL | Persistent analytical and application data |
-| Frontend hosting | Vercel | Preview and production deployment of the dashboard |
-| Backend and database hosting | Railway | Django API and PostgreSQL deployment |
-| Source control and planning | GitHub | Repositories, issues, project board, pull requests, and review history |
-| External legal data | DataJud / CNJ | Judicial records used by the project scope |
+| Area | Technology | Version / Tier | Primary responsibility |
+|---|---|---|---|
+| **Backend language** | Python | `3.13` | API logic, ETL pipelines, statistical NLP, and AI orchestration |
+| **Backend framework** | Django + Gunicorn | `5.2` | REST API, RBAC authentication, ORM/migrations, security & CSRF defaults |
+| **Real NLP engine** | spaCy + scikit-learn | `spacy 3.8` (`pt_core_news_sm`) · `scikit-learn 1.9` | Tokenization, lemmatization, POS-tagging, Portuguese Named Entity Recognition (NER), `TfidfVectorizer` term extraction, and `cosine_similarity` semantic ranking — running on CPU at zero per-request cost |
+| **Generative AI (RAG)** | Google Gemini API | `gemini-3.5-flash-lite` | Source-grounded legal synthesis over retrieved indicators and numbered sources (`F1..Fn`), with automatic deterministic fallback |
+| **Frontend framework** | React + Vite | `React 19` · `Vite 8` | Interactive multi-court research workspace, NLP dashboard, RAG chat, corpus explorer, and accessible charts |
+| **Edge & API Gateway** | Vercel + Node Gateway | Same-origin `/api/gateway.js` | Global HTTPS static delivery and same-origin proxy that isolates backend origin, preserves `HttpOnly` cookies, and blocks secret exposure |
+| **Database** | PostgreSQL | `18` (Railway managed, TLS) | Dimensional Data Warehouse (`fact_resource`, `dim_*`), approved corpus (`warehouse_legalcorpusitem`), references (`legal_reference`), and append-only NLP audit tables with integrity triggers |
+| **Backend & DB Hosting** | Railway | Dockerized service + Postgres 18 | Continuous zero-sleep deployment of API + NLP + PostgreSQL 18 (superseded Render Free tier) |
+| **Quality & CI/CD** | GitHub Actions + SonarCloud | Public Quality Gate (`DatumLex_datumlex-core`) | Automated Linux + Windows test runs (400+ tests), Ruff, ESLint, HTML/XML/LCOV coverage reports, and static security/reliability gate (`0 Bugs`, `0 Vulnerabilities`) |
+| **Official Data Sources** | DataJud/CNJ, Pangea/BNP, STJ, TJDFT, Senado RIL | 9 active civil courts + open doctrine | 32,000+ real official records in production, with modular multi-sphere expansion roadmap (Federal, State, District, and Municipal) |
 
-## Technology Decisions
+---
 
-### Python for the Backend and Data Workflows
+## Technology Decisions & Rationale
 
-Python is used for backend services and data-processing routines because it is
-well suited to data ingestion, transformation, analysis, and API development.
-Its ecosystem supports common tasks required by DatumLex, such as consuming
-external services, handling structured data, validating records, and preparing
-data for database loading.
+### 1. Python 3.13 + Django 5.2 for Backend, ETL, and Analytics
+Python unifies API serving, ETL ingestion, data validation, and NLP processing in a single runtime, eliminating polyglot operational overhead. Django 5.2 provides mature relational modeling, deterministic schema migrations, session security, CSRF enforcement, and role-based access control (`Master`, `Admin`, `Padrão`) with per-court authorization.
 
-Using Python also keeps the backend and ETL-related logic in one language. This
-reduces context switching for the team and makes the data flow easier to trace:
-extract data, validate it, transform it, persist it, and expose the resulting
-metrics through an API.
+### 2. Real Statistical & Neural NLP on CPU (`spaCy` + `scikit-learn`)
+Rather than relying on regex heuristics or costly GPU-hosted LLMs for corpus analysis, DatumLex runs a real Portuguese NLP pipeline directly on standard CPU instances (`backend/src/nlp/engine.py`):
+- **`spaCy 3.8` with `pt_core_news_sm`**: neural Portuguese pipeline performing tokenization, lemmatization, part-of-speech analysis, and **Named Entity Recognition (NER)** across real judicial summaries and user queries.
+- **`scikit-learn 1.9` (`TfidfVectorizer` + `cosine_similarity`)**: unigram/bigram sublinear TF-IDF vectorization over real approved decisions and live cosine similarity ranking exposed via `GET /api/v2/nlp-insights/` and rendered interactively in the **NLP · Teses** panel.
+- **Curated literal evidence auditability**: alongside live statistical NLP, 46 curated official decisions (33 TJDFT + 13 STJ) and 135 verified `LEGAL_THESIS`/`LEGAL_GROUND` passages are protected by PostgreSQL append-only triggers (`nlp_no_change` and `nlp_check_revision`) that verify literal character offsets and `SHA-256` text hashes.
 
-### Django as the Backend Framework
+### 3. Source-Grounded Generative AI (`Gemini 3.5 Flash-Lite` in RAG Architecture)
+Generative synthesis is strictly constrained to a **Retrieval-Augmented Generation (RAG)** workflow:
+1. Incoming questions are preprocessed with `spaCy` (lemmas, NER entities, and intent classification).
+2. The backend executes deterministic SQL aggregations over the user's authorized scope and retrieves approved jurisprudence, precedents, and doctrine as numbered sources (`F1..Fn`).
+3. `gemini-3.5-flash-lite` receives only that structured evidence packet with strict grounding instructions forbidding fabricated numbers or uncited case law.
+4. If the external LLM is rate-limited or unavailable, the backend degrades gracefully to a deterministic local synthesis over the same verified sources.
 
-Django provides a convention-based foundation for the backend, including data
-models, migrations, administration features, validation, security defaults,
-and a clear project structure. These conventions are valuable for a team
-project because they make responsibilities and code locations predictable.
+### 4. React 19 + Vite 8 + Vercel Same-Origin Gateway
+React 19 and Vite 8 deliver a fast, responsive SPA with explicit loading, empty, partial, and error states. Deploying on **Vercel** provides global HTTPS CDN delivery, instant PR preview environments, and a lightweight serverless same-origin gateway (`frontend/api/gateway.js`) so the browser communicates exclusively with `datumlex-core.vercel.app/api/*` without cross-site cookie issues or leaked credentials.
 
-Django is also appropriate for a data-centered application that needs stable
-database integration and documented API endpoints. It allows the team to begin
-with a focused dashboard API and grow the application without introducing an
-unnecessary collection of services.
+### 5. PostgreSQL 18 + Railway (Migration from Render Free Tier)
+Earlier prototypes ran on Render's free tier (see historical record [RENDER-HOSTING-RATIONALE.md](../design/RENDER-HOSTING-RATIONALE.md)). Because Render Free sleeps after 15 minutes of inactivity and deletes PostgreSQL instances after 30 days without managed backups, production was migrated to **Vercel (Frontend + Gateway) + Railway (Docker API + PostgreSQL 18)**. Everything remains 100% containerized and SQL-standard, enabling seamless FinOps migration to dedicated VPS + Cloudflare R2 cold storage as national and municipal data volumes grow (detailed in [hosting-and-scalability.md](hosting-and-scalability.md)).
 
-### JavaScript and React for the Frontend
+### 6. Automated Testing, Coverage & SonarCloud Governance
+Quality is enforced continuously through GitHub Actions and SonarCloud:
+- **`scripts/test-report.py`** executes backend unit tests, full Django/pytest integration suite (359+ tests), frontend unit tests (20 tests), and NLP/collector validation tools (24 tests), generating an interactive HTML dashboard (`backend/tests/relatorio-cobertura.html`) plus Sonar-compatible XML/LCOV reports.
+- **SonarCloud (`DatumLex_datumlex-core`)** evaluates every Pull Request and branch with `.sonarcloud.properties` and `sonar-project.properties`, maintaining a **PASSED** Quality Gate (`0 Bugs`, `0 Vulnerabilities`, Security/Reliability/Maintainability `A`).
 
-JavaScript is the browser-native language used by the frontend. React is used
-to organize the dashboard into reusable components such as filters, metric
-cards, chart states, and information popovers.
-
-This component model keeps the interface adaptable while the API evolves. The
-frontend can render explicit loading, empty, unavailable, and error states
-without fabricating analytical results. When the API contract becomes stable,
-mocked values can be replaced by real data with minimal change to the visual
-components.
-
-### Tailwind CSS for Frontend Styling
-
-Tailwind CSS is used to build a consistent, responsive UI without creating a
-large collection of one-off stylesheet rules. Its utility-first approach helps
-the team apply approved spacing, colors, typography, borders, focus states,
-and responsive layouts close to the components that use them.
-
-For DatumLex, this improves visual consistency with the approved dashboard
-mockup and makes it easier to maintain an accessible design system. Tailwind
-does not replace design decisions; the project still documents its palette,
-component behavior, and accessibility requirements in the `design/` folder.
-
-### PostgreSQL for Persistent Data
-
-PostgreSQL is the relational database for structured application and analytical
-data. It was chosen because it is mature, reliable, open source, and provides
-strong support for SQL, constraints, indexing, transactions, and analytical
-queries.
-
-These capabilities are important for judicial data, where consistent
-relationships, repeatable calculations, and traceable transformations matter.
-PostgreSQL also integrates naturally with Django and supports incremental
-evolution of the dimensional model through migrations.
-
-### Vercel for Frontend Deployment
-
-Vercel hosts the frontend and provides deployment previews for pull requests.
-Preview deployments allow the team and reviewers to validate interface changes
-in a browser before merging them, which supports a documented review process.
-
-The platform is especially appropriate for the React dashboard because it
-offers a simple deployment workflow and separates the static frontend delivery
-from the backend API deployment. Environment configuration must never expose
-secrets in the browser; public API configuration is managed through approved
-environment variables.
-
-### GitHub for Code, Planning, and Collaboration
-
-GitHub is the system of record for source code and the team workflow. It hosts
-the `datumlex-core` code repository and this `documentation` repository, while
-also providing Issues, GitHub Projects, Pull Requests, code review, branch
-protection, and the commit history.
-
-This centralizes traceability from product work to implementation:
-
-1. An epic, user story, or task is defined on the GitHub Project board.
-2. A branch follows the documented branch naming standard and references the
-   related issue when possible.
-3. Conventional Commits and pull requests link the implementation back to the
-   issue.
-4. Review and validation evidence are retained in the pull request.
-
-The detailed rules are maintained in the [Development documentation](../development/README.md).
+---
 
 ## Architecture Boundaries
 
-- The frontend is responsible for presentation, interaction, and clear data
-  states; it must not calculate legal metrics independently of the backend.
-- The backend is responsible for exposing validated metrics and documented API
-  contracts.
-- PostgreSQL is the persistent source for processed project data; raw external
-  data must be handled through documented ingestion and transformation steps.
-- Vercel deploys the frontend; Railway hosts backend and PostgreSQL. Configure
-  access independently and follow project security practices.
-- GitHub records work and review evidence; it is not a replacement for the
-  database or for runtime monitoring.
+- **Frontend (`frontend/`):** presentation, interactive filtering, accessible visualization, and explicit data-state rendering; never computes legal rates independently or holds secrets.
+- **Backend (`backend/`):** authoritative source for RBAC, SQL metrics, real NLP (`spaCy` + `scikit-learn`), RAG orchestration, and reproducible PDF/XLSX generation.
+- **PostgreSQL 18 (`datumlex-db`):** persistent analytical warehouse and append-only NLP audit ledger (~75 MB currently holding 32,000+ real official records).
+- **ETL Ingestion:** decoupled, idempotent Python pipelines with `SHA-256` deduplication and cursor checkpoints, keeping ingestion isolated from API serving latency.
 
-## Decision Review Criteria
+## Related Documents
 
-Any future stack change should be evaluated against the following criteria:
-
-- Alignment with the project scope and academic requirements.
-- Ability to keep data transformations traceable and reproducible.
-- Accessibility, responsiveness, and maintainability of the dashboard.
-- Security of credentials, user data, and deployment configuration.
-- Cost, learning curve, and operational overhead for the team.
-- Compatibility with the documented branch, commit, review, and deployment
-  workflow.
-
-## Sprint boundaries and planning
-
-Sprint 1 uses DataJud only, for TJDFT Civil Liability from 2023 onward. Sprint 2
-adds approved STJ/jurisprudence/open-doctrine sources, provenance, and NLP. Sprint 3
-adds reproducible exports, grounded narrative, Consumer Law, and Contracts. Specific
-NLP/generation models and export libraries require reviewed decisions; this document
-does not select them implicitly. Versions, alternatives, operational limits, and
-court-selection evidence remain deliverables of US-02, not proven by this summary.
-
-Track effort in story-level `Estimate`, including migrations, source feasibility,
-validation, and documentation. See the [roadmap](../product/product-roadmap.md) and
-[estimation agreement](../agile/estimation-and-prioritization.md).
+- [Cloud Hosting, Multi-Sphere Scalability & 36-Month Costs](hosting-and-scalability.md)
+- [Dimensional Model](dimensional-model.md) · [Data Dictionary](data-dictionary.md)
+- [ETL Overview](etl-overview.md) · [ETL Operations](etl-operations.md)
+- [Sprint 3 Delivery Snapshot](../agile/sprint-3-delivery.md)
+- [Architecture, Scalability, Costs & 36-Month Support Proposal (PDF v3.0)](../presentation/DatumLex_Plano_Arquitetura_Escalabilidade_Custos_Suporte_v3.pdf)

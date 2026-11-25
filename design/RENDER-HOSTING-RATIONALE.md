@@ -1,7 +1,9 @@
-# Why DatumLex Uses Render
+# Why DatumLex Uses Render *(Historical Record — Superseded)*
+
+> **Superseded on November 25, 2026:** Production hosting migrated from Render Free (which imposed 15-minute idle shutdowns and 30-day PostgreSQL expiration) to **Vercel (Frontend + Same-Origin Gateway) + Railway (Docker API + Managed PostgreSQL 18)**. See the active architecture, multi-sphere scalability plan, and 36-month cost analysis in [architecture/hosting-and-scalability.md](../architecture/hosting-and-scalability.md).
 
 **Decision date:** October 24, 2026  
-**Status:** Adopted for the current academic deployment and initial validation phase
+**Status:** Superseded by Vercel + Railway production deployment (preserved for historical traceability)
 
 ## Decision
 

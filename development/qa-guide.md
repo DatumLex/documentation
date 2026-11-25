@@ -94,10 +94,19 @@ After merge, the author or QA reviewer must:
 3. Move the card to **Done** only when the Definition of Done is satisfied.
 4. Record any deferred issue as a new linked card; do not hide it in a comment.
 
+## Automated Quality Gates (CI/CD & SonarCloud)
+
+Every Pull Request into `main` is verified automatically before human review approval:
+
+1. **Automated Test Suite (`python scripts/test-report.py`)**: runs **400+ automated tests** across both Linux and Windows runners (backend Django/pytest unit & integration tests including NLP engine and append-only evidence integrity, frontend Node unit tests, and ETL/collector validation tools), producing an interactive HTML coverage dashboard (`backend/tests/relatorio-cobertura.html`) plus Sonar-compatible `backend-coverage.xml`, `backend-junit.xml`, and `frontend-lcov.info`.
+2. **Static Analysis & Linting**: `ruff check backend/src --select F` (Python) and `npm --prefix frontend run lint` (ESLint) must pass with zero critical errors, alongside `npm --prefix frontend run build`.
+3. **SonarCloud Quality Gate (`DatumLex_datumlex-core`)**: [public SonarCloud dashboard](https://sonarcloud.io/project/overview?id=DatumLex_datumlex-core) analyzes Security, Reliability, and Maintainability on every PR using `.sonarcloud.properties` and `sonar-project.properties`. A PR must pass the Quality Gate (`0 Bugs`, `0 Vulnerabilities`) before merge.
+
 ## Quick reviewer checklist
 
 - [ ] Card, acceptance criteria, and PR are linked.
 - [ ] Change follows branch and commit standards.
+- [ ] Automated CI checks (tests, lint, build) and SonarCloud Quality Gate are **PASSED**.
 - [ ] Relevant behavior was validated and evidence is available.
 - [ ] Findings are clear, actionable, and recorded.
 - [ ] A QA/review comment exists on the card.

@@ -2,11 +2,14 @@
 
 Central documentation repository for **DatumLex** — an analytical platform (Data Warehouse + Web Dashboard) for consolidating and analyzing judicial decisions, jurisprudence, and academic doctrines.
 
+> 🌐 Live platform (production): [datumlex-core.vercel.app](https://datumlex-core.vercel.app/)
 > 💻 Source code: [datumlex-core](https://github.com/DatumLex/datumlex-core)
+> 🛡️ Code Quality (SonarCloud): [DatumLex_datumlex-core](https://sonarcloud.io/project/overview?id=DatumLex_datumlex-core) — Quality Gate **PASSED** (`0 Bugs`, `0 Vulnerabilities`, 400+ automated tests)
+> 📄 Architecture, Scalability, Costs & 36-Month Support Proposal (v3.0 PDF): [DatumLex_Plano_Arquitetura_Escalabilidade_Custos_Suporte_v3.pdf](presentation/DatumLex_Plano_Arquitetura_Escalabilidade_Custos_Suporte_v3.pdf)
 > 📋 Board / Backlog: [GitHub Project](https://github.com/orgs/DatumLex/projects/1/views/9?visibleFields=%5B%22Title%22%2C411889410%2C411889512%2C%22Assignees%22%2C%22Status%22%2C%22Sub-issues+progress%22%5D)
 > 🎯 Client features: [Product Backlog](#product-backlog)
-> 📅 Calendar: [official academic dates](product/product-roadmap.md#academic-calendar) — Sprint 2 delivery **October 25**; Review / Planning **October 26–30**; Sprint 3 **November 2–22, 2026**.
-> 📌 Sprint 2 execution: [scope, tasks and dependencies](agile/sprint-2-plan.md)
+> 📅 Calendar: [official academic dates](product/product-roadmap.md#academic-calendar) — Sprint 1–3 delivered; Solutions Fair **December 3, 2026**.
+> 📌 Delivery snapshots: [Sprint 2 plan](agile/sprint-2-plan.md) · [Sprint 3 & Solutions Fair delivery](agile/sprint-3-delivery.md)
 
 ---
 
@@ -39,7 +42,8 @@ provide reliable, structured evidence that supports analysis and decision-making
 | **Team** | LegacyTech |
 | **Academic Partner** | Xertica (Juan Hassam, Gerson Rolim) |
 | **Professors / Evaluators** | Eduardo Sakaue, Juliana Pasquini |
-| **Stack** | Python/Django, React/Tailwind, PostgreSQL DW; hosting to reconcile with current deployment evidence; DataJud-only Sprint 1, cross-source NLP and PDF in Sprint 2 |
+| **Stack** | Python 3.13 / Django 5.2, React 19 / Vite 8, PostgreSQL 18 (DW + Corpus), `spaCy 3.8 (pt_core_news_sm)` + `scikit-learn 1.9` (TF-IDF / Cosine Similarity), Google `Gemini 3.5 Flash-Lite` (RAG), Vercel (Frontend + Same-Origin Gateway) + Railway (API + PostgreSQL 18), GitHub Actions + SonarCloud |
+| **Production Dataset** | **32,000+ real official records** (~75 MB): 13,594 DataJud processes across 9 courts, 16,865 approved corpus items (13,944 decisions, 2,772 precedents, 149 doctrines), 1,474 `legal_reference` entries, and 46 curated TJDFT/STJ decisions with 135 verified literal NLP evidences |
 
 ## 👥 Team
 
@@ -72,6 +76,7 @@ documentation/
 - [Agile folder overview](agile/README.md)
 - [User Stories, Priorities, and Planned Sprints](agile/user-stories.md)
 - [Sprint 2 Plan and Assignment Agenda](agile/sprint-2-plan.md)
+- [Sprint 3 & Solutions Fair Delivery Snapshot](agile/sprint-3-delivery.md)
 - [MoSCoW and Planning Poker Guide](agile/moscow-and-planning-poker.md)
 - [Planning Poker, Estimate, and Prioritization](agile/estimation-and-prioritization.md)
 - [Agile Glossary (Epics, User Stories, Tasks)](agile/glossary.md)
@@ -101,7 +106,11 @@ documentation/
 
 ### Architecture & Data
 - [Technology Stack and Rationale](architecture/technology-stack.md)
+- [Cloud Hosting, Multi-Sphere Scalability & 36-Month FinOps Costs](architecture/hosting-and-scalability.md)
 - [Architecture folder overview](architecture/README.md)
+- [Dimensional Models](architecture/dimensional-model.md)
+- [Data Dictionary](architecture/data-dictionary.md)
+- [ETL Overview](architecture/etl-overview.md) and [ETL Operations](architecture/etl-operations.md)
 
 ### Design
 - [Design folder overview](design/README.md)
@@ -111,6 +120,7 @@ documentation/
 
 ### Academic Deliverables
 - [Presentation folder overview](presentation/README.md)
+- [Architecture, Scalability, Costs & 36-Month Support Proposal (v3.0 PDF)](presentation/DatumLex_Plano_Arquitetura_Escalabilidade_Custos_Suporte_v3.pdf)
 - [Sprint 1 presentation (Google Slides)](https://docs.google.com/presentation/d/15ZrHGEJONJXZg2ENUoq1YoI8AjIF6A7Wol1-tTPDVHM/edit?usp=sharing)
 
 ---

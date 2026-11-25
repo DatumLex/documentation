@@ -6,17 +6,17 @@ This folder holds the materials used to present **DatumLex** to the professors, 
 
 - **Slide decks** — for sprint reviews, the individual presentation, and the team presentation (both count toward the final grade, per the challenge rules: *Individual Presentation + Team Presentation = Final Grade*).
 
-## Sprint Review presentations
+## Sprint Review presentations & official deliverables
 
-Each Sprint Review has a separate presentation so the team can preserve the
-product evolution, technical decisions, delivered work, validation evidence,
-and next steps.
+Each Sprint Review preserves product evolution, technical decisions, delivered work, validation evidence, and next steps.
 
-| Sprint | Delivery deadline (2026) | Review window (2026) | Presentation | Status |
+| Deliverable / Sprint | Delivery deadline (2026) | Review window (2026) | Artifact / Link | Status |
 |---|---|---|---|---|
-| Sprint 1 | September 27 | September 28–October 2 | [Google Slides](https://docs.google.com/presentation/d/15ZrHGEJONJXZg2ENUoq1YoI8AjIF6A7Wol1-tTPDVHM/edit?usp=sharing) | Available |
-| Sprint 2 | October 25 | October 26–30 | Link to be added | Planned |
-| Sprint 3 | November 22 | November 23–27 | Link to be added | Planned |
+| **Sprint 1** | September 27 | September 28–October 2 | [Google Slides](https://docs.google.com/presentation/d/15ZrHGEJONJXZg2ENUoq1YoI8AjIF6A7Wol1-tTPDVHM/edit?usp=sharing) | Delivered |
+| **Sprint 2** | October 25 | October 26–30 | [Sprint 2 Plan](../agile/sprint-2-plan.md) | Delivered |
+| **Sprint 3** | November 22 | November 23–27 | [Sprint 3 Delivery Snapshot](../agile/sprint-3-delivery.md) · [Live App](https://datumlex-core.vercel.app/) | Delivered |
+| **Architecture, Scalability, Costs & 36-Month Support Proposal (v3.0)** | November 25 | Solutions Fair (Dec 3) | [DatumLex_Plano_Arquitetura_Escalabilidade_Custos_Suporte_v3.pdf](DatumLex_Plano_Arquitetura_Escalabilidade_Custos_Suporte_v3.pdf) | **Published (v3.0)** |
+| **Code Quality & Static Analysis (SonarCloud)** | Continuous | Continuous | [SonarCloud Dashboard](https://sonarcloud.io/project/overview?id=DatumLex_datumlex-core) · [PR #208 Quality Gate PASSED](https://sonarcloud.io/dashboard?id=DatumLex_datumlex-core&pullRequest=208) | **Live (A / A / A)** |
 
 The first two review windows also include planning for the following sprint.
 The [official academic calendar](../product/product-roadmap.md#academic-calendar)
